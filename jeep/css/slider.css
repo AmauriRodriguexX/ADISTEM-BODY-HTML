@@ -57,7 +57,7 @@
     width: 16px;
     height: 16px;
     background-color: transparent;
-    border: 2px solid #FFFFFF;
+    border: 1px solid #FFFFFF;
     border-radius: 50%;
     cursor: pointer;
 }
@@ -140,5 +140,68 @@
     }
     .mobile-slider {
         display: block;
+    }
+}
+
+/* slider vehiculos */
+
+/* Vista de escritorio */
+.vehicle-section-desktop {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.vehicle-section-desktop .vehicle-col {
+    flex: 0 0 23%; /* Ajusta a 4 columnas por fila */
+}
+
+.vehicle-section-mobile {
+    display: none; /* Oculta la vista móvil en pantallas grandes */
+}
+
+/* Vista móvil */
+@media (max-width: 768px) {
+    .vehicle-section-desktop {
+        display: none; /* Oculta la vista de escritorio en pantallas pequeñas */
+    }
+
+    .vehicle-section-mobile {
+        display: block; /* Muestra la vista móvil */
+    }
+
+    /* Dots personalizados para el slider móvil */
+    .vehicle-slider-custom-indicators {
+        position: absolute;
+        bottom: -16px;
+        left: 8%;
+        transform: translateX(-50%);
+        display: flex;
+        justify-content: center;
+        gap: 5px;
+        padding: 5px 10px;
+        border-radius: 20px;
+        z-index: 10;
+    }
+
+    .vehicle-custom-dot {
+        display: inline-block;
+        width: 16px;
+        height: 8px;
+        background-color: #A2B91C;
+        border-radius: 3px;
+        cursor: pointer;
+        opacity: 0.6;
+        transition: opacity 0.3s ease, width 0.3s ease;
+    }
+
+    .vehicle-slider-custom-indicators .active-dot {
+        background-color: #424D07;
+        width: 16px; /* Tamaño mayor para el dot activo */
+        opacity: 1;
+    }
+
+    .vehicle-custom-dot:hover {
+        opacity: 0.8;
     }
 }

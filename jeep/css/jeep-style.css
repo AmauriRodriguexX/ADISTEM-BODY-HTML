@@ -1,0 +1,115 @@
+@font-face {
+     font-family: 'Roboto';
+     src: url('../fonts/Roboto-Regular.ttf') format('truetype');
+     font-weight: 400;
+     font-style: normal;
+}
+
+@font-face {
+     font-family: 'Roboto';
+     src: url('../fonts/Roboto-Medium.ttf') format('truetype');
+     font-weight: 500;
+     font-style: normal;
+}
+
+@font-face {
+     font-family: 'Roboto';
+     src: url('../fonts/Roboto-Bold.ttf') format('truetype');
+     font-weight: 700;
+     font-style: normal;
+}
+
+body {
+     font-family: 'Roboto', sans-serif;
+}
+
+h1 {
+     font-family: 'Roboto', sans-serif;
+     font-size: 32px;
+     font-weight: 700;
+}
+
+@media (max-width: 768px) {
+     h1 {
+          font-size: 24px;
+          text-align: center !important;
+     }
+}
+
+h2 {
+     font-family: 'Roboto', sans-serif;
+     font-size: 28px;
+     font-weight: 500;
+     /* Medium */
+}
+
+h3 {
+     font-family: 'Roboto', sans-serif;
+     font-size: 24px;
+     font-weight: 500;
+     /* Medium */
+}
+
+h4 {
+     font-family: 'Roboto', sans-serif;
+     font-size: 20px;
+     font-weight: 400;
+     /* Regular */
+}
+
+h5 {
+     font-family: 'Roboto', sans-serif;
+     font-size: 18px;
+     font-weight: 400;
+     /* Regular */
+}
+
+h6 {
+     font-family: 'Roboto', sans-serif;
+     font-size: 16px;
+     font-weight: 400;
+     /* Regular */
+}
+
+p {
+     font-family: 'Roboto', sans-serif;
+     font-size: 15px;
+     font-weight: 400;
+     /* Regular */
+}
+
+.vichle-text-01 {
+     text-align: center;
+     font-size: 15px;
+     letter-spacing: 0px;
+     color: #000000;
+     margin-bottom: 0px;
+}
+
+.vichle-text-02 {
+     text-align: center;
+     font-size: 18px;
+     letter-spacing: 0px;
+     color: #000000;
+     margin-top: 0px;
+}
+
+.zoom-in {
+     transition: transform 0.3s ease;
+     /* Añade una transición suave */
+}
+
+.zoom-in:hover {
+     transform: scale(1.1);
+     /* Aumenta el tamaño al 120% en hover */
+}
+
+
+.text-jeep {
+     color: #424D07;
+}
+
+.registered {
+     font-size: 20px;
+     vertical-align: -0.2em;
+}
