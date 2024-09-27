@@ -174,7 +174,7 @@
     .vehicle-slider-custom-indicators {
         position: absolute;
         bottom: -16px;
-        left: 8%;
+        left: 17%;
         transform: translateX(-50%);
         display: flex;
         justify-content: center;
