@@ -89,3 +89,19 @@
         height: 16px;
     }
 }
+
+
+/* Ocultar la versión móvil por defecto */
+.mobile-slider {
+    display: none;
+}
+
+/* Mostrar la versión móvil en pantallas pequeñas */
+@media (max-width: 768px) {
+    .desktop-slider {
+        display: none;
+    }
+    .mobile-slider {
+        display: block;
+    }
+}
