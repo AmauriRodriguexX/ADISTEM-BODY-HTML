@@ -1,0 +1,91 @@
+/* Estilos generales del slider */
+.custom-carousel {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: auto;
+    max-height: 500px;
+    background-color: #000;
+}
+
+.custom-carousel-inner {
+    display: flex;
+    transition: transform 1s ease;
+    height: 100%;
+}
+
+.custom-carousel-item {
+    min-width: 100%;
+    height: auto;
+    display: none;
+    opacity: 0;
+    transform: translateX(20px) scale(0.95);
+    transition: opacity 1s ease, transform 1s ease;
+}
+
+.active-slide {
+    display: block;
+    opacity: 1;
+    transform: translateX(0) scale(1);
+}
+
+.custom-carousel-item img {
+    object-fit: contain; /* Asegura que la imagen se ajuste dentro del contenedor */
+    width: 100%;
+    height: auto;
+    max-height: 500px;
+    margin: 0 auto;
+    background-color: #000;
+    transition: transform 1s ease;
+}
+
+.custom-carousel-indicators {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 5px 15px;
+    border-radius: 25px;
+    z-index: 10;
+}
+
+.custom-carousel-indicators span {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    background-color: transparent;
+    border: 2px solid #FFFFFF;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.active-indicator {
+    background-color: #424D07 !important;
+    border-color: #424D07 !important;
+}
+
+/* Estilos específicos para dispositivos móviles */
+@media (max-width: 768px) {
+    .custom-carousel {
+        max-height: 400px;
+    }
+
+    .custom-carousel-item img {
+        max-height: 400px;
+    }
+
+    .custom-carousel-indicators {
+        bottom: 10px;
+        padding: 3px 8px;
+        gap: 6px;
+    }
+
+    .custom-carousel-indicators span {
+        width: 10px;
+        height: 10px;
+    }
+}
