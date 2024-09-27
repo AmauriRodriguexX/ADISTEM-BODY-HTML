@@ -30,7 +30,7 @@
 }
 
 .custom-carousel-item img {
-    object-fit: contain; /* Asegura que la imagen se ajuste dentro del contenedor */
+    object-fit: cover; /* Asegura que la imagen se ajuste dentro del contenedor */
     width: 100%;
     height: auto;
     max-height: 500px;
@@ -47,8 +47,8 @@
     display: flex;
     justify-content: center;
     gap: 10px;
-    background: rgba(0, 0, 0, 0.7);
-    padding: 5px 15px;
+    background: rgb(0 0 0 / 81%);
+    padding: 9px 30px;
     border-radius: 25px;
     z-index: 10;
 }
@@ -71,11 +71,11 @@
 /* Estilos específicos para dispositivos móviles */
 @media (max-width: 768px) {
     .custom-carousel {
-        max-height: 400px;
+        max-height: 550px;
     }
 
     .custom-carousel-item img {
-        max-height: 400px;
+        max-height: 550px;
     }
 
     .custom-carousel-indicators {
@@ -85,7 +85,7 @@
     }
 
     .custom-carousel-indicators span {
-        width: 10px;
-        height: 10px;
+        width: 16px;
+        height: 16px;
     }
 }
