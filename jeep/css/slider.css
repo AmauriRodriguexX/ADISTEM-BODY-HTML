@@ -3,7 +3,7 @@
     overflow: hidden;
     width: 100%;
     height: auto;
-    max-height: 500px;
+    max-height: 600px;
     background-color: #000;
 }
 
@@ -32,7 +32,7 @@
     object-fit: cover; 
     width: 100%;
     height: auto;
-    max-height: 500px;
+    max-height: 600px;
     margin: 0 auto;
     background-color: #000;
     transition: transform 1s ease;
@@ -188,7 +188,7 @@
         display: inline-block;
         width: 8px; 
         height: 8px; 
-        background-color: #A2B91C;
+        background-color: #919191;
         border-radius: 50%; 
         cursor: pointer;
         opacity: 0.6;
