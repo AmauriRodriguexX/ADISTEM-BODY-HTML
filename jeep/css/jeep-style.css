@@ -147,20 +147,6 @@ p {
      color: #fff;
 }
 
-.btn-section {
-     display: flex;
-     justify-content: center;
-     align-items: center;
-
-}
-.btn-check:checked + .btn-success:focus, .btn-check:active + .btn-success:focus, .btn-success:active:focus, .btn-success.active:focus, .show > .btn-success.dropdown-toggle:focus {
-    box-shadow: 0 0 0 0.25rem #aeb39200;
-}
-.btn-check:checked + .btn-success, .btn-check:active + .btn-success, .btn-success:active, .btn-success.active, .show > .btn-success.dropdown-toggle {
-     color: #fff;
-     background-color: #3a4306;
-     border-color: #3a4306;
- }
 
 .jeep-btn {
      background-color: #424D07;
@@ -186,6 +172,7 @@ p {
 .jeep-btn:hover {
      background-color: #303804;
      border-color: #303804;
+     color: white;
 }
 
 
