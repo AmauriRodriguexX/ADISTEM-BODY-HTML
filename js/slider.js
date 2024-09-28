@@ -151,6 +151,25 @@ document.addEventListener("DOMContentLoaded", function () {
         const dragThreshold = 50;
         const transitionDuration = 300;
 
+        // Aseguramos que solo un slide y dot estén activos
+        slides.forEach((slide, index) => {
+            if (index !== currentSlide) {
+                slide.style.display = "none";
+                slide.style.opacity = "0";
+                slide.style.visibility = "hidden";
+                slide.classList.remove("active");
+            }
+        });
+
+        dots.forEach((dot, index) => {
+            if (index !== currentSlide) {
+                dot.classList.remove("active-dot");
+            }
+        });
+
+        slides[currentSlide].style.display = "block";
+        slides[currentSlide].style.opacity = "1";
+        slides[currentSlide].style.visibility = "visible";
         slides[currentSlide].classList.add("active");
         dots[currentSlide].classList.add("active-dot");
 
@@ -168,17 +187,23 @@ document.addEventListener("DOMContentLoaded", function () {
             if (isTransitioning) return;
             isTransitioning = true;
 
+            // Remover clases activas y ocultar el slide anterior
             slides[currentSlide].classList.remove("active");
             dots[currentSlide].classList.remove("active-dot");
 
+            slides[currentSlide].style.transition = `opacity ${transitionDuration}ms ease`;
+            slides[currentSlide].style.opacity = "0";
+            slides[currentSlide].style.visibility = "hidden";
+            slides[currentSlide].style.display = "none";
+
+            // Actualizar al nuevo slide
             currentSlide = (newIndex + slides.length) % slides.length;
 
+            slides[currentSlide].style.display = "block";
+            slides[currentSlide].style.opacity = "1";
+            slides[currentSlide].style.visibility = "visible";
             slides[currentSlide].classList.add("active");
             dots[currentSlide].classList.add("active-dot");
-
-            slides[currentSlide].style.transition = `opacity ${transitionDuration}ms ease, transform ${transitionDuration}ms ease`;
-            slides[currentSlide].style.opacity = "1";
-            slides[currentSlide].style.transform = "translateX(0) scale(1)";
 
             setTimeout(() => {
                 isTransitioning = false;
@@ -228,6 +253,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     initSlider2();
 });
+
 
 
 
