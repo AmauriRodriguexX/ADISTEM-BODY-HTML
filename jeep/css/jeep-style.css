@@ -225,8 +225,7 @@ p {
 
 .form-control,
 .form-select {
-     background-color: #F4F4F4;
-    
+     background-color: #F4F4F4 !important;
      border: none;
      padding: 0.5rem;
      border-radius: 5px;
