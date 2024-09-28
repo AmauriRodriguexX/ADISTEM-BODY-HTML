@@ -28,6 +28,13 @@
     transform: translateX(0) scale(1);
 }
 
+
+.active-slide {
+    opacity: 1;
+    transform: translateX(0) scale(1);
+    z-index: 1; /* Asegúrate de que el slide activo esté encima */
+}
+
 .custom-carousel-item img {
     object-fit: cover; 
     width: 100%;
@@ -119,6 +126,16 @@
     
 }
 
+.carousel-item {
+    transition: none !important; /* Desactiva cualquier animación de Bootstrap */
+}
+
+/* Agrega la transición deseada para tus slides */
+.custom-carousel-item.active {
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    opacity: 1;
+    transform: translateX(0) scale(1);
+}
 
 .mobile-slider .custom-carousel-indicators {
     position: absolute;
