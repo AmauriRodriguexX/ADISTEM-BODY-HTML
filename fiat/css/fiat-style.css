@@ -334,12 +334,20 @@ p {
 }
 
 .custom-card {
-     background-color: #fff;
-     border: none;
-     border-radius: 10px;
-     padding: 32px !important;
-     box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    border: none;
+    border-radius: 10px;
+    padding: 32px !important;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
 }
+
+@media (max-width: 767px) {
+    .custom-card {
+        padding-right: 24px !important;
+        padding-left: 24px !important;
+    }
+}
+
 
 .card-title {
      font-size: 1.8rem;
