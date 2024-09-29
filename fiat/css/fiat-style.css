@@ -57,6 +57,7 @@ h1 {
      font-weight: 700;
      font-style: italic;
      text-align: left;
+     text-transform: uppercase;
 }
 
 @media (max-width: 768px) {
@@ -70,12 +71,14 @@ h2 {
      font-family: 'Roboto', sans-serif;
      font-size: 28px;
      font-weight: 500;
+     font-style: italic;
 }
 
 h3 {
      font-family: 'Roboto', sans-serif;
      font-size: 24px;
      font-weight: 500;
+     font-style: italic;
 }
 
 h4 {
@@ -141,7 +144,7 @@ p {
 }
 
 .registered {
-     font-size: 32px;
+     font-size: 24px;
      vertical-align: -0.3em;
 }
 
@@ -171,8 +174,8 @@ p {
 
 
 .jeep-btn {
-     background-color: #424D07;
-     border-color: #424D07;
+     background-color: #FF1530;
+     border-color: #FF1530;
      border-radius: 25px;
      width: 264px;
      color: white;
@@ -192,8 +195,8 @@ p {
 
 
 .jeep-btn:hover {
-     background-color: #303804;
-     border-color: #303804;
+     background-color: #000000;
+     border-color: #000000;
      color: white;
 }
 
@@ -570,3 +573,35 @@ p {
      background-repeat: no-repeat;
      padding-top: 48px;
 }
+
+hr.fiat-hr {
+    border: none;
+    height: 3px; 
+    background-color: #ff1a3c;
+    width: 197px; 
+    margin: 0; 
+}
+
+hr.fiat-hr-01 {
+    border: none;
+    height: 3px;
+    background-color: #ffffff;
+    width: 197px;
+    margin: 0;
+    box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.2); /* Añade una sombra sutil */
+}
+
+
+.section-fiat-bk{
+     background-color: #FF1530;
+}
+
+
+.image-right {
+     width: 180px; 
+     position: relative;
+     float: right; 
+     margin: 0; 
+     margin-right: 24px;
+     transform: translate(0px, 32px);
+ }

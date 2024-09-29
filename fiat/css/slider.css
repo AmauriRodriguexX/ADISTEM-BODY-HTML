@@ -192,7 +192,7 @@
     /* Dots personalizados para el slider móvil */
     .vehicle-slider-custom-indicators {
         position: absolute;
-        bottom: -16px;
+        bottom: -30px;
         left: 18%;
         transform: translateX(-50%);
         display: flex;
