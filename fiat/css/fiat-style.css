@@ -40,6 +40,12 @@
      font-style: normal;
 }
 
+svg {
+     font-family: 'Roboto', sans-serif !important;
+ }
+ 
+ 
+
 body {
      font-family: 'Roboto', sans-serif;
      overflow-x: hidden;
@@ -72,6 +78,13 @@ h2 {
      font-size: 28px;
      font-weight: 500;
      font-style: italic;
+     text-transform: uppercase;
+}
+
+@media (max-width: 768px) {
+     h2 {
+          font-size: 24px;
+     }
 }
 
 h3 {
@@ -105,6 +118,40 @@ p {
      font-weight: 400;
 }
 
+.h2-regular {
+    font-size: 32px; 
+    font-style: normal;
+    font-weight: 700;
+}
+
+/* Ajuste para pantallas móviles */
+@media (max-width: 767px) {
+    .h2-regular {
+        font-size: 24px;
+    }
+}
+
+
+.h2-italic-regular {
+    font-size: 32px; 
+    font-style: italic;
+    font-weight: 400;
+}
+
+/* Ajuste para pantallas móviles */
+@media (max-width: 767px) {
+    .h2-italic-regular {
+        font-size: 24px;
+    }
+}
+
+
+ 
+.big-text {
+     font-size: 54px;
+     white-space: nowrap;
+
+}
 
 
 @media (max-width: 768px) {
@@ -144,7 +191,7 @@ p {
 }
 
 .registered {
-     font-size: 24px;
+     font-size: 18px;
      vertical-align: -0.3em;
 }
 
@@ -173,7 +220,7 @@ p {
 }
 
 
-.jeep-btn {
+.fiat-btn {
      background-color: #FF1530;
      border-color: #FF1530;
      border-radius: 25px;
@@ -182,11 +229,11 @@ p {
      cursor: pointer;
      transition: background-color 0.3s, border-color 0.3s;
      padding: 8px 40px;
-     height: 53px;
+     height: 41px;
 }
 
 @media (max-width: 768px) {
-     .jeep-btn {
+     .fiat-btn {
           width: 100%;
           padding: 8px 0;
           text-align: center;
@@ -194,12 +241,39 @@ p {
 }
 
 
-.jeep-btn:hover {
+.fiat-btn:hover {
      background-color: #000000;
      border-color: #000000;
      color: white;
 }
 
+
+.fiat-btn-02 {
+     background-color: #ffffff;
+     border-color: #ffffff;
+     border-radius: 25px;
+     width: 264px;
+     color: rgb(0, 0, 0);
+     cursor: pointer;
+     transition: background-color 0.3s, border-color 0.3s;
+     padding: 8px 40px;
+     height: 41px;
+}
+
+@media (max-width: 768px) {
+     .fiat-btn-02 {
+          width: 100%;
+          padding: 8px 0;
+          text-align: center;
+     }
+}
+
+
+.fiat-btn-02:hover {
+     background-color: #ffffff96;
+     border-color: #ffffff96;
+     color: #000000;
+}
 
 .contenido-promocion-overlay {
      top: 50%;
@@ -263,8 +337,6 @@ p {
      background-color: #fff;
      border: none;
      border-radius: 10px;
-     margin-left: 24px !important;
-     margin-right: 24px !important;
      padding: 32px !important;
      box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
 }
@@ -272,8 +344,7 @@ p {
 .card-title {
      font-size: 1.8rem;
      font-weight: bold;
-     color: #424D07;
-     ;
+     color: #000000;
 }
 
 .custom-btn {
@@ -309,8 +380,8 @@ p {
 }
 
 .form-check-input:checked {
-     background-color: #424D07;
-     border-color: #424D07;
+     background-color: #FF1530;
+     border-color: #FF1530;
 }
 
 /* Estilos generales */
@@ -329,7 +400,7 @@ p {
      font-size: 1rem;
 }
 
-.cotizacion-jeep .jeep-btn {
+.cotizacion-jeep .fiat-btn {
      background-color: #4A7A16;
      color: #fff;
      border: none;
@@ -404,7 +475,7 @@ p {
 .title-form {
      font-size: 22px;
      font-weight: 700;
-     color: #424D07;
+     color: #020202;
 
 }
 
@@ -574,22 +645,25 @@ p {
      padding-top: 48px;
 }
 
+
 hr.fiat-hr {
-    border: none;
-    height: 3px; 
-    background-color: #ff1a3c;
-    width: 197px; 
-    margin: 0; 
-}
+     border: solid 1px #ff1a3c; 
+     height: 0;
+     background-color: #ff1a3c; 
+     width: 197px;
+     margin: 0; 
+     opacity: 1;
+ }
 
 hr.fiat-hr-01 {
-    border: none;
-    height: 3px;
-    background-color: #ffffff;
+    border: solid 1px #ffffff; 
+    height: 0; 
+    background-color: #ffffff; 
     width: 197px;
-    margin: 0;
-    box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.2); /* Añade una sombra sutil */
+    margin: 0; 
+    opacity: 1; 
 }
+
 
 
 .section-fiat-bk{
@@ -605,3 +679,24 @@ hr.fiat-hr-01 {
      margin-right: 24px;
      transform: translate(0px, 32px);
  }
+
+
+.image-right-02 {
+    width: 252px;
+    position: relative;
+    left: 35%; 
+    margin: 0;
+    transform: translate(0, 42px);
+}
+
+@media (max-width: 1000px) {
+    .image-right-02 {
+        width: auto; /* Cambia el ancho a auto cuando la pantalla sea menor o igual a 1000px */
+        left: 0; /* Ajusta el posicionamiento si es necesario */
+    }
+}
+
+
+.rounded {
+    border-radius: 8px !important;
+}
