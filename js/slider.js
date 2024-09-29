@@ -1,12 +1,12 @@
 document.addEventListener("DOMContentLoaded", function () {
     function initSlider(sliderId) {
         const slider = document.getElementById(sliderId);
-        if (!slider) return; // Verifica si el slider existe
+        if (!slider) return; 
 
-        const slides = slider.querySelectorAll(".custom-carousel-item");
-        const dots = slider.querySelectorAll(".custom-carousel-indicators span");
+        const slides = Array.from(slider.querySelectorAll(".custom-carousel-item"));
+        const dots = Array.from(slider.querySelectorAll(".custom-carousel-indicators span"));
 
-        if (slides.length === 0 || dots.length === 0) {
+        if (!slides.length || !dots.length) {
             console.error(`No se encontraron slides o dots en el slider ${sliderId}. Verifica tu HTML.`);
             return;
         }
@@ -14,48 +14,46 @@ document.addEventListener("DOMContentLoaded", function () {
         let currentSlide = 0;
         let startX = 0;
         let isDragging = false;
-        let isTransitioning = false; // Para evitar múltiples desplazamientos simultáneos
-        const dragThreshold = 50; // Definir umbral para arrastre
+        let isTransitioning = false;
+        const dragThreshold = 50;
+
         slides[currentSlide].classList.add("active-slide");
         dots[currentSlide].classList.add("active-indicator");
 
         let slideInterval = setInterval(nextSlide, 6000);
 
         function nextSlide() {
-            if (!isTransitioning) changeSlide(currentSlide + 1);
+            changeSlide((currentSlide + 1) % slides.length);
         }
 
         function previousSlide() {
-            if (!isTransitioning) changeSlide(currentSlide - 1);
+            changeSlide((currentSlide - 1 + slides.length) % slides.length);
         }
 
         function changeSlide(newIndex) {
-            if (isTransitioning) return; // Prevenir cambios mientras hay una transición activa
+            if (isTransitioning || currentSlide === newIndex) return; 
 
             isTransitioning = true;
-            slides[currentSlide].style.transition = "opacity 0.8s ease";
+            slides[currentSlide].classList.remove("active-slide");
+            dots[currentSlide].classList.remove("active-indicator");
+
+            currentSlide = newIndex;
+
             slides[currentSlide].style.opacity = "0";
+            slides[currentSlide].offsetWidth; // Forzar reflow
+            slides[currentSlide].classList.add("active-slide");
+            dots[currentSlide].classList.add("active-indicator");
 
-            setTimeout(() => {
-                slides[currentSlide].classList.remove("active-slide");
-                dots[currentSlide].classList.remove("active-indicator");
+            slides[currentSlide].style.transition = "opacity 0.8s ease";
+            slides[currentSlide].style.opacity = "1";
 
-                currentSlide = (newIndex + slides.length) % slides.length;
-
-                slides[currentSlide].classList.add("active-slide");
-                dots[currentSlide].classList.add("active-indicator");
-
-                slides[currentSlide].style.transition = "opacity 0.8s ease";
-                slides[currentSlide].style.opacity = "1";
-
-                isTransitioning = false; // Permitir nuevos desplazamientos
-            }, 300);
+            requestAnimationFrame(() => {
+                setTimeout(() => {
+                    isTransitioning = false;
+                }, 800);
+            });
 
             resetInterval();
-        }
-
-        function goToSlide(index) {
-            if (!isTransitioning) changeSlide(index);
         }
 
         function resetInterval() {
@@ -64,57 +62,53 @@ document.addEventListener("DOMContentLoaded", function () {
         }
 
         dots.forEach((dot, index) => {
-            dot.addEventListener("click", function () {
-                goToSlide(index);
+            dot.addEventListener("click", (e) => {
+                e.preventDefault(); // Evitar el desplazamiento automático
+                e.stopPropagation(); // Detener la propagación del evento
+                changeSlide(index);
             });
         });
 
-        slider.addEventListener("mousedown", startDrag);
-        slider.addEventListener("mouseup", endDrag);
-
-        slider.addEventListener("touchstart", startDrag);
-        slider.addEventListener("touchend", endDrag);
-
-        function startDrag(e) {
+        function handleDragStart(e) {
+            if (isTransitioning) return;
             isDragging = true;
             startX = e.type.includes('mouse') ? e.clientX : e.touches[0].clientX;
         }
 
-        function endDrag(e) {
-            if (!isDragging || isTransitioning) return; // No permitir cambios mientras está en transición
+        function handleDragEnd(e) {
+            if (!isDragging) return;
             isDragging = false;
             const endX = e.type.includes('mouse') ? e.clientX : e.changedTouches[0].clientX;
             const distanceDragged = startX - endX;
 
-            if (distanceDragged > dragThreshold) {
-                nextSlide();
-            } else if (distanceDragged < -dragThreshold) {
-                previousSlide();
+            if (Math.abs(distanceDragged) > dragThreshold) {
+                distanceDragged > 0 ? nextSlide() : previousSlide();
             }
         }
 
-        slides.forEach((slide) => {
-            const img = slide.querySelector('img');
-            if (img) {
-                img.addEventListener("mousedown", startDrag);
-                img.addEventListener("mouseup", endDrag);
-                img.addEventListener("touchstart", startDrag);
-                img.addEventListener("touchend", endDrag);
-            }
-        });
+        slider.addEventListener("mousedown", handleDragStart);
+        slider.addEventListener("mouseup", handleDragEnd);
+        slider.addEventListener("touchstart", handleDragStart);
+        slider.addEventListener("touchend", handleDragEnd);
+        
+        // Desactivar el enfoque de los elementos
+        slider.setAttribute('tabindex', '-1');
+        slides.forEach(slide => slide.setAttribute('tabindex', '-1'));
+        dots.forEach(dot => dot.setAttribute('tabindex', '-1'));
     }
 
     function initSlidersBasedOnViewport() {
         const desktopSlider = document.getElementById('desktopSlider');
         const mobileSlider = document.getElementById('mobileSlider');
+        const isMobile = window.innerWidth <= 768;
 
-        if (window.innerWidth <= 768) {
-            if (desktopSlider) desktopSlider.style.display = 'none';
-            if (mobileSlider) mobileSlider.style.display = 'block';
+        if (isMobile && mobileSlider) {
+            desktopSlider && (desktopSlider.style.display = 'none');
+            mobileSlider.style.display = 'block';
             initSlider('mobileSlider');
-        } else {
-            if (desktopSlider) desktopSlider.style.display = 'block';
-            if (mobileSlider) mobileSlider.style.display = 'none';
+        } else if (desktopSlider) {
+            desktopSlider.style.display = 'block';
+            mobileSlider && (mobileSlider.style.display = 'none');
             initSlider('desktopSlider');
         }
     }
@@ -122,6 +116,7 @@ document.addEventListener("DOMContentLoaded", function () {
     initSlidersBasedOnViewport();
     window.addEventListener('resize', initSlidersBasedOnViewport);
 });
+
 
 // Slider 2 optimización
 document.addEventListener("DOMContentLoaded", function () {
