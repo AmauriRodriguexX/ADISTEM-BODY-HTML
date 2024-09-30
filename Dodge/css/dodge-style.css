@@ -63,7 +63,12 @@ body {
      }
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
      font-family: 'BarlowCondensed-Bold', sans-serif !important;
      text-transform: uppercase;
      font-style: normal !important;
@@ -121,35 +126,35 @@ p {
 }
 
 .h2-regular {
-    font-size: 32px; 
-    font-style: normal;
-    font-weight: 700;
+     font-size: 32px;
+     font-style: normal;
+     font-weight: 700;
 }
 
 
 /* Ajuste para pantallas móviles */
 @media (max-width: 767px) {
-    .h2-regular {
-        font-size: 24px;
-    }
+     .h2-regular {
+          font-size: 24px;
+     }
 }
 
 
 .h2-italic-regular {
-    font-size: 32px; 
-    font-style: italic;
-    font-weight: 400;
+     font-size: 32px;
+     font-style: italic;
+     font-weight: 400;
 }
 
 /* Ajuste para pantallas móviles */
 @media (max-width: 767px) {
-    .h2-italic-regular {
-        font-size: 24px;
-    }
+     .h2-italic-regular {
+          font-size: 24px;
+     }
 }
 
 
- 
+
 .big-text {
      font-size: 54px;
      white-space: nowrap;
@@ -223,7 +228,7 @@ p {
 }
 
 
-.fiat-btn {
+.dodge-btn {
      background-color: #D50000;
      border-color: #D50000;
      border-radius: 25px;
@@ -236,7 +241,7 @@ p {
 }
 
 @media (max-width: 768px) {
-     .fiat-btn {
+     .dodge-btn {
           width: 100%;
           padding: 8px 0;
           text-align: center;
@@ -245,14 +250,14 @@ p {
 }
 
 
-.fiat-btn:hover {
+.dodge-btn:hover {
      background-color: #000000;
      border-color: #000000;
      color: white;
 }
 
 
-.fiat-btn-02 {
+.dodge-btn-02 {
      background-color: #ffffff;
      border-color: #ffffff;
      border-radius: 25px;
@@ -265,7 +270,7 @@ p {
 }
 
 @media (max-width: 768px) {
-     .fiat-btn-02 {
+     .dodge-btn-02 {
           width: 100%;
           padding: 8px 0;
           text-align: center;
@@ -274,7 +279,7 @@ p {
 }
 
 
-.fiat-btn-02:hover {
+.dodge-btn-02:hover {
      background-color: #ffffff96;
      border-color: #ffffff96;
      color: #000000;
@@ -310,6 +315,37 @@ p {
 }
 
 
+.contenido-promocion-overlay-right {
+     top: 50%;
+     right: 5%;
+     /* Posición inicial a la derecha */
+     transform: translate(0, -50%);
+     background-color: rgb(0 0 0 / 83%);
+     padding: 50px;
+     border-radius: 8px;
+     text-align: left;
+     width: 458px;
+}
+
+/* Ajustar para pantallas más pequeñas */
+@media (max-width: 768px) {
+     .contenido-promocion-overlay-right {
+          right: 2%;
+          /* Reducir el margen derecho en pantallas pequeñas */
+          width: 458px;
+          /* Ajustar el ancho si es necesario */
+     }
+}
+
+/* Ajustar para pantallas muy grandes */
+@media (min-width: 1200px) {
+     .contenido-promocion-overlay-right {
+          right: 10%;
+          /* Ajustar la posición a la derecha para pantallas más grandes */
+     }
+}
+
+
 .img-rounded {
      border-radius: 8px;
 }
@@ -339,20 +375,22 @@ p {
 }
 
 .custom-card {
-    background-color: #fff;
-    border: none;
-    border-radius: 10px;
-    padding: 32px !important;
-    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
-    margin-top: 60px !important;
-    margin-bottom: 80px !important;
+     background-color: #fff;
+     border: none;
+     border-radius: 10px;
+     margin-left: 24px !important;
+     margin-right: 24px !important;
+     padding: 32px !important;
+     box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+     margin-top: 60px !important;
+     margin-bottom: 80px !important;
 }
 
 @media (max-width: 767px) {
-    .custom-card {
-        padding-right: 24px !important;
-        padding-left: 24px !important;
-    }
+     .custom-card {
+          padding-right: 24px !important;
+          padding-left: 24px !important;
+     }
 }
 
 
@@ -491,6 +529,7 @@ p {
      font-size: 22px;
      font-weight: 700;
      color: #020202;
+     font-family: 'BarlowCondensed-Bold', sans-serif !important;
 
 }
 
@@ -658,74 +697,89 @@ p {
 
 
 hr.fiat-hr {
-     border: solid 1px #ff1a3c; 
+     border: solid 1px #ff1a3c;
      height: 0;
-     background-color: #ff1a3c; 
+     background-color: #ff1a3c;
      width: 197px;
-     margin: 0; 
+     margin: 0;
      opacity: 1;
- }
+}
 
 hr.fiat-hr-01 {
-    border: solid 1px #ffffff; 
-    height: 0; 
-    background-color: #ffffff; 
-    width: 197px;
-    margin: 0; 
-    opacity: 1; 
+     border: solid 1px #ffffff;
+     height: 0;
+     background-color: #ffffff;
+     width: 197px;
+     margin: 0;
+     opacity: 1;
 }
 
 
 
-.section-fiat-bk{
+.section-fiat-bk {
      background-color: #D50000;
 }
 
 
 .image-right {
-     width: 180px; 
+     width: 180px;
      position: relative;
-     float: right; 
-     margin: 0; 
+     float: right;
+     margin: 0;
      margin-right: 24px;
      transform: translate(0px, 32px);
- }
+}
 
 
 .image-right-02 {
-    width: 252px;
-    position: relative;
-    left: 35%; 
-    margin: 0;
-    transform: translate(0, 42px);
+     width: 252px;
+     position: relative;
+     left: 35%;
+     margin: 0;
+     transform: translate(0, 42px);
 }
 
 @media (max-width: 1000px) {
-    .image-right-02 {
-        width: auto; /* Cambia el ancho a auto cuando la pantalla sea menor o igual a 1000px */
-        left: 0; /* Ajusta el posicionamiento si es necesario */
-    }
+     .image-right-02 {
+          width: auto;
+          /* Cambia el ancho a auto cuando la pantalla sea menor o igual a 1000px */
+          left: 0;
+          /* Ajusta el posicionamiento si es necesario */
+     }
 }
 
 
 .rounded {
-    border-radius: 8px !important;
+     border-radius: 8px !important;
 }
 
 .privacy-title {
      font-family: 'Roboto', sans-serif !important;
      font-style: normal !important;
- }
- 
-.dondge-icon-card {
-    width: 100%;
-    height: 100px;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: contain; 
-    margin-bottom: 100px !important;
 }
 
+.dondge-icon-card {
+     width: 100%;
+     height: 100px;
+     background-position: center;
+     background-repeat: no-repeat;
+     background-size: contain;
+     margin-bottom: 100px !important;
+}
+
+/* Estilo específico para mobile */
+@media (max-width: 768px) {
+
+     /* Puedes ajustar el tamaño según lo necesites */
+     .dondge-icon-card {
+          padding-bottom: 39%;
+     }
+}
+
+
+.dodge-icon-move-top {
+     transform: translate(-6px, -47px);
+}
 
 
 /* --------------------------------
