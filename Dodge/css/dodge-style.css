@@ -1,4 +1,25 @@
 @font-face {
+     font-family: 'DMSans';
+     src: url('../fonts/DMSans-Bold.ttf') format('truetype');
+     font-weight: 700;
+     font-style: normal;
+}
+
+@font-face {
+     font-family: 'DMSans';
+     src: url('../fonts/DMSans-BoldItalic.ttf') format('truetype');
+     font-weight: 700;
+     font-style: italic;
+}
+
+@font-face {
+     font-family: 'DMSans';
+     src: url('../fonts/DMSans-Italic.ttf') format('truetype');
+     font-weight: 400;
+     font-style: italic;
+}
+
+@font-face {
      font-family: 'Roboto';
      src: url('../fonts/Roboto-Regular.ttf') format('truetype');
      font-weight: 400;
@@ -19,23 +40,30 @@
      font-style: normal;
 }
 
+svg {
+     font-family: 'Roboto', sans-serif !important;
+}
+
 body {
      font-family: 'Roboto', sans-serif;
-     margin: -12px;
      overflow-x: hidden;
- }
- 
- @media (max-width: 768px) {
+}
+
+@media (max-width: 768px) {
      body {
-         margin: 0px;
+          margin: 0px;
      }
- }
- 
+}
+
+h1, h2, h3, h4, h5, h6 {
+     font-family: 'DMSans', sans-serif;
+     text-transform: uppercase;
+}
 
 h1 {
-     font-family: 'Roboto', sans-serif;
      font-size: 32px;
      font-weight: 700;
+     font-style: italic;
      text-align: left;
 }
 
@@ -47,52 +75,86 @@ h1 {
 }
 
 h2 {
-     font-family: 'Roboto', sans-serif;
      font-size: 28px;
      font-weight: 500;
-     /* Medium */
+     font-style: italic;
+}
+
+@media (max-width: 768px) {
+     h2 {
+          font-size: 24px;
+     }
 }
 
 h3 {
-     font-family: 'Roboto', sans-serif;
      font-size: 24px;
      font-weight: 500;
-     /* Medium */
+     font-style: italic;
 }
 
 h4 {
-     font-family: 'Roboto', sans-serif;
      font-size: 20px;
      font-weight: 400;
-     /* Regular */
 }
 
 h5 {
-     font-family: 'Roboto', sans-serif;
      font-size: 18px;
      font-weight: 400;
-     /* Regular */
 }
 
 h6 {
-     font-family: 'Roboto', sans-serif;
      font-size: 16px;
      font-weight: 400;
-     /* Regular */
 }
 
 p {
      font-family: 'Roboto', sans-serif;
      font-size: 15px;
      font-weight: 400;
-     /* Regular */
 }
+
+.h2-regular {
+    font-size: 32px; 
+    font-style: normal;
+    font-weight: 700;
+}
+
+
+/* Ajuste para pantallas móviles */
+@media (max-width: 767px) {
+    .h2-regular {
+        font-size: 24px;
+    }
+}
+
+
+.h2-italic-regular {
+    font-size: 32px; 
+    font-style: italic;
+    font-weight: 400;
+}
+
+/* Ajuste para pantallas móviles */
+@media (max-width: 767px) {
+    .h2-italic-regular {
+        font-size: 24px;
+    }
+}
+
+
+ 
+.big-text {
+     font-size: 54px;
+     white-space: nowrap;
+
+}
+
 
 @media (max-width: 768px) {
      p {
-         font-size: 16px;
+          font-size: 16px;
      }
- }
+}
 
 
 .vichle-text-01 {
@@ -120,13 +182,13 @@ p {
 }
 
 
-.text-jeep {
-     color: #424D07;
+.text-fiat {
+     color: #D50000;
 }
 
 .registered {
-     font-size: 15px;
-     vertical-align: -0.2em;
+     font-size: 18px;
+     vertical-align: -0.3em;
 }
 
 .registered-2 {
@@ -154,9 +216,9 @@ p {
 }
 
 
-.jeep-btn {
-     background-color: #424D07;
-     border-color: #424D07;
+.fiat-btn {
+     background-color: #D50000;
+     border-color: #D50000;
      border-radius: 25px;
      width: 264px;
      color: white;
@@ -164,24 +226,52 @@ p {
      transition: background-color 0.3s, border-color 0.3s;
      padding: 8px 40px;
      height: 41px;
- }
- 
- @media (max-width: 768px) {
-     .jeep-btn {
-         width: 100%;
-         padding: 8px 0;
-         text-align: center;
-         height: 53px;
-     }
- }
- 
+}
 
-.jeep-btn:hover {
-     background-color: #303804;
-     border-color: #303804;
+@media (max-width: 768px) {
+     .fiat-btn {
+          width: 100%;
+          padding: 8px 0;
+          text-align: center;
+          height: 53px;
+     }
+}
+
+
+.fiat-btn:hover {
+     background-color: #000000;
+     border-color: #000000;
      color: white;
 }
 
+
+.fiat-btn-02 {
+     background-color: #ffffff;
+     border-color: #ffffff;
+     border-radius: 25px;
+     width: 264px;
+     color: rgb(0, 0, 0);
+     cursor: pointer;
+     transition: background-color 0.3s, border-color 0.3s;
+     padding: 8px 40px;
+     height: 41px;
+}
+
+@media (max-width: 768px) {
+     .fiat-btn-02 {
+          width: 100%;
+          padding: 8px 0;
+          text-align: center;
+          height: 53px;
+     }
+}
+
+
+.fiat-btn-02:hover {
+     background-color: #ffffff96;
+     border-color: #ffffff96;
+     color: #000000;
+}
 
 .contenido-promocion-overlay {
      top: 50%;
@@ -242,22 +332,27 @@ p {
 }
 
 .custom-card {
-     background-color: #fff;
-     border: none;
-     border-radius: 10px;
-     margin-left: 24px !important;
-     margin-right: 24px !important;
-     padding: 32px !important;
-     box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
-     margin-top: 60px !important;
-     margin-bottom: 80px !important;
+    background-color: #fff;
+    border: none;
+    border-radius: 10px;
+    padding: 32px !important;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+    margin-top: 60px !important;
+    margin-bottom: 80px !important;
 }
+
+@media (max-width: 767px) {
+    .custom-card {
+        padding-right: 24px !important;
+        padding-left: 24px !important;
+    }
+}
+
 
 .card-title {
      font-size: 1.8rem;
      font-weight: bold;
-     color: #424D07;
-     ;
+     color: #000000;
 }
 
 .custom-btn {
@@ -293,8 +388,8 @@ p {
 }
 
 .form-check-input:checked {
-     background-color: #424D07;
-     border-color: #424D07;
+     background-color: #D50000;
+     border-color: #D50000;
 }
 
 /* Estilos generales */
@@ -313,7 +408,7 @@ p {
      font-size: 1rem;
 }
 
-.cotizacion-jeep .jeep-btn {
+.cotizacion-jeep .fiat-btn {
      background-color: #4A7A16;
      color: #fff;
      border: none;
@@ -388,7 +483,7 @@ p {
 .title-form {
      font-size: 22px;
      font-weight: 700;
-     color: #424D07;
+     color: #020202;
 
 }
 
@@ -400,150 +495,222 @@ p {
 
 /* Custom styles for the modal */
 .custom-modal-content {
-    background-color: #fff;
-    border-radius: 12px;
-    max-width: 900px;
-    box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.3);
-    max-height: 50vh; /* Altura máxima del modal */
-    overflow: hidden; /* Controlar el desplazamiento del contenido */
+     background-color: #fff;
+     border-radius: 12px;
+     max-width: 900px;
+     box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.3);
+     max-height: 50vh;
+     /* Altura máxima del modal */
+     overflow: hidden;
+     /* Controlar el desplazamiento del contenido */
 }
 
 .custom-modal-header {
-    background-color: #fff;
-    position: sticky;
-    top: 0;
-    z-index: 10;
-    padding-right: 32px;
-    display: flex;
-    justify-content: flex-end; /* Alinea el botón cerrar a la derecha */
+     background-color: #fff;
+     position: sticky;
+     top: 0;
+     z-index: 10;
+     padding-right: 32px;
+     display: flex;
+     justify-content: flex-end;
+     /* Alinea el botón cerrar a la derecha */
 }
 
 .modal-close-container .btn-close {
-    font-size: 14px;
-    background: none;
-    border: none;
-    color: #000;
-    font-weight: bold;
-    cursor: pointer;
+     font-size: 14px;
+     background: none;
+     border: none;
+     color: #000;
+     font-weight: bold;
+     cursor: pointer;
 }
 
 .custom-modal-body {
-    padding: 15px;
-    overflow-y: auto;
-    max-height: calc(80vh - 50px); /* Resta la altura de la cabecera */
+     padding: 15px;
+     overflow-y: auto;
+     max-height: calc(80vh - 50px);
+     /* Resta la altura de la cabecera */
 }
 
 .boxPrivacidad {
-    padding: 15px;
+     padding: 15px;
 }
 
 .boxPrivacidad h2 {
-    font-size: 1.5rem;
-    font-weight: bold;
-    margin-bottom: 15px;
-    text-align: center;
+     font-size: 1.5rem;
+     font-weight: bold;
+     margin-bottom: 15px;
+     text-align: center;
 }
 
 .boxPrivacidad p {
-    font-size: 14px;
-    text-align: justify;
+     font-size: 14px;
+     text-align: justify;
 }
 
 .modal-dialog {
-    margin: auto;
+     margin: auto;
 }
 
 .btn-close:hover {
-    color: #000;
-    text-decoration: underline;
+     color: #000;
+     text-decoration: underline;
 }
 
 /* Custom styles for the modal */
 .custom-modal-content {
      background-color: #fff;
      border-radius: 12px;
-     max-width: 1114px; 
+     max-width: 1114px;
      box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.3);
-     max-height: 50vh; 
-     overflow: hidden; 
- }
+     max-height: 50vh;
+     overflow: hidden;
+}
 
- /* mobile modal */
+/* mobile modal */
 @media (max-width: 576px) {
      .custom-modal-content {
-         width: 100%; 
-         height: 100%; 
-         border-radius: 0; 
-         max-width: none; 
-         max-height: none; 
+          width: 100%;
+          height: 100%;
+          border-radius: 0;
+          max-width: none;
+          max-height: none;
      }
- 
+
      .modal-dialog {
-         margin: 0; 
-         width: 100%; 
-         height: 100%; 
-         max-width: none; 
+          margin: 0;
+          width: 100%;
+          height: 100%;
+          max-width: none;
      }
-     
+
      .custom-modal-body {
-         max-height: calc(100vh - 50px) !important; 
-         overflow-y: auto; 
+          max-height: calc(100vh - 50px) !important;
+          overflow-y: auto;
      }
- }
+}
 
 .custom-modal-header {
-    background-color: #fff;
-    position: sticky;
-    top: 0;
-    z-index: 10;
-    padding-right: 75px;
-    display: flex;
-    justify-content: flex-end;
+     background-color: #fff;
+     position: sticky;
+     top: 0;
+     z-index: 10;
+     padding-right: 75px;
+     display: flex;
+     justify-content: flex-end;
 }
 
 .modal-close-container .btn-close {
-    font-size: 14px;
-    background: none;
-    border: none;
-    color: #000;
-    font-weight: bold;
-    cursor: pointer;
+     font-size: 14px;
+     background: none;
+     border: none;
+     color: #000;
+     font-weight: bold;
+     cursor: pointer;
 }
 
 .custom-modal-body {
-    padding: 15px;
-    overflow-y: auto;
-    max-height: calc(80vh - 50px); 
+     padding: 15px;
+     overflow-y: auto;
+     max-height: calc(80vh - 50px);
 }
 
 .boxPrivacidad {
-    padding: 15px;
+     padding: 15px;
 }
 
 .boxPrivacidad h2 {
-    font-size: 1.5rem;
-    font-weight: bold;
-    margin-bottom: 15px;
-    text-align: center;
+     font-size: 1.5rem;
+     font-weight: bold;
+     margin-bottom: 15px;
+     text-align: center;
 }
 
 .boxPrivacidad p {
-    font-size: 14px;
-    text-align: justify;
+     font-size: 14px;
+     text-align: justify;
 }
 
 .modal-dialog {
-    margin: auto;
+     margin: auto;
 }
 
 .btn-close:hover {
-    color: #000;
-    text-decoration: underline;
+     color: #000;
+     text-decoration: underline;
 }
 
 @media (min-width: 576px) {
-    .modal-dialog {
-        max-width: 1114px !important; 
-        margin: 1.75rem auto;
+     .modal-dialog {
+          max-width: 1114px !important;
+          margin: 1.75rem auto;
+     }
+}
+
+.main-bk-img {
+     background-size: contain;
+     background-repeat: no-repeat;
+     padding-top: 48px;
+}
+
+
+hr.fiat-hr {
+     border: solid 1px #ff1a3c; 
+     height: 0;
+     background-color: #ff1a3c; 
+     width: 197px;
+     margin: 0; 
+     opacity: 1;
+ }
+
+hr.fiat-hr-01 {
+    border: solid 1px #ffffff; 
+    height: 0; 
+    background-color: #ffffff; 
+    width: 197px;
+    margin: 0; 
+    opacity: 1; 
+}
+
+
+
+.section-fiat-bk{
+     background-color: #D50000;
+}
+
+
+.image-right {
+     width: 180px; 
+     position: relative;
+     float: right; 
+     margin: 0; 
+     margin-right: 24px;
+     transform: translate(0px, 32px);
+ }
+
+
+.image-right-02 {
+    width: 252px;
+    position: relative;
+    left: 35%; 
+    margin: 0;
+    transform: translate(0, 42px);
+}
+
+@media (max-width: 1000px) {
+    .image-right-02 {
+        width: auto; /* Cambia el ancho a auto cuando la pantalla sea menor o igual a 1000px */
+        left: 0; /* Ajusta el posicionamiento si es necesario */
     }
 }
+
+
+.rounded {
+    border-radius: 8px !important;
+}
+
+.privacy-title {
+     font-family: 'Roboto', sans-serif !important;
+     font-style: normal !important;
+ }
+ 

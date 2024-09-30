@@ -233,6 +233,7 @@ p {
           width: 100%;
           padding: 8px 0;
           text-align: center;
+          height: 53px;
      }
 }
 
@@ -261,6 +262,7 @@ p {
           width: 100%;
           padding: 8px 0;
           text-align: center;
+          height: 53px;
      }
 }
 
@@ -335,6 +337,8 @@ p {
     border-radius: 10px;
     padding: 32px !important;
     box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+    margin-top: 60px !important;
+    margin-bottom: 80px !important;
 }
 
 @media (max-width: 767px) {
@@ -704,3 +708,9 @@ hr.fiat-hr-01 {
 .rounded {
     border-radius: 8px !important;
 }
+
+.privacy-title {
+     font-family: 'Roboto', sans-serif !important;
+     font-style: normal !important;
+ }
+ 
