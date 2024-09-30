@@ -251,8 +251,8 @@ p {
 
 
 .dodge-btn:hover {
-     background-color: #000000;
-     border-color: #000000;
+     background-color: #BA0000;
+     border-color: #BA0000;
      color: white;
 }
 
@@ -779,6 +779,10 @@ hr.fiat-hr-01 {
 
 .dodge-icon-move-top {
      transform: translate(-6px, -47px);
+}
+
+.big-text-cta {
+     font-size: 32px;
 }
 
 
