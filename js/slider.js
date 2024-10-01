@@ -250,5 +250,41 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 
+// tabs js
+// Función para activar los tabs de forma independiente
+function activateTabs(containerSelector) {
+    const container = document.querySelector(containerSelector);
+    
+    if (container) {
+        const tabs = container.querySelectorAll('.tabs-rounded-ram-tab');
+        const contents = container.querySelectorAll('.tabs-rounded-ram-content');
+
+        tabs.forEach(tab => {
+            tab.addEventListener('click', function () {
+                // Eliminar la clase active de todos los botones dentro del contenedor
+                tabs.forEach(btn => btn.classList.remove('active-tab'));
+                
+                // Agregar la clase active al botón seleccionado
+                this.classList.add('active-tab');
+                
+                // Ocultar todos los contenidos dentro del contenedor
+                contents.forEach(content => content.classList.remove('active-content'));
+                
+                // Mostrar el contenido correspondiente al tab seleccionado
+                const tabContent = container.querySelector(`#${this.getAttribute('data-tab')}`);
+                if (tabContent) {
+                    tabContent.classList.add('active-content');
+                }
+            });
+        });
+    }
+}
+
+// Activar los tabs para el contenedor de escritorio y móvil respectivamente
+activateTabs('.container-tabs.d-none.d-md-block'); // Tabs de escritorio
+activateTabs('.container-tabs.d-block.d-md-none'); // Tabs de móvil
+
+
+
 
 
