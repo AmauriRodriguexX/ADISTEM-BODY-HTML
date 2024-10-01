@@ -44,7 +44,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-     font-size: 32px;
+     font-size: 26px;
      text-align: left;
 }
 
@@ -57,7 +57,7 @@ h1 {
 }
 
 h2 {
-     font-size: 28px;
+     font-size: 26px;
 }
 
 @media (max-width: 768px) {
@@ -624,9 +624,10 @@ hr.pg-hr-blue {
 
 .cout-form {
      text-transform: uppercase;
-     font-size: 24px;
+     font-size: 20px;
      font-weight: 700;
-}
+ font-family: 'PeugeotNew', sans-serif;
+ }
 
 .privacy-title {
      font-family: 'Roboto', sans-serif !important;
