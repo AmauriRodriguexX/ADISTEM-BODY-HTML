@@ -1,0 +1,636 @@
+@font-face {
+     font-family: 'PeugeotNew';
+     src: url('../fonts/PeugeotNew-Bold.otf') format('opentype');
+     font-weight: bold;
+     font-style: normal;
+}
+
+@font-face {
+     font-family: 'Roboto';
+     src: url('../fonts/Roboto-Regular.ttf') format('truetype');
+     font-weight: 400;
+     font-style: normal;
+}
+
+@font-face {
+     font-family: 'Roboto';
+     src: url('../fonts/Roboto-Medium.ttf') format('truetype');
+     font-weight: 500;
+     font-style: normal;
+}
+
+@font-face {
+     font-family: 'Roboto';
+     src: url('../fonts/Roboto-Bold.ttf') format('truetype');
+     font-weight: 700;
+     font-style: normal;
+}
+
+body {
+     font-family: 'Roboto', sans-serif;
+     margin: -12px;
+     overflow-x: hidden;
+}
+
+@media (max-width: 768px) {
+     body {
+         margin: 0px;
+     }
+}
+
+h1, h2, h3, h4, h5, h6 {
+     font-family: 'PeugeotNew', sans-serif;
+     font-weight: bold;
+}
+
+h1 {
+     font-size: 32px;
+     text-align: left;
+}
+
+@media (max-width: 768px) {
+     h1 {
+          font-size: 20px;
+          text-transform: uppercase;
+          line-height: 32px;
+     }
+}
+
+h2 {
+     font-size: 28px;
+}
+
+@media (max-width: 768px) {
+     h2 {
+          font-size: 20px;
+          text-transform: uppercase;
+          line-height: 32px;
+     }
+}
+
+h3 {
+     font-size: 24px;
+}
+
+h4 {
+     font-size: 20px;
+}
+
+h5 {
+     font-size: 18px;
+}
+
+h6 {
+     font-size: 16px;
+}
+
+
+p {
+     font-family: 'Roboto', sans-serif;
+     font-size: 16px;
+     font-weight: 400;
+     /* Regular */
+}
+
+@media (max-width: 768px) {
+     p {
+         font-size: 16px;
+     }
+ }
+
+
+.vichle-text-01 {
+     text-align: center;
+     font-size: 15px;
+     letter-spacing: 0px;
+     color: #000000;
+     margin-bottom: 0px;
+}
+
+.vichle-text-02 {
+     text-align: center;
+     font-size: 18px;
+     letter-spacing: 0px;
+     color: #000000;
+     margin-top: 0px;
+}
+
+.zoom-in {
+     transition: transform 0.4s ease;
+}
+
+.zoom-in:hover {
+     transform: scale(1.1);
+}
+
+
+.peugeot-text {
+     color: #0074E8;
+     text-transform: uppercase;
+}
+
+.registered {
+     font-size: 15px;
+     vertical-align: -0.2em;
+}
+
+.registered-2 {
+     font-size: 10px;
+     vertical-align: -0.2em;
+}
+
+.cotizacion-jeep {
+     background-color: #000;
+     padding: 50px 0;
+}
+
+
+
+.pg-btn {
+     background-color: #2E6CCF;
+     border-color: #2E6CCF;
+     border-radius: 25px;
+     width: 264px;
+     color: white;
+     cursor: pointer;
+     transition: background-color 0.3s, border-color 0.3s;
+     padding: 8px 40px;
+     height: 41px;
+     text-transform: uppercase;
+ }
+ 
+ @media (max-width: 768px) {
+     .pg-btn {
+         width: 100%;
+         padding: 8px 0;
+         text-align: center;
+         height: 53px;
+     }
+ }
+ 
+
+.pg-btn:hover {
+     background-color: #0057AD;
+     border-color: #0057AD;
+     color: white;
+}
+
+
+.pg-btn-02 {
+     border: 1px solid #FFFFFF;
+     background-color: transparent; /* Fondo transparente */
+     border-radius: 25px;
+     width: 264px;
+     color: white;
+     cursor: pointer;
+     transition: background-color 0.3s, border-color 0.3s;
+     padding: 8px 40px;
+     height: 41px;
+     text-transform: uppercase;
+ }
+ 
+ @media (max-width: 768px) {
+     .pg-btn-02 {
+         width: 100%;
+         padding: 8px 0;
+         text-align: center;
+         height: 53px;
+     }
+ }
+ 
+
+.pg-btn-02:hover {
+     background-color: #0057AD;
+     border-color: #0057AD;
+     color: white;
+}
+
+
+.contenido-promocion-overlay {
+     top: 50%;
+     left: 5%;
+     transform: translate(0, -50%);
+     background-color: rgb(0 0 0 / 83%);
+     padding: 50px;
+     border-radius: 8px;
+     text-align: left;
+     width: 458px;
+}
+
+/* Ajustar para pantallas más pequeñas */
+@media (max-width: 768px) {
+     .contenido-promocion-overlay {
+          left: 2%;
+          /* Reducir el margen izquierdo en pantallas pequeñas */
+          width: 458px;
+          /* Ajustar el ancho si es necesario */
+     }
+}
+
+/* Ajustar para pantallas muy grandes */
+@media (min-width: 1200px) {
+     .contenido-promocion-overlay {
+          left: 10%;
+          /* Ajustar la posición a la izquierda para pantallas más grandes */
+     }
+}
+
+
+.img-rounded {
+     border-radius: 8px;
+}
+
+.form-control,
+.form-select {
+     background-color: #F4F4F4 !important;
+     border: none;
+     padding: 0.5rem;
+     border-radius: 5px;
+     color: #000;
+     height: 52px;
+}
+
+.form-control::placeholder,
+.form-select::placeholder {
+     color: #6c757d;
+     background-color: #F4F4F4;
+
+}
+
+.form-control:focus,
+.form-select:focus {
+     box-shadow: none;
+     border-color: none;
+     background-color: #F4F4F4;
+}
+
+.custom-card {
+     background-color: #fff;
+     border: none;
+     border-radius: 10px;
+     margin-left: 24px !important;
+     margin-right: 24px !important;
+     padding: 32px !important;
+     box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+     margin-top: 60px !important;
+     margin-bottom: 80px !important;
+}
+
+.card-title {
+     font-size: 1.8rem;
+     font-weight: bold;
+     color: #424D07;
+     ;
+}
+
+.custom-btn {
+     background-color: #424D07;
+     border: none;
+     padding: 10px 20px;
+     border-radius: 5px;
+     font-weight: bold;
+     color: #fff;
+}
+
+.custom-btn:hover {
+     background-color: #424D07;
+}
+
+@media (max-width: 768px) {
+     .custom-card {
+          padding: 20px;
+     }
+
+     .card-title {
+          font-size: 1.5rem;
+     }
+
+     .custom-btn {
+          width: 100%;
+     }
+}
+
+.form-label {
+     margin-bottom: 0.5rem;
+     font-weight: 500;
+}
+
+.form-check-input:checked {
+     background-color: #0074E8;
+     border-color: #0074E8;
+}
+
+/* Estilos generales */
+.cotizacion-jeep {
+     background-size: cover;
+     background-position: center;
+}
+
+.cotizacion-jeep h1 {
+     font-size: 1.5rem;
+     margin-top: 15px;
+     font-weight: bold;
+}
+
+.cotizacion-jeep p {
+     font-size: 1rem;
+}
+
+.cotizacion-jeep .pg-btn {
+     background-color: #4A7A16;
+     color: #fff;
+     border: none;
+     padding: 10px 20px;
+     border-radius: 25px;
+}
+
+/* Ocultar la imagen específica de escritorio en mobile */
+.desktop-image {
+     display: block;
+}
+
+.mobile-image {
+     display: none;
+}
+
+/* Adaptaciones para mobile */
+@media (max-width: 768px) {
+     .cotizacion-jeep h1 {
+          font-size: 1.2rem;
+     }
+
+     .cotizacion-jeep p {
+          font-size: 0.9rem;
+     }
+
+     .desktop-image {
+          display: none;
+          /* Oculta la imagen de escritorio en móvil */
+     }
+
+     .mobile-image {
+          display: block;
+          /* Muestra la imagen específica para móvil */
+     }
+
+     /* Control de orden */
+     .order-1 {
+          order: 1;
+     }
+
+     .order-2 {
+          order: 2;
+     }
+
+     .order-3 {
+          order: 3;
+     }
+}
+
+/* Adaptaciones para escritorio */
+@media (min-width: 768px) {
+     .order-md-1 {
+          order: 1;
+     }
+
+     .order-md-2 {
+          order: 2;
+     }
+
+     .order-md-3 {
+          order: 3;
+     }
+}
+
+
+.content-mobile {
+     padding-left: 24px;
+     padding-right: 24px;
+}
+
+.title-form {
+     font-size: 22px;
+     font-weight: 700;
+     color: #424D07;
+
+}
+
+.no-padding {
+     padding-left: 0;
+     padding-right: 0;
+
+}
+
+/* Custom styles for the modal */
+.custom-modal-content {
+    background-color: #fff;
+    border-radius: 12px;
+    max-width: 900px;
+    box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.3);
+    max-height: 50vh; /* Altura máxima del modal */
+    overflow: hidden; /* Controlar el desplazamiento del contenido */
+}
+
+.custom-modal-header {
+    background-color: #fff;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    padding-right: 32px;
+    display: flex;
+    justify-content: flex-end; /* Alinea el botón cerrar a la derecha */
+}
+
+.modal-close-container .btn-close {
+    font-size: 14px;
+    background: none;
+    border: none;
+    color: #000;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.custom-modal-body {
+    padding: 15px;
+    overflow-y: auto;
+    max-height: calc(80vh - 50px); /* Resta la altura de la cabecera */
+}
+
+.boxPrivacidad {
+    padding: 15px;
+}
+
+.boxPrivacidad h2 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.boxPrivacidad p {
+    font-size: 14px;
+    text-align: justify;
+}
+
+.modal-dialog {
+    margin: auto;
+}
+
+.btn-close:hover {
+    color: #000;
+    text-decoration: underline;
+}
+
+/* Custom styles for the modal */
+.custom-modal-content {
+     background-color: #fff;
+     border-radius: 12px;
+     max-width: 1114px; 
+     box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.3);
+     max-height: 50vh; 
+     overflow: hidden; 
+ }
+
+ /* mobile modal */
+@media (max-width: 576px) {
+     .custom-modal-content {
+         width: 100%; 
+         height: 100%; 
+         border-radius: 0; 
+         max-width: none; 
+         max-height: none; 
+     }
+ 
+     .modal-dialog {
+         margin: 0; 
+         width: 100%; 
+         height: 100%; 
+         max-width: none; 
+     }
+     
+     .custom-modal-body {
+         max-height: calc(100vh - 50px) !important; 
+         overflow-y: auto; 
+     }
+ }
+
+.custom-modal-header {
+    background-color: #fff;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    padding-right: 75px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.modal-close-container .btn-close {
+    font-size: 14px;
+    background: none;
+    border: none;
+    color: #000;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.custom-modal-body {
+    padding: 15px;
+    overflow-y: auto;
+    max-height: calc(80vh - 50px); 
+}
+
+.boxPrivacidad {
+    padding: 15px;
+}
+
+.boxPrivacidad h2 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.boxPrivacidad p {
+    font-size: 14px;
+    text-align: justify;
+}
+
+.modal-dialog {
+    margin: auto;
+}
+
+.btn-close:hover {
+    color: #000;
+    text-decoration: underline;
+}
+
+@media (min-width: 576px) {
+    .modal-dialog {
+        max-width: 1114px !important; 
+        margin: 1.75rem auto;
+    }
+}
+
+
+.hr-container {
+     display: flex;
+     justify-content: center; 
+     width: 100%;
+ }
+ 
+ hr.pg-hr {
+     border: solid 1px #9b9b9b69;
+     height: 0;
+     background-color: #9b9b9b69;
+     width: 197px; 
+     margin: 0; 
+     opacity: 1;
+     margin-top: 16px;
+     margin-bottom: 8px;
+ }
+
+
+hr.pg-hr-blue {
+     border: solid 1px #0057AD;
+     height: 0;
+     background-color: #0057AD;
+     width: 197px; 
+     margin: 0; 
+     opacity: 1;
+     margin-top: 16px;
+     margin-bottom: 8px;
+ }
+
+
+.p-5 {
+     margin-left: 50px;
+}
+
+
+.mayus-l1 {
+     text-transform: uppercase;
+}
+
+.contenido-promocion-overlay-right {
+     top: 50%;
+     right: 5%;
+     transform: translate(0, -50%);
+     padding: 50px;
+     border-radius: 8px;
+     text-align: left;
+     width: 600px;
+}
+
+
+.cout-form {
+     text-transform: uppercase;
+     font-size: 24px;
+     font-weight: 700;
+}
+
+.privacy-title {
+     font-family: 'Roboto', sans-serif !important;
+     font-style: normal !important;
+ }
+ 
+
