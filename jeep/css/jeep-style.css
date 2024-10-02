@@ -738,7 +738,27 @@ p {
     color: #000000;
 }
 
+@media only screen and (max-width: 768px) {
+    #listaPromos .cardModelopromo:hover {
+        margin-top: 0px; /* No se desplaza en dispositivos móviles */
+    }
+}
 
+@media only screen and (max-width: 768px) {
+    #listaPromos .cardModelopromo {
+        padding-top: 16px; /* Aplica padding-top solo en mobile */
+        margin-bottom: 24px;
+    }
+
+    #listaPromos .cardModelopromo .cardDetalle a { 
+        text-decoration: none;
+        font-size: 15px;
+        font-weight: bold;
+        color: #424D07;
+        padding-top: 16px; /* El padding-top para el enlace es 0px en mobile */
+        
+    }
+}
 @media (max-width: 768px) {
     #listaPromos .cardModelopromo {
         width: 100%;
