@@ -12,13 +12,32 @@ document.addEventListener("DOMContentLoaded", function () {
         }
 
         let currentSlide = 0;
-        let startX = 0;
-        let isDragging = false;
         let isTransitioning = false;
-        const dragThreshold = 50;
 
-        slides[currentSlide].classList.add("active-slide");
-        dots[currentSlide].classList.add("active-indicator");
+        // Inicializar slides y dots
+        slides.forEach((slide, index) => {
+            if (index === currentSlide) {
+                slide.classList.add("active-slide");
+            } else {
+                slide.classList.remove("active-slide");
+            }
+        });
+
+        dots.forEach((dot, index) => {
+            if (index === currentSlide) {
+                dot.classList.add("active-indicator");
+            } else {
+                dot.classList.remove("active-indicator");
+            }
+
+            dot.addEventListener("click", (e) => {
+                e.preventDefault();
+                e.stopPropagation();
+                if (!isTransitioning && currentSlide !== index) {
+                    changeSlide(index);
+                }
+            });
+        });
 
         let slideInterval = setInterval(nextSlide, 6000);
 
@@ -26,32 +45,26 @@ document.addEventListener("DOMContentLoaded", function () {
             changeSlide((currentSlide + 1) % slides.length);
         }
 
-        function previousSlide() {
-            changeSlide((currentSlide - 1 + slides.length) % slides.length);
-        }
-
         function changeSlide(newIndex) {
             if (isTransitioning || currentSlide === newIndex) return; 
 
             isTransitioning = true;
+
+            // Remover clase activa del slide y dot actuales
             slides[currentSlide].classList.remove("active-slide");
             dots[currentSlide].classList.remove("active-indicator");
 
+            // Actualizar índice de slide actual
             currentSlide = newIndex;
 
-            slides[currentSlide].style.opacity = "0";
-            slides[currentSlide].offsetWidth; // Forzar reflow
+            // Añadir clase activa al nuevo slide y dot
             slides[currentSlide].classList.add("active-slide");
             dots[currentSlide].classList.add("active-indicator");
 
-            slides[currentSlide].style.transition = "opacity 0.8s ease";
-            slides[currentSlide].style.opacity = "1";
-
-            requestAnimationFrame(() => {
-                setTimeout(() => {
-                    isTransitioning = false;
-                }, 800);
-            });
+            // Manejar transición
+            setTimeout(() => {
+                isTransitioning = false;
+            }, 800); // Duración de la transición en ms
 
             resetInterval();
         }
@@ -60,41 +73,6 @@ document.addEventListener("DOMContentLoaded", function () {
             clearInterval(slideInterval);
             slideInterval = setInterval(nextSlide, 6000);
         }
-
-        dots.forEach((dot, index) => {
-            dot.addEventListener("click", (e) => {
-                e.preventDefault(); // Evitar el desplazamiento automático
-                e.stopPropagation(); // Detener la propagación del evento
-                changeSlide(index);
-            });
-        });
-
-        function handleDragStart(e) {
-            if (isTransitioning) return;
-            isDragging = true;
-            startX = e.type.includes('mouse') ? e.clientX : e.touches[0].clientX;
-        }
-
-        function handleDragEnd(e) {
-            if (!isDragging) return;
-            isDragging = false;
-            const endX = e.type.includes('mouse') ? e.clientX : e.changedTouches[0].clientX;
-            const distanceDragged = startX - endX;
-
-            if (Math.abs(distanceDragged) > dragThreshold) {
-                distanceDragged > 0 ? nextSlide() : previousSlide();
-            }
-        }
-
-        slider.addEventListener("mousedown", handleDragStart);
-        slider.addEventListener("mouseup", handleDragEnd);
-        slider.addEventListener("touchstart", handleDragStart);
-        slider.addEventListener("touchend", handleDragEnd);
-        
-        // Desactivar el enfoque de los elementos
-        slider.setAttribute('tabindex', '-1');
-        slides.forEach(slide => slide.setAttribute('tabindex', '-1'));
-        dots.forEach(dot => dot.setAttribute('tabindex', '-1'));
     }
 
     function initSlidersBasedOnViewport() {
@@ -120,133 +98,139 @@ document.addEventListener("DOMContentLoaded", function () {
 
 // Slider 2 optimización
 document.addEventListener("DOMContentLoaded", function () {
-    function initSlider2() {
-        const slider2 = document.getElementById("vehicleSlider");
-        if (!slider2) return;
+    function initSliders() {
+        // Selecciona todos los sliders por una clase común
+        const sliders = document.querySelectorAll(".carousel.slide.vehicle-section-mobile");
 
-        // Desactivar cualquier control de Bootstrap sobre este slider
-        if (typeof bootstrap !== 'undefined') {
-            const bsCarouselInstance = bootstrap.Carousel.getInstance(slider2);
-            if (bsCarouselInstance) {
-                bsCarouselInstance.dispose(); // Desactivar la instancia de Bootstrap
+        sliders.forEach((slider, sliderIndex) => {
+            // Desactivar cualquier control de Bootstrap sobre este slider
+            if (typeof bootstrap !== 'undefined') {
+                const bsCarouselInstance = bootstrap.Carousel.getInstance(slider);
+                if (bsCarouselInstance) {
+                    bsCarouselInstance.dispose(); // Desactivar la instancia de Bootstrap
+                }
             }
-        }
 
-        // Selecciona los slides y dots usando las clases personalizadas
-        const slides = slider2.querySelectorAll(".carousel-item");
-        const dots = document.querySelectorAll(".vehicle-custom-dot");
+            // Selecciona los slides y dots dentro de este slider
+            const slides = slider.querySelectorAll(".carousel-item");
+            const dots = slider.querySelectorAll(".vehicle-custom-dot");
 
-        if (slides.length === 0 || dots.length === 0) {
-            console.error("No se encontraron slides o dots en el slider 2. Verifica tu HTML.");
-            return;
-        }
-
-        let currentSlide = 0;
-        let isTransitioning = false;
-        const dragThreshold = 50;
-        const transitionDuration = 300;
-
-        // Aseguramos que solo un slide y dot estén activos
-        slides.forEach((slide, index) => {
-            if (index !== currentSlide) {
-                slide.style.display = "none";
-                slide.style.opacity = "0";
-                slide.style.visibility = "hidden";
-                slide.classList.remove("active");
+            if (slides.length === 0 || dots.length === 0) {
+                console.error(`No se encontraron slides o dots en el slider ${sliderIndex + 1}. Verifica tu HTML.`);
+                return;
             }
-        });
 
-        dots.forEach((dot, index) => {
-            if (index !== currentSlide) {
-                dot.classList.remove("active-dot");
-            }
-        });
+            let currentSlide = 0;
+            let isTransitioning = false;
+            let isDragging = false;
+            let startX = 0;
+            const dragThreshold = 50;
+            const transitionDuration = 300;
 
-        slides[currentSlide].style.display = "block";
-        slides[currentSlide].style.opacity = "1";
-        slides[currentSlide].style.visibility = "visible";
-        slides[currentSlide].classList.add("active");
-        dots[currentSlide].classList.add("active-dot");
-
-        let slideInterval = setInterval(nextSlide, 6000);
-
-        function nextSlide() {
-            if (!isTransitioning) changeSlide(currentSlide + 1);
-        }
-
-        function previousSlide() {
-            if (!isTransitioning) changeSlide(currentSlide - 1);
-        }
-
-        function changeSlide(newIndex) {
-            if (isTransitioning) return;
-            isTransitioning = true;
-
-            // Remover clases activas y ocultar el slide anterior
-            slides[currentSlide].classList.remove("active");
-            dots[currentSlide].classList.remove("active-dot");
-
-            slides[currentSlide].style.transition = `opacity ${transitionDuration}ms ease`;
-            slides[currentSlide].style.opacity = "0";
-            slides[currentSlide].style.visibility = "hidden";
-            slides[currentSlide].style.display = "none";
-
-            // Actualizar al nuevo slide
-            currentSlide = (newIndex + slides.length) % slides.length;
-
-            slides[currentSlide].style.display = "block";
-            slides[currentSlide].style.opacity = "1";
-            slides[currentSlide].style.visibility = "visible";
-            slides[currentSlide].classList.add("active");
-            dots[currentSlide].classList.add("active-dot");
-
-            setTimeout(() => {
-                isTransitioning = false;
-            }, transitionDuration);
-
-            resetInterval();
-        }
-
-        function goToSlide(index) {
-            if (!isTransitioning) changeSlide(index);
-        }
-
-        function resetInterval() {
-            clearInterval(slideInterval);
-            slideInterval = setInterval(nextSlide, 6000);
-        }
-
-        dots.forEach((dot, index) => {
-            dot.addEventListener("click", function () {
-                goToSlide(index);
+            // Aseguramos que solo un slide y dot estén activos
+            slides.forEach((slide, index) => {
+                if (index !== currentSlide) {
+                    slide.style.display = "none";
+                    slide.style.opacity = "0";
+                    slide.style.visibility = "hidden";
+                    slide.classList.remove("active");
+                } else {
+                    slide.style.display = "block";
+                    slide.style.opacity = "1";
+                    slide.style.visibility = "visible";
+                    slide.classList.add("active");
+                }
             });
-        });
 
-        slider2.addEventListener("mousedown", startDrag);
-        slider2.addEventListener("mouseup", endDrag);
-        slider2.addEventListener("touchstart", startDrag);
-        slider2.addEventListener("touchend", endDrag);
+            dots.forEach((dot, index) => {
+                if (index !== currentSlide) {
+                    dot.classList.remove("active-dot");
+                } else {
+                    dot.classList.add("active-dot");
+                }
 
-        function startDrag(e) {
-            isDragging = true;
-            startX = e.type.includes("mouse") ? e.clientX : e.touches[0].clientX;
-        }
+                // Añadir event listener para cada dot
+                dot.addEventListener("click", function () {
+                    goToSlide(index);
+                });
+            });
 
-        function endDrag(e) {
-            if (!isDragging || isTransitioning) return;
-            isDragging = false;
-            const endX = e.type.includes("mouse") ? e.clientX : e.changedTouches[0].clientX;
-            const distanceDragged = startX - endX;
+            let slideInterval = setInterval(nextSlide, 6000);
 
-            if (distanceDragged > dragThreshold) {
-                nextSlide();
-            } else if (distanceDragged < -dragThreshold) {
-                previousSlide();
+            function nextSlide() {
+                if (!isTransitioning) changeSlide(currentSlide + 1);
             }
-        }
+
+            function previousSlide() {
+                if (!isTransitioning) changeSlide(currentSlide - 1);
+            }
+
+            function changeSlide(newIndex) {
+                if (isTransitioning) return;
+                isTransitioning = true;
+
+                // Remover clases activas y ocultar el slide anterior
+                slides[currentSlide].classList.remove("active");
+                dots[currentSlide].classList.remove("active-dot");
+
+                slides[currentSlide].style.transition = `opacity ${transitionDuration}ms ease`;
+                slides[currentSlide].style.opacity = "0";
+                slides[currentSlide].style.visibility = "hidden";
+                slides[currentSlide].style.display = "none";
+
+                // Actualizar al nuevo slide
+                currentSlide = (newIndex + slides.length) % slides.length;
+
+                slides[currentSlide].style.display = "block";
+                slides[currentSlide].style.opacity = "1";
+                slides[currentSlide].style.visibility = "visible";
+                slides[currentSlide].classList.add("active");
+                dots[currentSlide].classList.add("active-dot");
+
+                setTimeout(() => {
+                    isTransitioning = false;
+                }, transitionDuration);
+
+                resetInterval();
+            }
+
+            function goToSlide(index) {
+                if (!isTransitioning) changeSlide(index);
+            }
+
+            function resetInterval() {
+                clearInterval(slideInterval);
+                slideInterval = setInterval(nextSlide, 6000);
+            }
+
+            // Añadir event listeners para arrastrar
+            slider.addEventListener("mousedown", startDrag);
+            slider.addEventListener("mouseup", endDrag);
+            slider.addEventListener("mouseleave", endDrag);
+            slider.addEventListener("touchstart", startDrag);
+            slider.addEventListener("touchend", endDrag);
+
+            function startDrag(e) {
+                isDragging = true;
+                startX = e.type.includes("mouse") ? e.clientX : e.touches[0].clientX;
+            }
+
+            function endDrag(e) {
+                if (!isDragging || isTransitioning) return;
+                isDragging = false;
+                const endX = e.type.includes("mouse") ? e.clientX : e.changedTouches[0].clientX;
+                const distanceDragged = startX - endX;
+
+                if (distanceDragged > dragThreshold) {
+                    nextSlide();
+                } else if (distanceDragged < -dragThreshold) {
+                    previousSlide();
+                }
+            }
+        });
     }
 
-    initSlider2();
+    initSliders();
 });
 
 
