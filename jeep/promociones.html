@@ -16,14 +16,16 @@
 
 <body>
      <main>
-         
+
           <section class="vehicle-section py-5">
 
                <div class="container content-mobile">
-                    <h1 class="mb-4 text-start mayus-l1">PROMOCIONES <span class="text-jeep">JEEP<span class="registered">&reg;</span></span></h1>
-
+                    <h1 class="text-start mayus-l1 mb-2 ">PROMOCIONES <span class="text-jeep">JEEP<span
+                                   class="registered">&reg;</span></span></h1>
+                    <p class="mb-4">Aprovecha nuestras promociones del mes para que estrenes el auto que más te gusta.
+                    </p>
                     <!-- tabs escritorio -->
-                    <div class="container-tabs d-none d-md-block">
+                    <div class="container-tabs my-unique-tabs">
                          <div class="tabs-rounded-ram">
                               <button class="tabs-rounded-ram-tab active-tab" data-tab="tab-lujo">Lujo</button>
                               <button class="tabs-rounded-ram-tab" data-tab="tab-deportivas">Deportivas</button>
@@ -31,378 +33,309 @@
                          </div>
                          <div class="tabs-rounded-ram-content active-content" id="tab-lujo">
                               <!-- Vista de escritorio-->
-                              <div class="container my-5" id="listaPromos">
+                              <div class="container my-5 no-padding" id="listaPromos">
                                    <div class="row">
-                                       <div class="col">
-                                           <div class="cardModelopromo jeep slick-slide slick-current slick-active" data-slick-index="0" aria-hidden="false" tabindex="0">
-                                               <img src="https://spdfc.s3.us-west-2.amazonaws.com/autos/NuevosAutos/promociones/COMP24.jpg" alt="Jeep Compass 2024">
-                                               <div class="cardDetalle COMP24">
-                                                   <span class="tituloModelo">Jeep Compass 2024</span>
-                                                   <br><br>
-                                                   <span class="txtVersion">Versiones</span>
-                                                   <br>
-                                                   <select class="selectVersiones" onchange="CambieVersionPromo(this,'COMP24');" tabindex="0">
-                                                       <option value="279"> High Altitude AWD ATX8 2.0L Turbo </option>
-                                                       <option value="314"> Limited Premium 4X2 </option>
-                                                       <option value="315"> Altitude 4X2 </option>
-                                                   </select>
-                                                   <br>
-                                                   <div class="txtPromo">
-                                                       <span>- Descuento promocional en pago de contado de $50,000.</span>
-                                                       <span>- Plan de financiamiento con Descuento promocional de $50,000 + Tasa desde 14.50%</span>
-                                                   </div>
-                                                   <br><br>
-                                                   <a href="#" tabindex="0">Ver detalles &gt;</a>
-                                               </div>
-                                           </div>
-                                       </div>
-                           
-                                       <!-- Aquí puedes añadir más tarjetas según lo necesites -->
+                                        <div class="col-12 col-md-6 col-lg-3">
+                                             <div class="cardModelopromo jeep">
+                                                  <img src="https://spdfc.s3.us-west-2.amazonaws.com/autos/NuevosAutos/promociones/RENE24.jpg"
+                                                       alt="Jeep Grand Wagoneer L 2024">
+                                                  <div class="cardDetalle WGNL24">
+                                                       <span class="tituloModelo">Renegade 2024</span>
+                                                       <span class="txtVersion">Versiones</span>
+                                                       <select class="selectVersiones"
+                                                            onchange="CambieVersionPromo(this,'WGNL24');" tabindex="0">
+                                                            <option value="316"> Latitude 1.3L Turbo 6AT</option>
+                                                       </select>
+                                                       <div class="txtPromo">
+                                                            <span>- Plan de financiamiento con Descuento promocional de
+                                                                 $35,000 + Tasa desde 14.50%</span>
+                                                       </div>
+                                                       <div class="d-flex justify-content-between align-items-center">
+                                                            <button class="btn jeep-btn-promo">Cotiza ahora</button>
+                                                            <a href="#" tabindex="0">Ver detalles &gt;</a>
+                                                       </div>
+                                                  </div>
+                                             </div>
+                                        </div>
+
+                                        <div class="col-12 col-md-6 col-lg-3">
+                                             <div class="cardModelopromo jeep">
+                                                  <img src="https://spdfc.s3.us-west-2.amazonaws.com/autos/NuevosAutos/promociones/COMP24.jpg"
+                                                       alt="Jeep Grand Wagoneer L 2024">
+                                                  <div class="cardDetalle WGNL24">
+                                                       <span class="tituloModelo">Compass 2024</span>
+                                                       <span class="txtVersion">Versiones</span>
+                                                       <select class="selectVersiones"
+                                                            onchange="CambieVersionPromo(this,'WGNL24');" tabindex="0">
+                                                            <option value="316">Altitude 4x2</option>
+                                                       </select>
+                                                       <div class="txtPromo">
+                                                            <span>- Plan de financiamiento con Descuento promocional de
+                                                                 $50,000 + Tasa desde 14.50%</span>
+                                                       </div>
+                                                       <div class="d-flex justify-content-between align-items-center">
+                                                            <button class="btn jeep-btn-promo">Cotiza ahora</button>
+                                                            <a href="#" tabindex="0">Ver detalles &gt;</a>
+                                                       </div>
+                                                  </div>
+                                             </div>
+                                        </div>
+
+                                        <div class="col-12 col-md-6 col-lg-3">
+                                             <div class="cardModelopromo jeep">
+                                                  <img src="https://spdfc.s3.us-west-2.amazonaws.com/autos/NuevosAutos/promociones/WRMH24.jpg"
+                                                       alt="Jeep Grand Wagoneer L 2024">
+                                                  <div class="cardDetalle WGNL24">
+                                                       <span class="tituloModelo">Wrangler 2024</span>
+                                                       <span class="txtVersion">Versiones</span>
+                                                       <select class="selectVersiones"
+                                                            onchange="CambieVersionPromo(this,'WGNL24');" tabindex="0">
+                                                            <option value="316">Rubicon 3.6l V6 4x4</option>
+                                                       </select>
+                                                       <div class="txtPromo">
+                                                            <span>-24 meses sin intereses + 0% de comisión por apertura
+                                                                 ó Descuento de hasta $100,000 </span>
+                                                       </div>
+                                                       <div class="d-flex justify-content-between align-items-center">
+                                                            <button class="btn jeep-btn-promo">Cotiza ahora</button>
+                                                            <a href="#" tabindex="0">Ver detalles &gt;</a>
+                                                       </div>
+                                                  </div>
+                                             </div>
+                                        </div>
+
+                                        <div class="col-12 col-md-6 col-lg-3">
+                                             <div class="cardModelopromo jeep">
+                                                  <img src="https://spdfc.s3.us-west-2.amazonaws.com/autos/NuevosAutos/promociones/WRPH24.jpg"
+                                                       alt="Jeep Grand Wagoneer L 2024">
+                                                  <div class="cardDetalle WGNL24">
+                                                       <span class="tituloModelo">Wrangler 4xe 2024</span>
+                                                       <span class="txtVersion">Versiones</span>
+                                                       <select class="selectVersiones"
+                                                            onchange="CambieVersionPromo(this,'WGNL24');" tabindex="0">
+                                                            <option value="316">Sahara 4xe</option>
+                                                       </select>
+                                                       <div class="txtPromo">
+                                                            <span>- Cargador gratis </span>
+                                                            <span>- Plan de financiamiento con Tasa desde 14.50%</span>
+                                                       </div>
+                                                       <div class="d-flex justify-content-between align-items-center">
+                                                            <button class="btn jeep-btn-promo">Cotiza ahora</button>
+                                                            <a href="#" tabindex="0">Ver detalles &gt;</a>
+                                                       </div>
+                                                  </div>
+                                             </div>
+                                        </div>
+
+                                        <div class="col-12 col-md-6 col-lg-3">
+                                             <div class="cardModelopromo jeep">
+                                                  <img src="https://spdfc.s3.us-west-2.amazonaws.com/autos/NuevosAutos/promociones/GLAD24.jpg"
+                                                       alt="Jeep Grand Wagoneer L 2024">
+                                                  <div class="cardDetalle WGNL24">
+                                                       <span class="tituloModelo">JT 2024</span>
+                                                       <span class="txtVersion">Versiones</span>
+                                                       <select class="selectVersiones"
+                                                            onchange="CambieVersionPromo(this,'WGNL24');" tabindex="0">
+                                                            <option value="316">Sahara 4xe</option>
+                                                       </select>
+                                                       <div class="txtPromo">
+                                                            <span>- 24 Meses sin intereses sin comisión por
+                                                                 apertura</span>
+                                                            <span>- Plan de financiamiento con Tasa desde 14.50%</span>
+                                                       </div>
+                                                       <div class="d-flex justify-content-between align-items-center">
+                                                            <button class="btn jeep-btn-promo">Cotiza ahora</button>
+                                                            <a href="#" tabindex="0">Ver detalles &gt;</a>
+                                                       </div>
+                                                  </div>
+                                             </div>
+                                        </div>
+
+                                        <div class="col-12 col-md-6 col-lg-3">
+                                             <div class="cardModelopromo jeep">
+                                                  <img src="https://spdfc.s3.us-west-2.amazonaws.com/autos/NuevosAutos/promociones/TCHR24.jpg"
+                                                       alt="Jeep Grand Wagoneer L 2024">
+                                                  <div class="cardDetalle WGNL24">
+                                                       <span class="tituloModelo">Grand Cherokee 2024</span>
+                                                       <span class="txtVersion">Versiones</span>
+                                                       <select class="selectVersiones"
+                                                            onchange="CambieVersionPromo(this,'WGNL24');" tabindex="0">
+                                                            <option value="316">Altitude V6 4x2</option>
+                                                       </select>
+                                                       <div class="txtPromo">
+                                                            <span>- 24 meses sin intereses + 0% de comisión por
+                                                                 apertura</span>
+                                                            <span>- Plan de financiamiento con Tasa desde 14.50%</span>
+                                                       </div>
+                                                       <div class="d-flex justify-content-between align-items-center">
+                                                            <button class="btn jeep-btn-promo">Cotiza ahora</button>
+                                                            <a href="#" tabindex="0">Ver detalles &gt;</a>
+                                                       </div>
+                                                  </div>
+                                             </div>
+                                        </div>
+
+                                        <div class="col-12 col-md-6 col-lg-3">
+                                             <div class="cardModelopromo jeep">
+                                                  <img src="https://spdfc.s3.us-west-2.amazonaws.com/autos/NuevosAutos/promociones/TCHR24.jpg"
+                                                       alt="Jeep Grand Wagoneer L 2024">
+                                                  <div class="cardDetalle WGNL24">
+                                                       <span class="tituloModelo">Grand Cherokee 4xe 2024</span>
+                                                       <span class="txtVersion">Versiones</span>
+                                                       <select class="selectVersiones"
+                                                            onchange="CambieVersionPromo(this,'WGNL24');" tabindex="0">
+                                                            <option value="316">4xe</option>
+                                                       </select>
+                                                       <div class="txtPromo">
+                                                            <span>- 24 Meses sin intereses sin comisión por apertura +
+                                                                 Cargador gratis</span>
+                                                            <span>- Plan de financiamiento con Tasa desde 14.50%</span>
+                                                       </div>
+                                                       <div class="d-flex justify-content-between align-items-center">
+                                                            <button class="btn jeep-btn-promo">Cotiza ahora</button>
+                                                            <a href="#" tabindex="0">Ver detalles &gt;</a>
+                                                       </div>
+                                                  </div>
+                                             </div>
+                                        </div>
+
+                                        <div class="col-12 col-md-6 col-lg-3">
+                                             <div class="cardModelopromo jeep">
+                                                  <img src="https://spdfc.s3.us-west-2.amazonaws.com/autos/NuevosAutos/promociones/WGNL24.jpg"
+                                                       alt="Jeep Grand Wagoneer L 2024">
+                                                  <div class="cardDetalle WGNL24">
+                                                       <span class="tituloModelo">Grand Wagoner L 2024</span>
+                                                       <span class="txtVersion">Versiones</span>
+                                                       <select class="selectVersiones"
+                                                            onchange="CambieVersionPromo(this,'WGNL24');" tabindex="0">
+                                                            <option value="316">Series III 4x4</option>
+                                                       </select>
+                                                       <div class="txtPromo">
+                                                            <span>- Precio desde $2,399,900</span>
+                                                            <span>- Plan de financiamiento con tasa desde 14.50%</span>
+                                                       </div>
+                                                       <div class="d-flex justify-content-between align-items-center">
+                                                            <button class="btn jeep-btn-promo">Cotiza ahora</button>
+                                                            <a href="#" tabindex="0">Ver detalles &gt;</a>
+                                                       </div>
+                                                  </div>
+                                             </div>
+                                        </div>
+
+                                        <!-- Añade más tarjetas según lo necesites -->
                                    </div>
-                               </div>
-                           
-                           
+                              </div>
+
+
+
                          </div>
                          <div class="tabs-rounded-ram-content" id="tab-deportivas">
-                              <div class="row vehicle-section-desktop">
-                                   <div class="col-md-3 vehicle-col text-center">
-                                        <img src="assets/img/RTRX24.png" class="img-fluid zoom-in" alt="Renegade 2024">
-                                        <p class="vichle-text-01 mt-3">Desde $2,514,900</p>
-                                        <p class="fw-bold vehicle-name vichle-text-02">1500 TRX 2024</p>
+                              <div class="container my-5 no-padding" id="listaPromos">
+                                   <div class="row">
+                                        <div class="col-12 col-md-6 col-lg-3">
+                                             <div class="cardModelopromo jeep">
+                                                  <img src="https://spdfc.s3.us-west-2.amazonaws.com/autos/NuevosAutos/promociones/RENE24.jpg"
+                                                       alt="Jeep Grand Wagoneer L 2024">
+                                                  <div class="cardDetalle WGNL24">
+                                                       <span class="tituloModelo">Renegade 2024</span>
+                                                       <span class="txtVersion">Versiones</span>
+                                                       <select class="selectVersiones"
+                                                            onchange="CambieVersionPromo(this,'WGNL24');" tabindex="0">
+                                                            <option value="316">Latitude 1.3L Turbo 6AT</option>
+                                                       </select>
+                                                       <div class="txtPromo">
+                                                            <span>-Descuento promocional de $35,000 en pago de
+                                                                 contado.</span>
+                                                       </div>
+                                                       <div class="d-flex justify-content-between align-items-center">
+                                                            <button class="btn jeep-btn-promo">Cotiza ahora</button>
+                                                            <a href="#" tabindex="0">Ver detalles &gt;</a>
+                                                       </div>
+                                                  </div>
+                                             </div>
+                                        </div>
+
+                                        <div class="col-12 col-md-6 col-lg-3">
+                                             <div class="cardModelopromo jeep">
+                                                  <img src="https://spdfc.s3.us-west-2.amazonaws.com/autos/NuevosAutos/promociones/COMP24.jpg"
+                                                       alt="Jeep Grand Wagoneer L 2024">
+                                                  <div class="cardDetalle WGNL24">
+                                                       <span class="tituloModelo">Compass 2024</span>
+                                                       <span class="txtVersion">Versiones</span>
+                                                       <select class="selectVersiones"
+                                                            onchange="CambieVersionPromo(this,'WGNL24');" tabindex="0">
+                                                            <option value="316">Altitude 4x2</option>
+                                                       </select>
+                                                       <div class="txtPromo">
+                                                            <span>-Descuento promocional en pago de contado de
+                                                                 $50,000.</span>
+                                                       </div>
+                                                       <div class="d-flex justify-content-between align-items-center">
+                                                            <button class="btn jeep-btn-promo">Cotiza ahora</button>
+                                                            <a href="#" tabindex="0">Ver detalles &gt;</a>
+                                                       </div>
+                                                  </div>
+                                             </div>
+                                        </div>
+
+                                        <div class="col-12 col-md-6 col-lg-3">
+                                             <div class="cardModelopromo jeep">
+                                                  <img src="https://spdfc.s3.us-west-2.amazonaws.com/autos/NuevosAutos/promociones/WRMH24.jpg"
+                                                       alt="Jeep Grand Wagoneer L 2024">
+                                                  <div class="cardDetalle WGNL24">
+                                                       <span class="tituloModelo">Wrangler 2024</span>
+                                                       <span class="txtVersion">Versiones</span>
+                                                       <select class="selectVersiones"
+                                                            onchange="CambieVersionPromo(this,'WGNL24');" tabindex="0">
+                                                            <option value="316">Rubicon 3.6l V6 4x4</option>
+                                                       </select>
+                                                       <div class="txtPromo">
+                                                            <span>-Descuento promocional de $100,000 en pago de
+                                                                 contado.</span>
+                                                       </div>
+                                                       <div class="d-flex justify-content-between align-items-center">
+                                                            <button class="btn jeep-btn-promo">Cotiza ahora</button>
+                                                            <a href="#" tabindex="0">Ver detalles &gt;</a>
+                                                       </div>
+                                                  </div>
+                                             </div>
+                                        </div>
                                    </div>
-                                   <div class="col-md-3 vehicle-col text-center">
-                                        <img src="assets/img/RMPW24.png" class="img-fluid zoom-in" alt="Renegade 2024">
-                                        <p class="vichle-text-01 mt-3">Desde $1,654,900</p>
-                                        <p class="fw-bold vehicle-name vichle-text-02">2500 HD POWER WAGON 2024</p>
-                                   </div>
-                                   <div class="col-md-3 vehicle-col text-center">
-                                        <img src="assets/img/RLSH24.png" class="img-fluid zoom-in" alt="Renegade 2024">
-                                        <p class="vichle-text-01 mt-3">Desde $1,239,900</p>
-                                        <p class="fw-bold vehicle-name vichle-text-02">1500 MILD HYBRID LARAMIE SPORT
-                                             2024</p>
-                                   </div>
-                                   <div class="col-md-3 vehicle-col text-center">
-                                        <img src="assets/img/RABH24.png" class="img-fluid zoom-in" alt="Renegade 2024">
-                                        <p class="vichle-text-01 mt-3">Desde $1,084,900</p>
-                                        <p class="fw-bold vehicle-name vichle-text-02">1500 MILD HYBRID BIGHORN OFF ROAD
-                                             2024</p>
-                                   </div>
-                                   <div class="col-md-3 vehicle-col text-center">
-                                        <img src="assets/img/RHTV24.png" class="img-fluid zoom-in" alt="Renegade 2024">
-                                        <p class="vichle-text-01 mt-3">Desde $919,900</p>
-                                        <p class="fw-bold vehicle-name vichle-text-02">1500 MILD HYBRID TRADESMAN V6
-                                             2024</p>
-                                   </div>
-                                   <div class="col-md-3 vehicle-col text-center">
-                                        <img src="assets/img/RAHS23.png" class="img-fluid zoom-in" alt="Renegade 2024">
-                                        <p class="vichle-text-01 mt-3">Desde $904,900</p>
-                                        <p class="fw-bold vehicle-name vichle-text-02">HEMI SPORT 2023</p>
-                                   </div>
+
                               </div>
 
                          </div>
                          <div class="tabs-rounded-ram-content" id="tab-comerciales">
-                              <div class="row vehicle-section-desktop">
-                                   <div class="col-md-3 vehicle-col text-center">
-                                        <img src="assets/img/120025.png" class="img-fluid zoom-in" alt="Renegade 2024">
-                                        <p class="vichle-text-01 mt-3">Desde $444,900</p>
-                                        <p class="fw-bold vehicle-name vichle-text-02">1200 2025</p>
-                                   </div>
-                                   <div class="col-md-3 vehicle-col text-center">
-                                        <img src="assets/img/R70024.png" class="img-fluid zoom-in" alt="Renegade 2024">
-                                        <p class="vichle-text-01 mt-3">Desde $324,900</p>
-                                        <p class="fw-bold vehicle-name vichle-text-02">700 2024</p>
-                                   </div>
-                                   <div class="col-md-3 vehicle-col text-center">
-                                        <img src="assets/img/PROR24.png" class="img-fluid zoom-in" alt="Renegade 2024">
-                                        <p class="vichle-text-01 mt-3">Desde $289,900</p>
-                                        <p class="fw-bold vehicle-name vichle-text-02">PROMASTER RAPID 2024</p>
-                                   </div>
-                                   <div class="col-md-3 vehicle-col text-center">
-                                        <img src="assets/img/CRLM24.png" class="img-fluid zoom-in" alt="Renegade 2024">
-                                        <p class="vichle-text-01 mt-3">Desde $1,249,900</p>
-                                        <p class="fw-bold vehicle-name vichle-text-02">2500 HD 2024</p>
-                                   </div>
-                                   <div class="col-md-3 vehicle-col text-center">
-                                        <img src="assets/img/R400024.png" class="img-fluid zoom-in" alt="Renegade 2024">
-                                        <p class="vichle-text-01 mt-3">Desde $919,900</p>
-                                        <p class="fw-bold vehicle-name vichle-text-02">4000 2024</p>
-                                   </div>
-                                   <div class="col-md-3 vehicle-col text-center">
-                                        <img src="assets/img/PROM24.png" class="img-fluid zoom-in" alt="Renegade 2024">
-                                        <p class="vichle-text-01 mt-3">Desde $999,900</p>
-                                        <p class="fw-bold vehicle-name vichle-text-02">PROMASTER 2024</p>
-                                   </div>
-                                   <div class="col-md-3 vehicle-col text-center">
-                                        <img src="assets/img/CREW23.png" class="img-fluid zoom-in" alt="Renegade 2024">
-                                        <p class="vichle-text-01 mt-3">Desde $834,900</p>
-                                        <p class="fw-bold vehicle-name vichle-text-02">1500 SLT 2023</p>
+                              <div class="container my-5 no-padding" id="listaPromos">
+                                   <div class="row">
+
+                                        <div class="col-12 col-md-6 col-lg-3">
+                                             <div class="cardModelopromo jeep">
+                                                  <img src="https://spdfc.s3.us-west-2.amazonaws.com/distribuidores/demo_t2o/img/slider_servicio/off-road-season_875x587.jpg"
+                                                       alt="Jeep Grand Wagoneer L 2024">
+                                                  <div class="cardDetalle WGNL24">
+                                                       <span class="tituloModelo">¡Mopar te lleva de Ruta 4x4!</span>
+                                                       <span class="txtVersion">¿Te apasiona la aventura? </span>
+
+                                                       <div class="txtPromo">
+                                                            <span>¡Entonces esta promoción es para ti! Compra Accesorios
+                                                                 Originales Mopar Off-Road y participa para ganar una
+                                                                 emocionante Ruta 4x4.</span>
+                                                       </div>
+                                                       <div class="d-flex justify-content-between align-items-center">
+                                                            <button class="btn jeep-btn-promo">Cotiza ahora</button>
+                                                            <a href="#" tabindex="0">Ver detalles &gt;</a>
+                                                       </div>
+                                                  </div>
+                                             </div>
+                                        </div>
                                    </div>
                               </div>
                          </div>
                     </div>
-
-                    <!-- Tabs solo visibles en mobile -->
-                    <div class="container-tabs d-block d-md-none">
-                         <div class="contenedor-padre">
-                              <div class="tabs-rounded-ram">
-                                   <button class="tabs-rounded-ram-tab active-tab" data-tab="tab-lujo">Lujo</button>
-                                   <button class="tabs-rounded-ram-tab" data-tab="tab-deportivas">Deportivas</button>
-                                   <button class="tabs-rounded-ram-tab" data-tab="tab-comerciales">Comerciales</button>
-                              </div>
-                         </div> <!-- Cerrando contenedor-padre -->
-
-                         <!-- Tab Lujo -->
-                         <div class="tabs-rounded-ram-content active-content" id="tab-lujo">
-                              <!-- Vista móvil como slider -->
-                              <div id="vehicleSlider" class="carousel slide vehicle-section-mobile"
-                                   data-bs-ride="carousel">
-                                   <div class="carousel-inner">
-                                        <!-- Primer vehículo -->
-                                        <div class="carousel-item active">
-                                             <div class="col-md-3 vehicle-col text-center">
-                                                  <img src="assets/img/RHBV25.png" class="img-fluid zoom-in"
-                                                       alt="1500 2025">
-                                                  <p class="vichle-text-01 mt-3">Desde $1,169,900</p>
-                                                  <p class="fw-bold vehicle-name vichle-text-02">1500 2025</p>
-                                             </div>
-                                        </div>
-                                        <!-- Segundo vehículo -->
-                                        <div class="carousel-item">
-                                             <div class="col-md-3 vehicle-col text-center">
-                                                  <img src="assets/img/CRMH24.png" class="img-fluid zoom-in"
-                                                       alt="1500 MILD HYBRID LIMITED 2024">
-                                                  <p class="vichle-text-01 mt-3">Desde $1,524,900</p>
-                                                  <p class="fw-bold vehicle-name vichle-text-02">1500 MILD HYBRID
-                                                       LIMITED 2024</p>
-                                             </div>
-                                        </div>
-                                        <!-- Tercer vehículo -->
-                                        <div class="carousel-item">
-                                             <div class="col-md-3 vehicle-col text-center">
-                                                  <img src="assets/img/HDLI24.png" class="img-fluid zoom-in"
-                                                       alt="2500 HD LIMITED 2024">
-                                                  <p class="vichle-text-01 mt-3">Desde $1,774,900</p>
-                                                  <p class="fw-bold vehicle-name vichle-text-02">2500 HD LIMITED 2024
-                                                  </p>
-                                             </div>
-                                        </div>
-                                        <!-- Cuarto vehículo -->
-                                        <div class="carousel-item">
-                                             <div class="col-md-3 vehicle-col text-center">
-                                                  <img src="assets/img/CRLM24.png" class="img-fluid zoom-in"
-                                                       alt="1500 MILD HYBRID LONGHORN 2024">
-                                                  <p class="vichle-text-01 mt-3">Desde $1,399,900</p>
-                                                  <p class="fw-bold vehicle-name vichle-text-02">1500 MILD HYBRID
-                                                       LONGHORN 2024</p>
-                                             </div>
-                                        </div>
-                                        <!-- Quinto vehículo -->
-                                        <div class="carousel-item">
-                                             <div class="col-md-3 vehicle-col text-center">
-                                                  <img src="assets/img/RHBV24.png" class="img-fluid zoom-in"
-                                                       alt="1500 MILD HYBRID BIGHORN V6 2024">
-                                                  <p class="vichle-text-01 mt-3">Desde $979,900</p>
-                                                  <p class="fw-bold vehicle-name vichle-text-02">1500 MILD HYBRID
-                                                       BIGHORN V6 2024</p>
-                                             </div>
-                                        </div>
-                                   </div>
-
-                                   <!-- Dots personalizados para la vista móvil -->
-                                   <div class="vehicle-slider-custom-indicators">
-                                        <span class="vehicle-custom-dot active-dot" data-bs-target="#vehicleSlider"
-                                             data-bs-slide-to="0"></span>
-                                        <span class="vehicle-custom-dot" data-bs-target="#vehicleSlider"
-                                             data-bs-slide-to="1"></span>
-                                        <span class="vehicle-custom-dot" data-bs-target="#vehicleSlider"
-                                             data-bs-slide-to="2"></span>
-                                        <span class="vehicle-custom-dot" data-bs-target="#vehicleSlider"
-                                             data-bs-slide-to="3"></span>
-                                        <span class="vehicle-custom-dot" data-bs-target="#vehicleSlider"
-                                             data-bs-slide-to="4"></span>
-                                   </div>
-                              </div>
-                         </div>
-
-                         <!-- Tab Deportivas -->
-                         <div class="tabs-rounded-ram-content" id="tab-deportivas">
-                              <div id="vehicleSlider2" class="carousel slide vehicle-section-mobile"
-                                   data-bs-ride="carousel">
-                                   <div class="carousel-inner">
-                                        <!-- Primer vehículo -->
-                                        <div class="carousel-item active">
-                                             <div class="col-md-3 vehicle-col text-center">
-                                                  <img src="assets/img/RTRX24.png" class="img-fluid zoom-in"
-                                                       alt="1500 TRX 2024">
-                                                  <p class="vichle-text-01 mt-3">Desde $2,514,900</p>
-                                                  <p class="fw-bold vehicle-name vichle-text-02">1500 TRX 2024</p>
-                                             </div>
-                                        </div>
-                                        <!-- Segundo vehículo -->
-                                        <div class="carousel-item">
-                                             <div class="col-md-3 vehicle-col text-center">
-                                                  <img src="assets/img/RMPW24.png" class="img-fluid zoom-in"
-                                                       alt="2500 HD POWER WAGON 2024">
-                                                  <p class="vichle-text-01 mt-3">Desde $1,654,900</p>
-                                                  <p class="fw-bold vehicle-name vichle-text-02">2500 HD POWER WAGON
-                                                       2024</p>
-                                             </div>
-                                        </div>
-                                        <!-- Tercer vehículo -->
-                                        <div class="carousel-item">
-                                             <div class="col-md-3 vehicle-col text-center">
-                                                  <img src="assets/img/RLSH24.png" class="img-fluid zoom-in"
-                                                       alt="1500 MILD HYBRID LARAMIE SPORT 2024">
-                                                  <p class="vichle-text-01 mt-3">Desde $1,239,900</p>
-                                                  <p class="fw-bold vehicle-name vichle-text-02">1500 MILD HYBRID
-                                                       LARAMIE SPORT 2024</p>
-                                             </div>
-                                        </div>
-                                        <!-- Cuarto vehículo -->
-                                        <div class="carousel-item">
-                                             <div class="col-md-3 vehicle-col text-center">
-                                                  <img src="assets/img/RABH24.png" class="img-fluid zoom-in"
-                                                       alt="1500 MILD HYBRID BIGHORN OFF ROAD 2024">
-                                                  <p class="vichle-text-01 mt-3">Desde $1,084,900</p>
-                                                  <p class="fw-bold vehicle-name vichle-text-02">1500 MILD HYBRID
-                                                       BIGHORN OFF ROAD 2024</p>
-                                             </div>
-                                        </div>
-                                        <!-- Quinto vehículo -->
-                                        <div class="carousel-item">
-                                             <div class="col-md-3 vehicle-col text-center">
-                                                  <img src="assets/img/RHTV24.png" class="img-fluid zoom-in"
-                                                       alt="1500 MILD HYBRID TRADESMAN V6 2024">
-                                                  <p class="vichle-text-01 mt-3">Desde $919,900</p>
-                                                  <p class="fw-bold vehicle-name vichle-text-02">1500 MILD HYBRID
-                                                       TRADESMAN V6 2024</p>
-                                             </div>
-                                        </div>
-                                        <!-- Sexto vehículo -->
-                                        <div class="carousel-item">
-                                             <div class="col-md-3 vehicle-col text-center">
-                                                  <img src="assets/img/RAHS23.png" class="img-fluid zoom-in"
-                                                       alt="HEMI SPORT 2023">
-                                                  <p class="vichle-text-01 mt-3">Desde $904,900</p>
-                                                  <p class="fw-bold vehicle-name vichle-text-02">HEMI SPORT 2023</p>
-                                             </div>
-                                        </div>
-                                   </div>
-
-                                   <!-- Dots personalizados para la vista móvil -->
-                                   <div class="vehicle-slider-custom-indicators">
-                                        <span class="vehicle-custom-dot active-dot" data-bs-target="#vehicleSlider2"
-                                             data-bs-slide-to="0"></span>
-                                        <span class="vehicle-custom-dot" data-bs-target="#vehicleSlider2"
-                                             data-bs-slide-to="1"></span>
-                                        <span class="vehicle-custom-dot" data-bs-target="#vehicleSlider2"
-                                             data-bs-slide-to="2"></span>
-                                        <span class="vehicle-custom-dot" data-bs-target="#vehicleSlider2"
-                                             data-bs-slide-to="3"></span>
-                                        <span class="vehicle-custom-dot" data-bs-target="#vehicleSlider2"
-                                             data-bs-slide-to="4"></span>
-                                        <span class="vehicle-custom-dot" data-bs-target="#vehicleSlider2"
-                                             data-bs-slide-to="5"></span>
-                                   </div>
-                              </div>
-                         </div>
-
-                         <!-- Tab Comerciales -->
-                         <div class="tabs-rounded-ram-content" id="tab-comerciales">
-                              <div id="vehicleSlider3" class="carousel slide vehicle-section-mobile"
-                                   data-bs-ride="carousel">
-                                   <div class="carousel-inner">
-                                        <!-- Primer vehículo -->
-                                        <div class="carousel-item active">
-                                             <div class="col-md-3 vehicle-col text-center">
-                                                  <img src="assets/img/120025.png" class="img-fluid zoom-in"
-                                                       alt="1200 2025">
-                                                  <p class="vichle-text-01 mt-3">Desde $444,900</p>
-                                                  <p class="fw-bold vehicle-name vichle-text-02">1200 2025</p>
-                                             </div>
-                                        </div>
-                                        <!-- Segundo vehículo -->
-                                        <div class="carousel-item">
-                                             <div class="col-md-3 vehicle-col text-center">
-                                                  <img src="assets/img/R70024.png" class="img-fluid zoom-in"
-                                                       alt="700 2024">
-                                                  <p class="vichle-text-01 mt-3">Desde $324,900</p>
-                                                  <p class="fw-bold vehicle-name vichle-text-02">700 2024</p>
-                                             </div>
-                                        </div>
-                                        <!-- Tercer vehículo -->
-                                        <div class="carousel-item">
-                                             <div class="col-md-3 vehicle-col text-center">
-                                                  <img src="assets/img/PROR24.png" class="img-fluid zoom-in"
-                                                       alt="PROMASTER RAPID 2024">
-                                                  <p class="vichle-text-01 mt-3">Desde $289,900</p>
-                                                  <p class="fw-bold vehicle-name vichle-text-02">PROMASTER RAPID 2024
-                                                  </p>
-                                             </div>
-                                        </div>
-                                        <!-- Cuarto vehículo -->
-                                        <div class="carousel-item">
-                                             <div class="col-md-3 vehicle-col text-center">
-                                                  <img src="assets/img/CRLM24.png" class="img-fluid zoom-in"
-                                                       alt="2500 HD 2024">
-                                                  <p class="vichle-text-01 mt-3">Desde $1,249,900</p>
-                                                  <p class="fw-bold vehicle-name vichle-text-02">2500 HD 2024</p>
-                                             </div>
-                                        </div>
-                                        <!-- Quinto vehículo -->
-                                        <div class="carousel-item">
-                                             <div class="col-md-3 vehicle-col text-center">
-                                                  <img src="assets/img/R400024.png" class="img-fluid zoom-in"
-                                                       alt="4000 2024">
-                                                  <p class="vichle-text-01 mt-3">Desde $919,900</p>
-                                                  <p class="fw-bold vehicle-name vichle-text-02">4000 2024</p>
-                                             </div>
-                                        </div>
-                                        <!-- Sexto vehículo -->
-                                        <div class="carousel-item">
-                                             <div class="col-md-3 vehicle-col text-center">
-                                                  <img src="assets/img/PROM24.png" class="img-fluid zoom-in"
-                                                       alt="PROMASTER 2024">
-                                                  <p class="vichle-text-01 mt-3">Desde $999,900</p>
-                                                  <p class="fw-bold vehicle-name vichle-text-02">PROMASTER 2024</p>
-                                             </div>
-                                        </div>
-                                        <!-- Séptimo vehículo -->
-                                        <div class="carousel-item">
-                                             <div class="col-md-3 vehicle-col text-center">
-                                                  <img src="assets/img/CREW23.png" class="img-fluid zoom-in"
-                                                       alt="1500 SLT 2023">
-                                                  <p class="vichle-text-01 mt-3">Desde $834,900</p>
-                                                  <p class="fw-bold vehicle-name vichle-text-02">1500 SLT 2023</p>
-                                             </div>
-                                        </div>
-                                   </div>
-
-                                   <!-- Dots personalizados para la vista móvil -->
-                                   <div class="vehicle-slider-custom-indicators">
-                                        <span class="vehicle-custom-dot active-dot" data-bs-target="#vehicleSlider3"
-                                             data-bs-slide-to="0"></span>
-                                        <span class="vehicle-custom-dot" data-bs-target="#vehicleSlider3"
-                                             data-bs-slide-to="1"></span>
-                                        <span class="vehicle-custom-dot" data-bs-target="#vehicleSlider3"
-                                             data-bs-slide-to="2"></span>
-                                        <span class="vehicle-custom-dot" data-bs-target="#vehicleSlider3"
-                                             data-bs-slide-to="3"></span>
-                                        <span class="vehicle-custom-dot" data-bs-target="#vehicleSlider3"
-                                             data-bs-slide-to="4"></span>
-                                        <span class="vehicle-custom-dot" data-bs-target="#vehicleSlider3"
-                                             data-bs-slide-to="5"></span>
-                                        <span class="vehicle-custom-dot" data-bs-target="#vehicleSlider3"
-                                             data-bs-slide-to="6"></span>
-                                   </div>
-                              </div>
-                         </div>
-                    </div>
-
                </div>
           </section>
-         
+
      </main>
      <!-- Bootstrap JS -->
      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.10.2/umd/popper.min.js"></script>

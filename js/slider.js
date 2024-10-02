@@ -264,9 +264,10 @@ function activateTabs(containerSelector) {
     }
 }
 
-// Activar los tabs para el contenedor de escritorio y móvil respectivamente
-activateTabs('.container-tabs.d-none.d-md-block'); // Tabs de escritorio
-activateTabs('.container-tabs.d-block.d-md-none'); // Tabs de móvil
+// Activar los tabs para los contenedores correspondientes
+activateTabs('.container-tabs.desktop-tabs');       // Tabs de escritorio
+activateTabs('.container-tabs.mobile-tabs');        // Tabs de móvil
+activateTabs('.container-tabs.my-unique-tabs');     // Tabs en ambos dispositivos
 
 
 
