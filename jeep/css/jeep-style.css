@@ -183,6 +183,34 @@ p {
 }
 
 
+.jeep-btn-low {
+     background-color: transparent;
+     border-color: #424D07;
+     border-radius: 25px;
+     width: 264px;
+     color: #424D07;
+     cursor: pointer;
+     transition: background-color 0.3s, border-color 0.3s;
+     padding: 8px 40px;
+     height: 41px;
+ }
+ 
+ @media (max-width: 768px) {
+     .jeep-btn-low {
+         width: 100%;
+         padding: 8px 0;
+         text-align: center;
+         height: 53px;
+     }
+ }
+ 
+
+.jeep-btn-low:hover {
+     background-color: transparent;
+     border-color: #424D07;
+     color: #424D07;
+}
+
 
 .jeep-btn-promo {
      background-color: #424D07;
@@ -686,7 +714,7 @@ p {
     background: #F4F4F4;
     border-radius: 4px;
     width: 100%;
-    height: 34px;
+    height: 39px;
     border: none;
     font-size: 12px;
     font-weight: bold;
@@ -784,3 +812,87 @@ p {
     }
 }
 
+
+
+
+.card-detail {
+   box-shadow: 0px 3px 6px #00000029;
+   border: none !important;
+    
+ }
+.content-card {
+    height: 90px;
+    overflow: hidden; /* Si quieres que el contenido no exceda el tamaño establecido */
+}
+
+
+.text-link-btn {
+     text-decoration: none;
+     font-size: 15px;
+     font-weight: bold;
+     color: #424D07;
+ }
+ 
+ .text-link-btn:hover {
+     color: #424D07; /* Mantiene el mismo color al hacer hover */
+ }
+ 
+
+.selectVersiones {
+    background: #F4F4F4;
+    border-radius: 4px;
+    width: 100%;
+    height: 39px;
+    border: none;
+    font-size: 12px;
+    font-weight: bold;
+    margin-top: 5px;
+    padding: 5px;
+    color: #333;
+}
+
+.back-btn {
+    background-color: transparent;
+    border: none;
+    font-size: 18px;
+    color: black;
+    display: inline-flex;
+    align-items: center;
+}
+
+.back-btn span {
+    font-size: 24px;
+    margin-right: 8px;
+}
+
+.text-end {
+    text-align: right;
+}
+
+.margin-top-mobile {
+  margin-top: 40px;
+}
+
+@media (min-width: 768px) {
+  .margin-top-mobile {
+    margin-top: 0px;
+  }
+}
+
+
+.btn-back-icon-mobile {
+     font-size: 24px;
+     transform: translateX(-10px);
+     top: -64px;
+     font-weight: 600;
+}
+
+.margin-top-eow {
+  margin-top: 0px;
+}
+
+@media (max-width: 767px) {
+  .margin-top-eow {
+    margin-top: 120px;
+  }
+}
