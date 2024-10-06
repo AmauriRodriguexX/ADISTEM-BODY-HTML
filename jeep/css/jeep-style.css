@@ -1,3 +1,7 @@
+html {
+    font-size: 16px;
+}
+
 @font-face {
     font-family: 'Roboto';
     src: url('../fonts/Roboto-Regular.ttf') format('truetype');
@@ -21,7 +25,6 @@
 
 body {
     font-family: 'Roboto', sans-serif;
-    margin: -12px;
     overflow-x: hidden;
 }
 
@@ -33,17 +36,12 @@ body {
 
 h1 {
     font-family: 'Roboto', sans-serif;
-    font-size: 32px;
     font-weight: 700;
     text-align: left;
+    font-size: 24px;
 }
 
-@media (max-width: 768px) {
-    h1 {
-         font-size: 24px;
-         text-align: center;
-    }
-}
+
 
 h2 {
     font-family: 'Roboto', sans-serif;
@@ -160,12 +158,13 @@ p {
     transition: background-color 0.3s, border-color 0.3s;
     padding: 8px 40px;
     height: 41px;
+    font-size: 16px;
 }
 
 @media (max-width: 768px) {
     .jeep-btn {
         width: 100%;
-        padding: 8px 0;
+        padding: 12px 0;
         text-align: center;
         height: 53px;
     }
@@ -461,7 +460,7 @@ p {
         margin: 0; 
         width: 100%; 
         height: 100%; 
-        max-width: none; 
+        max-width: 850px !important;
     }
     
     .custom-modal-body {
@@ -470,14 +469,27 @@ p {
     }
 }
 
+@media (min-width: 576px) {
+    .modal-dialog {
+        max-width: 800px;
+        margin: 1.75rem auto;
+    }
+}
+
 .custom-modal-header {
-   background-color: #fff;
-   position: sticky;
-   top: 0;
-   z-index: 10;
-   padding-right: 32px;
-   display: flex;
-   justify-content: flex-end; /* Alinea el botón cerrar a la derecha */
+    background-color: #fff;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 87px; /* Estilo general para pantallas grandes */
+}
+
+@media (max-width: 768px) {
+    .custom-modal-header {
+        padding-right: 89px; /* Estilo para pantallas móviles */
+    }
 }
 
 .modal-close-container .btn-close {

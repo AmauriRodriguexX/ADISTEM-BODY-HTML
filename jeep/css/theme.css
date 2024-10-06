@@ -1,0 +1,4182 @@
+@charset "UTF-8";
+
+@font-face {
+    font-family: 'Roboto';
+    src: url('../fonts/Roboto-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Roboto-Medium';
+    src: url('../fonts/Roboto-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Roboto-Bold';
+    src: url('../fonts/Roboto-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
+
+
+.backgraundBlack {
+    background-color: black;
+    color: white;
+}
+
+#DescargasBGB.backgraundBlack {
+    border-top-right-radius: 5% 40%;
+    border-top-left-radius: 5% 0px;
+    border-bottom-left-radius: 5% 0px;
+    border-bottom-right-radius: 5% 0px;
+}
+
+
+
+body {
+    font-family: "Roboto",sans-serif;
+    overflow-x: hidden
+}
+
+html.cotizacionOpen {
+    position: fixed;
+    height: 100%;
+    overflow: hidden;
+}
+
+body.cotizacionOpen {
+    margin: 0;
+    width: 100vw;
+    height: 100%;
+    overflow-y: auto;
+    overflow-x: hidden;
+    -webkit-overflow-scrolling: touch;
+}
+
+.form-control:focus, .form-select:focus {
+    box-shadow: none
+}
+
+header {
+    display: flex;
+    justify-content: space-between
+}
+
+    header #logo {
+        padding: 19px 0 19px 24px
+    }
+
+    header .vb-menu {
+        margin-top: 40px;
+        margin-right: 40px;
+        position: relative
+    }
+
+@media (max-width:768px) {
+
+    .ficha-nuevo .nombre-modelo {
+        margin-top: -82px;
+    }
+
+    header .vb-menu .vb-menu-text {
+        display: none
+    }
+}
+
+header .vb-menu #vb-burger-icon {
+    width: 24px;
+    height: 20px;
+    position: relative;
+    margin: 0 0 0 .5rem;
+    transform: rotate(0deg);
+    transition: .5s ease-in-out;
+    cursor: pointer
+}
+
+    header #vb-burger-iconmobile .vb-menu-text, header .vb-menu #vb-burger-icon .vb-menu-text {
+        position: absolute;
+        display: block;
+        top: -7px;
+        right: 45px;
+        font-size: 2.5rem;
+        opacity: 1;
+        transition: .25s ease-in-out
+    }
+
+    header .vb-menu #vb-burger-icon span {
+        display: block;
+        position: absolute;
+        height: 3px;
+        width: 100%;
+        background: #000;
+        border-radius: 9px;
+        opacity: 1;
+        left: 0;
+        transform: rotate(0deg);
+        transition: .25s ease-in-out
+    }
+
+        header .vb-menu #vb-burger-icon span:nth-child(1) {
+            top: 0
+        }
+
+        header .vb-menu #vb-burger-icon span:nth-child(2) {
+            top: 10px
+        }
+
+        header .vb-menu #vb-burger-icon span:nth-child(3) {
+            top: 20px
+        }
+
+    header .vb-menu #vb-burger-icon.open .vb-menu-text {
+        opacity: 0;
+        right: 200px
+    }
+
+    header #vb-burger-iconmobile span:nth-child(1), header .vb-menu #vb-burger-icon.open span:nth-child(1) {
+        position: fixed;
+        top: 14px;
+        transform: rotate(135deg)
+    }
+
+    header #vb-burger-iconmobile span:nth-child(2), header .vb-menu #vb-burger-icon.open span:nth-child(2) {
+        position: fixed;
+        opacity: 0;
+        left: -60px
+    }
+
+    header #vb-burger-iconmobile span:nth-child(3), header .vb-menu #vb-burger-icon.open span:nth-child(3) {
+        position: fixed;
+        top: 14px;
+        transform: rotate(-135deg)
+    }
+
+header #vb-burger-iconmobile {
+    width: 24px;
+    height: 20px;
+    position: absolute;
+    right: 40px;
+    top: 35px;
+    margin: 0 0 0 .5rem;
+    transform: rotate(0deg);
+    transition: .5s ease-in-out;
+    cursor: pointer;
+    z-index: 999999
+}
+
+    header #vb-burger-iconmobile span {
+        display: block;
+        position: absolute;
+        height: 3px;
+        width: 100%;
+        background: #000;
+        border-radius: 9px;
+        opacity: 1;
+        left: 0;
+        transform: rotate(0deg);
+        transition: .25s ease-in-out;
+        z-index: 999999
+    }
+
+header #vb-burger-container #vb-burger-menu, header .zonamenu .row {
+    overflow-x: hidden;
+    overflow-y: scroll
+}
+
+header #vb-burger-container {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0,0,0,.6);
+    z-index: 999999999
+}
+
+    header #vb-burger-container #vb-burger-menu {
+        position: absolute;
+        background: #fff;
+        z-index: 99999;
+        right: -20px;
+        width: 500px;
+        max-width: 100%;
+        border: 1px solid #000;
+        transition: .25s ease-in-out
+    }
+
+        header #vb-burger-container #vb-burger-menu #logo-menu {
+            padding: 32px 0 32px 45px
+        }
+
+        header #vb-burger-container #vb-burger-menu .separador-menu {
+            position: relative;
+            border-bottom: 1px solid #ccc
+        }
+
+        header #vb-burger-container #vb-burger-menu #submenu ul, header #vb-burger-container #vb-burger-menu .menu-nav {
+            list-style: none
+        }
+
+            header #vb-burger-container #vb-burger-menu .menu-nav li {
+                font-size: 1.9rem;
+                position: relative
+            }
+
+                header #vb-burger-container #vb-burger-menu .menu-nav li span {
+                    position: absolute;
+                    right: 40px;
+                    top: 10
+                }
+
+                header #vb-burger-container #vb-burger-menu .menu-nav li a {
+                    display: block;
+                    width: 100;
+                    color: #000;
+                    text-decoration: none;
+                    padding: 20px 0 18px 40px
+                }
+
+            header #vb-burger-container #vb-burger-menu #submenu ul li {
+                text-align: center
+            }
+
+                header #vb-burger-container #vb-burger-menu #submenu ul li a {
+                    padding: 10px 0
+                }
+
+        header #vb-burger-container #vb-burger-menu .social-icons-menu a {
+            color: #000
+        }
+
+@media (max-width:768px) {
+    header #vb-burger-container #vb-burger-menu {
+        width: 100%;
+        height: 100vh;
+        right: 0
+    }
+}
+
+.fondo-cabecera-form {
+    width: 100%;
+    height: 584px;
+    background-image: url(../img/fndcabecera01-80.jpg);
+    background-position: center center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff
+}
+
+    .fondo-cabecera-form.promociones {
+        background-image: url(../img/Banner_Promociones.jpg);
+    }
+
+    .fondo-cabecera-form .bloque {
+        max-width: 800px
+    }
+
+        .fondo-cabecera-form .bloque h1 {
+            font-family: "Roboto-Bold",sans-serif;
+            font-size: 4.3rem;
+            font-weight: 700;
+            text-align: center;
+            position: relative
+        }
+
+            .container-directorio h2:before, .fondo-cabecera-form .bloque h1:before {
+                position: absolute;
+                content: "";
+                width: 70px;
+                border-bottom: 7px solid #c5140c;
+                display: block;
+                bottom: 0;
+                left: calc(50% - 35px)
+            }
+
+        .fondo-cabecera-form .bloque p {
+            margin-top: 60px;
+            font-size: 2.7rem
+        }
+
+        .fondo-cabecera-form .bloque .zona-correos {
+            margin-top: 30px;
+            text-align: center;
+            font-size: 2.5rem
+        }
+
+            .fondo-cabecera-form .bloque .zona-correos a {
+                text-decoration: none;
+                color: #fff;
+                font-size: 2.4rem;
+                font-family: "Roboto",sans-serif
+            }
+
+    .fondo-cabecera-form.cabecera-mini {
+        height: 240px
+    }
+
+        .fondo-cabecera-form.cabecera-mini .bloque {
+            max-width: 100%
+        }
+
+#Principal, #exteriorClaims, #interiorClaims {
+    max-width: 1920px;
+    width: 93%;
+    margin: 0 auto;
+    font-family: 'Roboto';
+    padding: 61px 0px 30px 0px;
+}
+
+#exteriorClaims, #interiorClaims {
+    padding: 80px 0;
+}
+
+.DG .separador {
+    background: #C51A18;
+}
+
+.CH .separador {
+    background: #164075;
+}
+
+.FI .separador {
+    background: #E30D13;
+}
+
+.JP .separador {
+    background: #324B20;
+}
+
+.RM .separador {
+    background: #848484;
+}
+
+.PE-PREMIUM .separador, .PE-VANS .separador {
+    background: #00A3E0;
+}
+
+.separador {
+    width: 55px;
+    height: 1px;
+    /* margin-bottom: 10px; */
+    display: inline-block;
+    vertical-align: text-top;
+    margin: 10px 0 15px 0;
+}
+
+#Descargas .separador {
+    display: block;
+    background: white;
+    text-align: left;
+    margin: 0;
+}
+
+@media (max-width:768px) {
+    .fondo-cabecera-form.promociones {
+        background-image: url(../img/Banner_Promociones_mobile.jpg);
+    }
+
+        .fondo-cabecera-form.promociones span {
+            font-size: 28px;
+        }
+
+    #interiorClaims > div:first-child {
+        margin-top: 80px;
+    }
+
+    #DescargasBGB.backgraundBlack {
+        border-top-right-radius: 11% 7%;
+        border-top-left-radius: 0px 0px;
+        border-bottom-left-radius: 0px 0px;
+        border-bottom-right-radius: 0px 0px;
+        padding: 0;
+    }
+
+    .fondo-cabecera-form {
+        height: 300px;
+        padding: 0 20px;
+    }
+
+        .fondo-cabecera-form.cabecera-contacto {
+            height: 268px
+        }
+
+        .fondo-cabecera-form .bloque h1 {
+            font-size: 2.8rem
+        }
+
+            .fondo-cabecera-form .bloque h1:before {
+                border-bottom: 2px solid #c5140c
+            }
+
+        .fondo-cabecera-form .bloque p {
+            font-size: 1.7rem;
+            margin-top: 30px
+        }
+
+        .fondo-cabecera-form .bloque .zona-correos {
+            margin-top: 10px;
+            text-align: center;
+            font-size: 1.6rem
+        }
+
+            .fondo-cabecera-form .bloque .zona-correos a {
+                text-decoration: none;
+                color: #fff;
+                font-size: 1.6rem;
+                font-family: "Roboto",sans-serif
+            }
+}
+
+.container-form {
+    max-width: 1300px;
+    margin-top: 120px;
+    margin-bottom: 180px
+}
+
+    .container-form h2 {
+        text-align: center;
+        font-size: 4.4rem;
+        margin-bottom: 45px
+    }
+
+    .container-form input, .container-form select, .container-form textarea {
+        font-size: 2.2rem;
+        border: 1px solid #000;
+        border-radius: 13px;
+        font-family: "Roboto",sans-serif;
+        margin-bottom: 45px;
+        padding: 15px 0 12px 30px
+    }
+
+        .container-form input:focus, .container-form select:focus, .container-form textarea:focus {
+            border-color: #c5140c
+        }
+
+    .container-form .radioopt-formato input[type=radio] {
+        display: none
+    }
+
+    .container-form .radioopt-formato input:checked + label {
+        background-color: #334E8B;
+        color: #fff
+    }
+
+    .container-form .radioopt-formato label {
+        display: block;
+        cursor: hand;
+        width: 100%;
+        border: 1px solid #000;
+        font-family: "Roboto",sans-serif;
+        border-radius: 5px;
+        padding: 8px 15px;
+        text-align: center;
+        margin-bottom: 45px;
+        font-size: 2.2rem
+    }
+
+    .container-form .checkbox-lopd {
+        font-size: 3.2rem
+    }
+
+        .container-form .checkbox-lopd a, .ficha-nuevo .zona-cotizador .zona-lopd .label-lopd a, .modal-custom .modal-dialog .modal-content .checkbox-lopd a {
+            text-decoration: none;
+            color: #c5140c
+        }
+
+    .container-form .btn-enviar {
+        font-size: 2.6rem;
+        background-color: #c5140c;
+        color: #fff;
+        border-radius: 5px;
+        padding: 8px 15px
+    }
+
+@media (max-width:768px) {
+    .container-form {
+        margin-top: 60px;
+        margin-bottom: 45px;
+        padding-left: 80px;
+        padding-right: 80px
+    }
+
+        .container-form h2 {
+            font-size: 2.5rem;
+            margin-bottom: 25px
+        }
+
+        .container-form input, .container-form select, .container-form textarea {
+            margin-bottom: 25px;
+            font-size: 2rem
+        }
+
+        .container-form .radioopt-formato input[type=radio] {
+            display: none
+        }
+
+        .container-form .radioopt-formato label {
+            font-size: 2.5rem
+        }
+
+        .container-form .checkbox-lopd {
+            font-size: 2rem
+        }
+
+        .container-form .btn-enviar {
+            font-size: 2.2rem
+        }
+}
+
+@media (max-width:478px) {
+    .container-form {
+        padding-left: 30px;
+        padding-right: 30px
+    }
+}
+
+.modal-custom {
+    z-index: 99999999
+}
+
+    .modal-custom .modal-dialog {
+        position: fixed;
+        right: 15px
+    }
+
+        .modal-custom .modal-dialog .modal-header {
+            border-bottom: none;
+            margin-bottom: 30px
+        }
+
+            .modal-custom .modal-dialog .modal-header img {
+                max-width: 43px
+            }
+
+            .modal-custom .modal-dialog .modal-header .tex {
+                font-size: 3.8rem;
+                margin-left: 35px
+            }
+
+            .modal-custom .modal-dialog .modal-header .btn-close {
+                color: #fff
+            }
+
+        .modal-custom .modal-dialog .modal-footer {
+            border-top: none;
+            text-align: center
+        }
+
+        .modal-custom .modal-dialog .modal-content {
+            background-color: #000;
+            color: #fff;
+            border: 0;
+            font-size: 1.9rem;
+            border-radius: 15px;
+            padding: 45px 75px
+        }
+
+            .modal-custom .modal-dialog .modal-content input, .modal-custom .modal-dialog .modal-content select, .modal-custom .modal-dialog .modal-content textarea {
+                font-size: 1.9rem;
+                border: 1px solid #fff;
+                border-radius: 5px;
+                font-family: "Roboto",sans-serif;
+                color: #fff;
+                background-color: #000;
+                margin-bottom: 25px
+            }
+
+                .fichas-coches .zona-ficha-precio input::placeholder, .fichas-coches .zona-ficha-precio textarea::placeholder, .modal-custom .modal-dialog .modal-content input::placeholder, .modal-custom .modal-dialog .modal-content select::placeholder, .modal-custom .modal-dialog .modal-content textarea::placeholder {
+                    color: #fff
+                }
+
+                .modal-custom .modal-dialog .modal-content input[type=date]::-webkit-calendar-picker-indicator, .modal-custom .modal-dialog .modal-content input[type=time]::-webkit-calendar-picker-indicator {
+                    cursor: pointer;
+                    border-radius: 4px;
+                    margin-right: 2px;
+                    opacity: .9;
+                    filter: invert(.9)
+                }
+
+            .modal-custom .modal-dialog .modal-content .checkbox-lopd {
+                font-size: 2.2rem
+            }
+
+        .modal-custom .modal-dialog .btn-primary {
+            font-size: 1.9rem;
+            padding: 8px 15px 5px;
+            text-transform: uppercase
+        }
+
+@media (min-width:768px) {
+    .modal-custom .modal-dialog {
+        min-width: 760px
+    }
+}
+
+@media (max-width:768px) {
+    .modal-custom .modal-dialog {
+        right: 0
+    }
+
+        .modal-custom .modal-dialog .modal-header img {
+            max-width: 20px
+        }
+
+        .modal-custom .modal-dialog .modal-header .tex {
+            font-size: 2.2rem;
+            margin-left: 15px
+        }
+
+        .modal-custom .modal-dialog .modal-content {
+            padding: 15px 25px;
+            font-size: 1.6rem
+        }
+
+            .modal-custom .modal-dialog .modal-content .checkbox-lopd {
+                font-size: 1.8rem
+            }
+}
+
+.container-directorio {
+    background-color: #eee;
+    padding: 75px 0 100px
+}
+
+    .container-directorio h2 {
+        font-size: 4.3rem;
+        text-align: center;
+        position: relative;
+        margin-bottom: 45px
+    }
+
+    .container-directorio .zona-directorio, .optservicios label {
+        font-size: 2rem
+    }
+
+        .container-directorio .zona-directorio h4 {
+            font-size: 2rem;
+            font-family: "Roboto-Bold",sans-serif
+        }
+
+        .container-directorio .zona-directorio p {
+            font-family: "Roboto",sans-serif;
+            margin-bottom: 30px
+        }
+
+            .container-directorio .zona-directorio p a {
+                text-decoration: none;
+                color: #000
+            }
+
+@media (max-width:992px) {
+    .container-directorio {
+        padding: 75px 80px
+    }
+
+        .container-directorio h2 {
+            font-size: 2.8rem
+        }
+
+            .container-directorio h2:before {
+                width: 38px;
+                left: calc(50% - 19px);
+                border-bottom: 4px solid #c5140c
+            }
+
+        .container-directorio .zona-directorio, .container-directorio .zona-directorio h4 {
+            font-size: 1.6rem
+        }
+}
+
+@media (max-width:768px) {
+    .container-directorio {
+        padding: 75px 80px
+    }
+
+        .container-directorio h2 {
+            font-size: 2.2rem
+        }
+
+        .container-directorio .zona-directorio, .container-directorio .zona-directorio h4 {
+            font-size: 1.4rem
+        }
+}
+
+@media (max-width:450px) {
+    .container-directorio {
+        padding: 45px 20px
+    }
+
+        .container-directorio .zona-directorio, .container-directorio .zona-directorio h4 {
+            font-size: 1.4rem
+        }
+}
+
+.optservicios {
+    position: relative;
+}
+
+#galeria-slider-container {
+    display: block;
+    top: 0;
+    position: absolute;
+    height: 100%;
+}
+
+.optservicios .delete {
+    position: absolute;
+    top: 44px;
+    right: 15px
+}
+
+    .listado article .zona-modelo a:hover, .optservicios .delete a {
+        color: #c5140c
+    }
+
+        .optservicios .delete a i {
+            font-size: 2.5rem
+        }
+
+.zona-filtros {
+    background-color: #000;
+    font-family: "Roboto-Bold",sans-serif;
+    font-size: 3rem;
+    padding: 25px 110px 20px
+}
+
+    .zona-filtros a, footer .copyfooter a {
+        color: #fff;
+        text-decoration: none
+    }
+
+.zona-subfiltros {
+    background-color: #1a1a1a;
+    padding: 50px 110px 60px;
+    color: #fff
+}
+
+    .zona-subfiltros h2 {
+        font-size: 2.9rem
+    }
+
+    .zona-subfiltros .zona-checks {
+        flex-direction: row
+    }
+
+        .zona-subfiltros .zona-checks input[type=checkbox] {
+            display: none
+        }
+
+        .zona-subfiltros .zona-checks input:checked + label {
+            background-color: #c5140c;
+            color: #fff;
+            border-color: transparent
+        }
+
+        .zona-subfiltros .zona-checks label {
+            cursor: hand;
+            border: 1px solid #fff;
+            font-family: "Roboto",sans-serif;
+            border-radius: 5px;
+            padding: 8px 70px;
+            text-align: center;
+            margin-bottom: 45px;
+            font-size: 1.6rem;
+            margin-right: 10px
+        }
+
+@media (max-width:768px) {
+    .zona-subfiltros .zona-checks label {
+        text-align: center;
+        width: auto;
+        min-width: 120px;
+        padding: 8px 20px;
+        margin-bottom: 10px
+    }
+}
+
+.zona-subfiltros .btn-aplicar {
+    font-size: 2rem;
+    background-color: #c5140c;
+    color: #fff;
+    border-radius: 5px;
+    padding: 8px 200px
+}
+
+@media (max-width:768px) {
+    .zona-subfiltros .btn-aplicar {
+        padding: 8px 0;
+        text-align: center;
+        width: 100%;
+        margin-top: 20px
+    }
+
+    .zona-filtros, .zona-subfiltros {
+        padding-left: 45px;
+        padding-right: 45px
+    }
+}
+
+@media (min-width:768px) {
+    .zona-listados.padding-zona-showroom {
+        padding: 65px 110px 180px
+    }
+
+    .zona-listados.padding-zona-promociones {
+        padding: 0 110px 180px
+    }
+}
+
+@media (max-width:768px) {
+    .zona-listados.padding-zona-showroom {
+        padding: 65px 15px 60px
+    }
+
+    .zona-listados.padding-zona-promociones {
+        padding: 0 15px 60px
+    }
+}
+
+.zona-listados h1 {
+    font-family: "Roboto-Bold",sans-serif;
+    font-size: 6rem;
+    font-weight: 700;
+    position: relative
+}
+
+    .zona-listados h1:before {
+        position: absolute;
+        content: "";
+        width: 70px;
+        border-bottom: 7px solid #c5140c;
+        display: block;
+        bottom: 0;
+        left: 0
+    }
+
+.zona-listados .aviso-showroom {
+    margin-top: 150px;
+    font-size: 1.8rem;
+    color: #828282
+}
+
+.zona-listados .filtros-listados {
+    margin-top: 60px;
+    font-size: 2.4rem
+}
+
+    .zona-listados .filtros-listados label {
+        font-size: 2.4rem
+    }
+
+    .zona-listados .filtros-listados select {
+        font-size: 2.4rem;
+        padding: 20px 45px 15px;
+        border: 1px solid #000;
+        border-radius: 11px
+    }
+
+    .zona-listados .filtros-listados .leyenda, .zona-listados .filtros-listados select {
+        font-family: "Roboto",sans-serif
+    }
+
+.btn-ver-resultados {
+    background-color: #000;
+    font-size: 20px;
+    color: #fff;
+    font-family: 'Roboto';
+    width: 100%;
+    max-width: 610px;
+    border-radius: 5px;
+    margin-top: 25px;
+    padding: 7px 0 5px;
+    /* margin-bottom: 100px; */
+}
+
+#filtrosListado > div.row > div > div.row input[type=range] {
+    -webkit-appearance: none;
+    margin: 10px 0;
+    width: 100%;
+    height: 11px;
+    border-radius: 11px;
+    background: linear-gradient(to right,black 0,#eee 1%,#eee 50%,#eee 100%);
+}
+
+    #filtrosListado > div.row > div > div.row input[type=range]:focus {
+        outline: 0
+    }
+
+    #filtrosListado > div.row > div > div.row input[type=range]::-webkit-slider-runnable-track {
+        width: 100%;
+        height: 11px;
+        cursor: pointer;
+        animate: .2s;
+        box-shadow: 0 0 0 #000;
+        border-radius: 5px;
+        border: 0 solid #000
+    }
+
+    #filtrosListado > div.row > div > div.row input[type=range]::-webkit-slider-thumb {
+        box-shadow: 0 0 1px #000;
+        border: 1px solid black;
+        height: 25px;
+        width: 25px;
+        border-radius: 25px;
+        background: #000;
+        cursor: pointer;
+        -webkit-appearance: none;
+        margin-top: -7.5px
+    }
+
+    #filtrosListado > div.row > div > div.row input[type=range]::-moz-range-track {
+        width: 100%;
+        height: 11px;
+        cursor: pointer;
+        animate: .2s;
+        box-shadow: 0 0 0 #000;
+        background: 0 0;
+        border-radius: 5px;
+        border: 0 solid #000
+    }
+
+    #filtrosListado > div.row > div > div.row input[type=range]::-moz-range-thumb {
+        box-shadow: 0 0 1px #000;
+        border: 1px solid black;
+        height: 25px;
+        width: 25px;
+        border-radius: 25px;
+        background: #fff;
+        cursor: pointer
+    }
+
+    #filtrosListado > div.row > div > div.row input[type=range]::-ms-track {
+        width: 100%;
+        height: 11px;
+        cursor: pointer;
+        animate: .2s;
+        background: 0 0;
+        border-color: transparent;
+        color: transparent
+    }
+
+    #filtrosListado > div.row > div > div.row input[type=range]::-ms-fill-lower {
+        background: #eee;
+        border: 0 solid #000;
+        border-radius: 10px;
+        box-shadow: 0 0 0 #000
+    }
+
+    #filtrosListado > div.row > div > div.row input[type=range]::-ms-fill-upper {
+        background: #eee;
+        border: 0 solid #000;
+        border-radius: 10px;
+        box-shadow: 0 0 0 #000
+    }
+
+    #filtrosListado > div.row > div > div.row input[type=range]::-ms-thumb {
+        box-shadow: 0 0 1px #000;
+        border: 1px solid black;
+        height: 25px;
+        width: 25px;
+        border-radius: 25px;
+        background: #fff;
+        cursor: pointer
+    }
+
+    #filtrosListado > div.row > div > div.row input[type=range]:focus::-ms-fill-lower {
+        background: #eee
+    }
+
+    #filtrosListado > div.row > div > div.row input[type=range]:focus::-ms-fill-upper {
+        background: #eee
+    }
+
+#filtrosListado > div.row > div > div.row > div > div.row > div.nopading {
+    padding: 0;
+}
+
+#filtrosListado > div.row > div > div.row > div > div.row > div {
+    position: relative;
+    padding: 20px 0 0 0;
+}
+
+#filtrosListado > div.row > div > div.row #limitePrecios span {
+    font-family: 'Roboto';
+    font-size: 14px;
+    color: #bebebe;
+    position: absolute;
+    right: 0;
+}
+
+#filtrosListado > div.row > div > div.row #limitePrecios {
+    top: -10px;
+    margin: -10px 0 25px 0;
+}
+
+    #filtrosListado > div.row > div > div.row #limitePrecios span:first-child {
+        right: auto;
+        left: 5px;
+    }
+
+#filtrosListado > div.row > div > div.row .leyenda {
+    font-family: 'Roboto';
+    font-size: 12px;
+    color: #bebebe;
+}
+
+@media (max-width:768px) {
+    #filtrosListado > div.row > div > div.row > div > div.row > div {
+        padding: 10px 20px;
+    }
+
+    .zona-listados {
+        padding: 30px 30px 60px
+    }
+
+        .zona-listados h1 {
+            font-size: 3.3rem
+        }
+}
+
+.zona-tags-filtro {
+    margin-top: 30px
+}
+
+    .zona-tags-filtro .tag-filtro {
+        position: relative;
+        display: inline-block;
+        border: 1px solid #000;
+        padding: 7px 0 5px 30px;
+        font-size: 1.6rem;
+        border-radius: 5px;
+        margin-right: 15px;
+        min-width: 168px
+    }
+
+        .zona-tags-filtro .tag-filtro a {
+            position: absolute;
+            font-size: 3rem;
+            right: 30px;
+            top: -1px;
+            color: #c5140c
+        }
+
+        .zona-tags-filtro .tag-filtro.tag-del {
+            background-color: #c5140c;
+            color: #fff;
+            border-color: #c5140c
+        }
+
+            .zona-tags-filtro .tag-filtro.tag-del a {
+                right: 20px;
+                color: #fff
+            }
+
+@media (max-width:768px) {
+    .zona-tags-filtro .tag-filtro {
+        padding-left: 10px;
+        min-width: 150px;
+        margin-bottom: 15px
+    }
+
+        .zona-tags-filtro .tag-filtro a {
+            right: 15px
+        }
+
+        .zona-tags-filtro .tag-filtro.tag-del a {
+            right: 10px
+        }
+}
+
+.listado {
+    background: black;
+    padding: 60px 20px;
+    color: #787878;
+    width: 98%;
+}
+
+#filtrosListado .listado-seminuevos > div.row > div {
+    /* cursor: pointer; */
+}
+
+    #filtrosListado .listado-seminuevos > div.row > div .seminuevos {
+        border: solid 1px #bbb;
+        margin: 25px 5px;
+    }
+
+        #filtrosListado .listado-seminuevos > div.row > div .seminuevos.NoHover {
+            background-color: black;
+            opacity: 0.5;
+        }
+
+        #filtrosListado .listado-seminuevos > div.row > div .seminuevos.Hover .info-general h3 {
+            font-size: 22px;
+        }
+
+        #filtrosListado .listado-seminuevos > div.row > div .seminuevos.Hover #preciosSeminuevos span {
+            font-size: 19px;
+        }
+
+        #filtrosListado .listado-seminuevos > div.row > div .seminuevos .slick-arrow {
+            display: none;
+            z-index: 999;
+            width: 40px;
+            height: 40px;
+        }
+
+            #filtrosListado .listado-seminuevos > div.row > div .seminuevos .slick-arrow:before {
+                content: '';
+            }
+
+            #filtrosListado .listado-seminuevos > div.row > div .seminuevos .slick-arrow.slick-prev {
+                background: url(/assets/img/Icono_Flecha_Izq.png);
+                background-size: cover;
+                left: 10px;
+            }
+
+            #filtrosListado .listado-seminuevos > div.row > div .seminuevos .slick-arrow.slick-next {
+                background: url(/assets/img/Icono_Flecha_Der.png);
+                background-size: cover;
+                right: 10px;
+            }
+
+        #filtrosListado .listado-seminuevos > div.row > div .seminuevos.Hover .slick-arrow {
+            display: block;
+        }
+
+#filtrosListado #preciosSeminuevos {
+    padding-bottom: 20px;
+}
+
+@media (max-width:768px) {
+
+    .listado {
+        width: 111.5%;
+        margin-left: -6%;
+    }
+
+        .listado.listado-promociones {
+            margin-top: 30px
+        }
+
+    #filtrosListado .listado-seminuevos > div.row > div .seminuevos .slick-arrow {
+        display: block;
+        position: absolute;
+    }
+}
+
+.listado article {
+    margin-bottom: 50px;
+    padding-bottom: 40px;
+    border-bottom: 1px solid rgba(0,0,0,.48)
+}
+
+    .listado article .ano-modelo {
+        font-size: 2.5rem;
+        font-family: "Roboto",sans-serif
+    }
+
+@media (max-width:768px) {
+    .listado article .ano-modelo {
+        font-size: 1.7rem
+    }
+}
+
+.listado article .zona-modelo a {
+    color: #000;
+    text-decoration: none
+}
+
+    .listado article .datos-version span, .listado article .zona-modelo a h3 {
+        font-size: 2.5rem;
+        font-family: "Roboto-Bold",sans-serif
+    }
+
+@media (max-width:768px) {
+    .listado article .zona-modelo a h3 {
+        font-size: 2.1rem
+    }
+}
+
+.listado article .zona-colores {
+    margin-top: 35px
+}
+
+    .ficha-nuevo .zona-color ul, .listado article .zona-colores ul {
+        list-style: none;
+        padding: 0;
+        margin: 0
+    }
+
+        .listado article .zona-colores ul li {
+            display: inline-block;
+            width: 34px;
+            height: 34px;
+            border: 6px solid #f0f0f0
+        }
+
+            .listado article .zona-colores ul li img {
+                width: 22px;
+                height: 22px;
+                display: block
+            }
+
+            .listado article .zona-colores ul li.active {
+                border-color: #e1e1e1
+            }
+
+            .listado article .zona-colores ul li:hover {
+                border-color: #e1e1e1;
+                cursor: hand
+            }
+
+.listado article .datos-precios, .listado article .datos-version {
+    font-size: 2.2rem;
+    color: #828282;
+    margin-bottom: 25px
+}
+
+    .listado article .datos-version span {
+        color: #000
+    }
+
+    .listado article .datos-version .form-select {
+        font-size: 1.9rem;
+        font-family: "Roboto-Bold",sans-serif;
+        border: 0
+    }
+
+    .listado article .datos-precios span {
+        font-size: 2.5rem;
+        color: #000
+    }
+
+        .ficha-vehiculo .cabecera-ficha h1 strong, .listado article .datos-precios span.destacado, .listado article.seminuevos .info-general h3 strong {
+            font-family: "Roboto-Bold",sans-serif
+        }
+
+    .listado article .datos-precios .fila-precios .col {
+        border-left: 1px solid #333
+    }
+
+        .listado article .datos-precios .fila-precios .col:first-child {
+            border-left: none
+        }
+
+@media (max-width:768px) {
+    .listado article .datos-precios {
+        font-size: 1.7rem
+    }
+
+        .listado article .datos-precios span {
+            font-size: 2.4rem
+        }
+}
+
+.listado article .precios-promociones {
+    font-size: 2.3rem
+}
+
+    .listado article .precios-promociones .titprecio {
+        margin: 0
+    }
+
+    .listado article .precios-promociones .importe {
+        margin-top: -10px;
+        font-size: 3.4rem;
+        font-family: "Roboto-Bold",sans-serif
+    }
+
+@media (min-width:768px) and (max-width:1100px) {
+    .listado article .precios-promociones {
+        font-size: 1.6rem
+    }
+
+        .listado article .precios-promociones .importe {
+            font-size: 2.4rem
+        }
+}
+
+@media (max-width:768px) {
+    .listado article .form-select {
+        margin-top: 30px
+    }
+
+    .listado article .precios-promociones {
+        font-size: 1.8rem
+    }
+
+        .listado article .precios-promociones .importe {
+            font-size: 2.8rem
+        }
+}
+
+.listado article .info-terminos {
+    font-size: 2rem;
+    color: #828282
+}
+
+    .listado article .info-terminos a {
+        color: #828282
+    }
+
+.listado article button {
+    font-size: 1.9rem;
+    width: 100%;
+    padding: 8px 0 5px;
+    display: block;
+    max-width: 260px;
+    text-align: center;
+    border-radius: 5px
+}
+
+.listado article .zona-btn-promocion {
+    width: 100%;
+    max-width: 260px
+}
+
+    .listado article .zona-btn-promocion .btn-promocion {
+        color: #fff;
+        background-color: rgba(0,0,0,.8);
+        border: 1px solid rgba(0,0,0,.8)
+    }
+
+@media (max-width:768px) {
+    .listado article .zona-btn-promocion {
+        flex: 1 1 auto;
+        width: 100%;
+        max-width: 100%;
+        margin-bottom: -5px
+    }
+
+        .listado article .zona-btn-promocion .btn-promocion {
+            margin-top: 30px
+        }
+}
+
+.listado article .btn-cotizacion {
+    color: #fff;
+    background-color: #c5140c;
+    border: 1px solid #c5140c
+}
+
+.listado article .btn-general {
+    color: #828282;
+    background-color: #fff;
+    border: 1px solid #828282
+}
+
+@media (max-width:768px) {
+    .listado article .btn-cotizacion, .listado article .btn-general {
+        margin-bottom: 20px
+    }
+
+    .listado article button {
+        width: 100%;
+        max-width: 100%;
+        position: relative;
+        text-align: left;
+        padding: 8px 20px 5px;
+    }
+
+        .listado article button i {
+            position: absolute;
+            right: 10px
+        }
+}
+
+.listado article.promociones h3 {
+    font-size: 2.6rem
+}
+
+    .listado article.promociones h3 span {
+        font-family: "Roboto-Bold",sans-serif;
+        margin-top: -10px
+    }
+
+.listado article.seminuevos {
+    margin-bottom: 40px;
+    padding-bottom: 0
+}
+
+    .listado article.seminuevos .info-general {
+        margin-top: 20px;
+        border-bottom: 1px solid #000;
+        padding-bottom: 20px;
+        margin-bottom: 10px;
+        margin: 15px;
+    }
+
+        .listado article.seminuevos .info-general h3 {
+            font-size: 20px;
+            padding: 7px 0 10px 0;
+            margin: 0;
+            color: white;
+        }
+
+        .listado article.seminuevos .info-general .price {
+            background-color: #c5140c;
+            text-align: right;
+            color: #fff;
+            font-size: 2rem;
+            font-family: "Roboto-Bold",sans-serif;
+            padding: 6px 10px 1px 20px;
+            position: relative
+        }
+
+            .listado article.seminuevos .info-general .price:before {
+                content: "";
+                width: 15px;
+                height: 50px;
+                position: absolute;
+                background-color: #fff;
+                bottom: -1px;
+                left: -5px;
+                transform: rotate(15deg)
+            }
+
+    .listado article.seminuevos .info-detalles {
+        font-size: 13px;
+        color: white;
+        font-family: 'Roboto';
+    }
+
+.info-detalles .col-4 {
+    position: relative;
+}
+
+.listado article.seminuevos .info-detalles .separadorSeminuevos {
+    width: 1px;
+    height: 20px;
+    background: white;
+    margin: 0 auto;
+    text-align: center;
+    display: inline-block;
+    position: absolute;
+    right: 4px;
+}
+
+.listado article.seminuevos .precioAnterior {
+    margin: 0 auto;
+    text-align: center;
+}
+
+.listado article.seminuevos .datosDist {
+    text-align: center;
+    border-top: solid 1px #ccc;
+    font-size: 18px;
+    padding: 15px 0;
+}
+
+#CaracteristicasSeminuevo, #DistribuidorSeminuevo {
+    border: solid 1px #000;
+    padding: 30px;
+}
+
+    #CaracteristicasSeminuevo .titulo, #DistribuidorSeminuevo .titulo {
+        font-family: 'Roboto-Bold';
+    }
+
+    #CaracteristicasSeminuevo > div > div > div > div, #DistribuidorSeminuevo > div > div > div > div {
+        margin: 20px 0;
+    }
+
+    #CaracteristicasSeminuevo .lastDiv, #DistribuidorSeminuevo .lastDiv {
+        width: 218px;
+        margin: 0 0 0 auto;
+    }
+
+    #CaracteristicasSeminuevo .textCaracteristicas, #DistribuidorSeminuevo .textCaracteristicas {
+        display: inline-block;
+        vertical-align: middle;
+        margin-left: 15px;
+        /* width: 80%; */
+        height: 80px;
+    }
+
+        #CaracteristicasSeminuevo .textCaracteristicas span, #DistribuidorSeminuevo .textCaracteristicas span {
+            display: block;
+            font-size: 16px;
+            margin-bottom: 10px;
+        }
+
+            #CaracteristicasSeminuevo .textCaracteristicas span strong, #DistribuidorSeminuevo .textCaracteristicas span strong {
+                font-family: 'Roboto-Bold';
+            }
+
+    #CaracteristicasSeminuevo img, #DistribuidorSeminuevo img {
+        width: 25px;
+        display: inline-block;
+        vertical-align: middle;
+    }
+
+    #CaracteristicasSeminuevo p, #DistribuidorSeminuevo p {
+        display: inline-block;
+        vertical-align: sub;
+    }
+
+#filtrosListado {
+    margin-bottom: 50px;
+}
+
+    #filtrosListado .form-select {
+        background-color: #f1f1f1;
+        border: none;
+        padding: 10px 10px;
+        font-size: 14px;
+        font-family: 'Roboto';
+        color: #b8b8b8;
+    }
+
+    #filtrosListado label {
+        font-size: 14px;
+        font-family: 'Roboto-Medium';
+        padding: 10px 0;
+    }
+
+#titleHead {
+    margin: 20px 0;
+}
+
+#filtrosListado .cabezera {
+    background-color: black;
+    color: white;
+    padding: 10px 0;
+    font-size: 18px;
+    font-family: 'Roboto-Medium';
+}
+
+#titleHead label {
+    font-size: 16px;
+    display: block;
+    font-family: 'Roboto';
+}
+
+#titleHead .title {
+    font-size: 32px;
+    display: block;
+    font-family: 'Roboto';
+}
+
+    #titleHead .title strong {
+        font-family: 'Roboto-Medium';
+    }
+
+#filtrosListado #preciosSeminuevos span {
+    display: block;
+    font-size: 16px;
+    font-family: 'Roboto';
+}
+
+#filtrosListado #preciosSeminuevos .precio {
+    color: white;
+    font-size: 18px;
+    font-family: 'Roboto-Bold';
+}
+
+#filtrosListado #preciosSeminuevos .precioAnterior .precio {
+    color: red;
+    text-decoration: line-through;
+}
+
+@media (max-width: 768px) {
+    #CaracteristicasSeminuevo > div > div > div > div:first-child {
+        margin-top: 0;
+    }
+
+    #CaracteristicasSeminuevo > div > div > div > div:last-child {
+        margin-bottom: 0;
+    }
+
+    #CaracteristicasSeminuevo, #DistribuidorSeminuevo {
+        padding: 10px;
+        width: 98%;
+        margin: 0 auto;
+    }
+
+        #CaracteristicasSeminuevo .textCaracteristicas, #DistribuidorSeminuevo .textCaracteristicas {
+            width: 80%;
+        }
+
+        #CaracteristicasSeminuevo .lastDiv, #DistribuidorSeminuevo .lastDiv {
+            margin: 0;
+            width: 100%;
+        }
+
+    #titleHead {
+        width: 90%;
+        margin: 20px auto 20px auto;
+    }
+
+    #filtrosListado {
+        width: 90%;
+        margin: 20px auto 20px auto;
+    }
+
+    .listado article.seminuevos .info-detalles .zona-carroceria {
+        width: 100%;
+        justify-content: space-between
+    }
+}
+
+.listado article.seminuevos .btn-detalle {
+    border-radius: 0;
+    font-size: 1.6rem;
+    max-width: 100%;
+    margin-top: 10px;
+    text-align: center
+}
+
+.listado article.seminuevos .btn-ver-detalle {
+    border: 1px solid #334E8B;
+    background-color: #334E8B;
+    color: #fff;
+    width: 100%;
+}
+
+.listado article.seminuevos .btn-contact {
+    border: 1px solid #828282;
+    color: #000
+}
+
+.modal-info-condiciones {
+    font-size: 1.8rem;
+    color: #686767
+}
+
+    .listado article.seminuevos, .modal-info-condiciones .modal-dialog .modal-header {
+        border-bottom: none
+    }
+
+        .modal-info-condiciones .modal-dialog .modal-header .btn-close {
+            width: 1.5rem;
+            height: 1.5rem;
+            background-size: cover;
+            margin-right: 10px;
+            margin-top: 10px
+        }
+
+    .modal-info-condiciones .modal-dialog .modal-body {
+        padding: 20px 50px 40px
+    }
+
+@media (min-width:768px) {
+    .modal-info-condiciones .modal-dialog {
+        min-width: 700px
+    }
+}
+
+@media (max-width:768px) {
+    .modal-info-condiciones .modal-info-condiciones {
+        font-size: 1.6rem
+    }
+
+        .modal-info-condiciones .modal-info-condiciones .modal-dialog {
+            min-width: auto;
+            width: 100vw
+        }
+}
+
+.ficha-vehiculo {
+    padding-left: 50px;
+    padding-right: 50px;
+    font-family: 'Roboto';
+}
+
+    .ficha-vehiculo .cabecera-ficha {
+        margin-bottom: 75px
+    }
+
+        .ficha-vehiculo .cabecera-ficha h2 {
+            font-size: 30px;
+        }
+
+        .ficha-vehiculo .cabecera-ficha h1 {
+            font-size: 28px;
+            margin-bottom: 10px;
+        }
+
+        .ficha-vehiculo .cabecera-ficha span {
+            font-size: 14px;
+            margin-bottom: 10px;
+        }
+
+        .ficha-vehiculo .cabecera-ficha a {
+            font-family: "Roboto",sans-serif;
+            font-size: 2.2rem;
+            color: #000;
+            text-decoration: none
+        }
+
+@media (max-width:768px) {
+    .galeria-slider .slick-arrow {
+        width: 40px;
+        height: 40px;
+    }
+
+    .ficha-vehiculo .cabecera-ficha h2 {
+        margin-top: 40px;
+    }
+
+    .ficha-vehiculo .cabecera-ficha {
+        margin-bottom: 25px
+    }
+
+        .ficha-vehiculo .cabecera-ficha h1 {
+            font-size: 2.7rem
+        }
+}
+
+.ficha-vehiculo .galeria-grid .parent {
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    grid-template-rows: repeat(2,1fr);
+    grid-column-gap: 0;
+    grid-row-gap: 0
+}
+
+.ficha-vehiculo .galeria-grid .div1 {
+    grid-area: 1/1/3/3
+}
+
+.ficha-vehiculo .galeria-grid .div2 {
+    grid-area: 1/3/2/4
+}
+
+.ficha-vehiculo .galeria-grid .div3 {
+    grid-area: 1/4/2/5
+}
+
+.ficha-vehiculo .galeria-grid .div4 {
+    grid-area: 1/5/2/6
+}
+
+.ficha-vehiculo .galeria-grid .div5 {
+    grid-area: 2/3/3/4
+}
+
+.ficha-vehiculo .galeria-grid .div6 {
+    grid-area: 2/4/3/5
+}
+
+.ficha-vehiculo .galeria-grid .div7 {
+    grid-area: 2/5/3/6
+}
+
+.galeria-slider .slick-arrow:before {
+    content: ''
+}
+
+.galeria-slider .slick-prev {
+    background: url(/assets/img/Icono_Flecha_Izq_Blanco.png);
+    background-size: cover;
+}
+
+.galeria-slider .slick-next {
+    background: url(/assets/img/Icono_Flecha_Der_Blanco.png);
+    background-size: cover;
+}
+
+#galeria-slider-container .galeria-slider {
+    background: rgb(0,0,0,0.5);
+    height: 100%;
+    z-index: 999;
+}
+
+    #galeria-slider-container .galeria-slider .slick-list, #galeria-slider-container .galeria-slider .slick-track, #galeria-slider-container .galeria-slider .slick-track .slide.slick-slide {
+        height: 100%;
+    }
+
+    #galeria-slider-container .galeria-slider .slide {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 500px
+    }
+
+@media (min-width:768px) {
+    #galeria-slider-container .galeria-slider .slick-center {
+        -webkit-transform: scale(1.25);
+        -moz-transform: scale(1.25);
+        transform: scale(1.25)
+    }
+}
+
+#galeria-slider-container .cslider {
+    position: absolute;
+    z-index: 999999;
+    right: 15px;
+    top: 15px
+}
+
+    #galeria-slider-container .cslider a, footer .infofooter .infosocial a {
+        color: #fff
+    }
+
+        #galeria-slider-container .cslider a i {
+            font-size: 3rem
+        }
+
+.fichas-coches {
+    margin-top: 85px;
+    margin-bottom: 200px
+}
+
+@media (min-width:768px) {
+    .fichas-coches {
+        padding-left: 50px;
+        padding-right: 50px
+    }
+}
+
+.fichas-coches .zona-ficha-tecnica {
+    border: 1px solid #000;
+    border-radius: 54px;
+    padding: 26px 45px 36px
+}
+
+    .fichas-coches .zona-ficha-tecnica h3 {
+        font-size: 2.9rem;
+        font-family: "Roboto-Bold",sans-serif;
+        text-align: center
+    }
+
+        .fichas-coches .zona-ficha-tecnica h3.separador {
+            margin-top: 50px
+        }
+
+    .fichas-coches .zona-ficha-tecnica .zona-datos {
+        font-size: 1.9rem
+    }
+
+        .fichas-coches .zona-ficha-tecnica .zona-datos .row {
+            border-bottom: 1px solid #000;
+            padding: 12px 0 8px
+        }
+
+            .fichas-coches .zona-ficha-tecnica .zona-datos .row .col {
+                padding-left: 0;
+                padding-right: 0
+            }
+
+                .fichas-coches .zona-ficha-precio .cabecera-precio .col:nth-child(0n+2), .fichas-coches .zona-ficha-tecnica .zona-datos .row .col:nth-child(0n+2) {
+                    text-align: right
+                }
+
+@media (max-width:768px) {
+    .fichas-coches .zona-ficha-tecnica h3 {
+        font-size: 1.9rem
+    }
+
+        .fichas-coches .zona-ficha-tecnica h3.separador {
+            margin-top: 40px
+        }
+
+    .fichas-coches .zona-ficha-tecnica .zona-datos {
+        font-size: 1.7rem
+    }
+
+        .fichas-coches .zona-ficha-tecnica .zona-datos .row {
+            padding: 6px 0 4px
+        }
+}
+
+#DetalleSeminuevo {
+    padding: 20px;
+}
+
+    #DetalleSeminuevo img {
+        display: inline-block;
+        width: 25px;
+        vertical-align: sub;
+    }
+
+    #DetalleSeminuevo p {
+        display: inline-block;
+        padding-left: 10px;
+        font-size: 18px;
+        width: 83%;
+        vertical-align: middle;
+    }
+
+    #DetalleSeminuevo #contactar {
+        display: block;
+        text-align: center;
+    }
+
+        #DetalleSeminuevo #contactar span {
+            width: 200px;
+            font-size: 16px;
+            background: #334E8B;
+            color: white;
+            display: block;
+            border: none;
+            padding: 10px 0;
+            border-radius: 20px;
+            cursor: pointer;
+            font-family: 'Roboto-Bold';
+        }
+
+    #DetalleSeminuevo #whatsapp {
+        display: block;
+        text-align: center;
+    }
+
+        #DetalleSeminuevo #whatsapp a {
+            width: 200px;
+            font-size: 16px;
+            background: #00d829;
+            color: white;
+            display: block;
+            border: none;
+            padding: 10px 0;
+            border-radius: 20px;
+            cursor: pointer;
+            margin: 15px 0;
+        }
+
+#disclaimerSeminuevos, #disclaimerSeminuevosMobile {
+    border-top: solid 1px #000;
+}
+
+#disclaimerSeminuevosMobile {
+    display: none;
+}
+
+    #disclaimerSeminuevos p, #disclaimerSeminuevosMobile p {
+        font-size: 13px;
+        margin: 0px 20px;
+    }
+
+    #disclaimerSeminuevos #detalleDisclaimer, #disclaimerSeminuevosMobile #detalleDisclaimer2 {
+        font-size: 14px;
+        margin: 20px;
+    }
+
+        #disclaimerSeminuevos #detalleDisclaimer span, #disclaimerSeminuevosMobile #detalleDisclaimer2 span {
+            color: #b9b9b9ee;
+            font-size: 16px;
+            margin: 0 20px;
+        }
+
+        #disclaimerSeminuevos #detalleDisclaimer i, #disclaimerSeminuevosMobile #detalleDisclaimer2 i {
+            color: #334E8B;
+            font-size: 19px;
+        }
+
+    #disclaimerSeminuevos .tituloDisclairmer, #disclaimerSeminuevosMobile .tituloDisclairmer {
+        margin: 20px;
+    }
+
+        #disclaimerSeminuevos .tituloDisclairmer img, #disclaimerSeminuevosMobile .tituloDisclairmer img {
+            display: inline-block;
+            width: 25px;
+            vertical-align: sub;
+        }
+
+        #disclaimerSeminuevos .tituloDisclairmer p, #disclaimerSeminuevosMobile .tituloDisclairmer p {
+            display: inline-block;
+            font-size: 20px;
+            vertical-align: middle;
+            margin-top: -7px;
+            margin-left: 18px;
+            font-family: 'Roboto-Bold';
+        }
+
+#infoSeminuevo .titleSeminuevo {
+    background: #000;
+    color: white;
+    font-size: 25px;
+    padding: 10px 0 10px 30px;
+    font-family: 'Roboto-Bold';
+    position: relative;
+}
+
+    #infoSeminuevo .titleSeminuevo .text-right {
+        text-align: right;
+        position: absolute;
+        right: 30px;
+    }
+
+.fichas-coches .zona-ficha-precio {
+    background-color: #000;
+    border-radius: 54px;
+    padding: 26px 45px 36px;
+    color: #fff
+}
+
+    .fichas-coches .zona-ficha-precio .cabecera-precio {
+        font-size: 3rem
+    }
+
+        .fichas-coches .zona-ficha-precio .cabecera-precio p {
+            padding: 0
+        }
+
+            .fichas-coches .zona-ficha-precio .cabecera-precio p:nth-child(0n+2) {
+                margin: -30px 0 0
+            }
+
+        .fichas-coches .zona-ficha-precio .cabecera-precio strong {
+            font-size: 7rem;
+            font-family: "Roboto-Bold",sans-serif
+        }
+
+    .fichas-coches .zona-ficha-precio h4 {
+        text-align: center;
+        font-size: 3rem
+    }
+
+    .fichas-coches .zona-ficha-precio input, .fichas-coches .zona-ficha-precio textarea {
+        background-color: #000;
+        border: 1px solid #fff;
+        color: #fff;
+        font-size: 2.2rem;
+        padding: 25px 30px 15px;
+        border-radius: 13px
+    }
+
+    .fichas-coches .zona-ficha-precio textarea {
+        color: #828282;
+        padding: 15px 10px 10px
+    }
+
+    .fichas-coches .zona-ficha-precio .btn-enviar {
+        background-color: #c5140c;
+        border-radius: 7px;
+        color: #fff;
+        font-size: 2.6rem;
+        margin-top: 45px;
+        padding: 17px 20px 8px;
+        width: 100%;
+        max-width: 400px
+    }
+
+@media (max-width:768px) {
+    #disclaimerSeminuevos {
+        display: none;
+    }
+
+    #disclaimerSeminuevosMobile {
+        display: block;
+    }
+
+    .container .videos {
+        order: 2;
+    }
+
+    #DetalleSeminuevo #contactar span, #DetalleSeminuevo #whatsapp a {
+        width: 100%;
+    }
+
+    #disclaimerSeminuevos .tituloDisclairmer p {
+        font-size: 18px;
+    }
+
+    .fichas-coches .zona-ficha-precio .cabecera-precio p:nth-child(0n+2) {
+        margin: -20px 0 0
+    }
+
+    .fichas-coches .zona-ficha-precio .cabecera-precio strong {
+        font-size: 3.4rem
+    }
+
+    .fichas-coches .zona-ficha-precio h4 {
+        font-size: 1.7rem;
+        margin-top: 10px
+    }
+
+    .fichas-coches .zona-ficha-precio input {
+        font-size: 1.7rem;
+        padding: 16px 18px 10px
+    }
+
+    .fichas-coches .zona-ficha-precio textarea {
+        padding: 16px 18px 10px;
+        font-size: 1.1rem
+    }
+
+    .fichas-coches .zona-ficha-precio .btn-enviar {
+        font-size: 2rem;
+        max-width: 100%
+    }
+}
+
+@media (min-width:768px) {
+    .galeria-grid {
+        display: block
+    }
+
+    #galeria-slider-container {
+        display: none;
+    }
+}
+
+@media (max-width: 768px) {
+    .ficha-vehiculo {
+        padding-left: 10px;
+        padding-right: 10px
+    }
+
+    .zona-ficha-precio {
+        margin-bottom: 60px
+    }
+
+    #galeria-slider-container .cslider {
+        display: block;
+        width: 50px;
+        margin-top: 32%;
+    }
+
+        #galeria-slider-container .cslider img {
+            display: block;
+            width: 50px;
+            height: 50px;
+        }
+
+    .galeria-grid {
+        display: none;
+    }
+
+    #galeria-slider-container {
+        display: none;
+    }
+}
+
+#float-menu-ficha {
+    position: fixed;
+    z-index: 999;
+    right: 10px;
+    display: flex;
+    flex-direction: column;
+    height: 70vh;
+    justify-content: top;
+    bottom: 0;
+    font-size: 1.1rem
+}
+
+    #float-menu-ficha > a {
+        background: #c5140c;
+        color: #fff;
+        text-decoration: none;
+        border-radius: 5px;
+        margin-bottom: 4px;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        height: 85px;
+        width: 70px;
+        justify-content: center
+    }
+
+        #float-menu-ficha > a .icono {
+            margin-bottom: 6px
+        }
+
+@media (max-width:768px) {
+    #Cotizacion-container .cslider img {
+        height: 40px;
+    }
+
+    #float-menu-ficha {
+        flex-direction: row;
+        bottom: 0;
+        width: 100vw;
+        background-color: #c5140c;
+        height: 93px;
+        justify-content: space-around;
+        align-items: center;
+        right: 0;
+        font-size: 1.1rem
+    }
+
+        #float-menu-ficha > a {
+            width: 100px
+        }
+
+            #float-menu-ficha > a .icono img {
+                max-height: 27px
+            }
+}
+
+.ficha-nuevo {
+    margin-left: 80px;
+}
+
+    .ficha-nuevo .atras-link {
+        font-size: 2.2rem;
+        font-family: "Roboto",sans-serif;
+        color: #000;
+        text-decoration: none;
+        margin-left: 125px
+    }
+
+    .ficha-nuevo .nombre-modelo {
+        position: relative;
+        color: white;
+        margin-top: -100px;
+    }
+
+        .ficha-nuevo .nombre-modelo .modelo {
+            font-size: 3rem;
+            display: inline-block;
+            border-right: solid 1px #fcfbfb;
+            height: 100px;
+            padding: 5px 20px 0px 80px;
+            font-family: 'Roboto-Bold';
+            text-transform:uppercase;
+        }
+
+            .ficha-nuevo .nombre-modelo .modelo .year {
+                color: #c5140c;
+                font-family: "Roboto-Bold",sans-serif
+            }
+
+        .ficha-nuevo .nombre-modelo .zona-precio {
+            display: inline-block;
+            color: #fcfbfb;
+            margin-left: 10px;
+        }
+
+            .ficha-nuevo .nombre-modelo .zona-precio .desde {
+                font-size: 3rem;
+                font-family: 'Roboto';
+            }
+
+            .ficha-nuevo .nombre-modelo .zona-precio .precio {
+                font-family: "Roboto-Bold",sans-serif;
+                font-size: 2rem
+            }
+
+#Principal h1, #exteriorClaims .header, #interiorClaims .header, #Tecnologia .header, #Seguridad .header, #Dimensiones h3, #Versiones h3 {
+    padding: 0px 0 10px 0;
+    font-size: 2.5rem;
+}
+
+.titulo {
+    font-size: 22px;
+    /* width: 250px; */
+    font-family: 'Roboto-Medium';
+}
+
+.subtitulo {
+    font-size: 16px;
+    width: 467px;
+    max-width: 100%;
+}
+
+#backRedEdge .separador {
+    display: block;
+    background: white;
+    text-align: left;
+    margin: 0;
+}
+
+.ficha-vehiculo .container {
+    max-height: 550px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    margin-bottom: 80px;
+    padding: 0;
+}
+
+.container .videos {
+    width: 20%;
+    padding: 10px 0 10px 3px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: hidden;
+    height: 100%;
+    align-self: stretch;
+    max-height: 550px;
+}
+
+    .container .videos div span {
+        display: block;
+        margin: 9px auto auto auto;
+        text-align: center;
+        font-size: 30px;
+        position: relative;
+    }
+
+    .container .videos a img {
+        object-fit: contain;
+    }
+
+    .container .videos a, .container .videos div {
+        width: 88px;
+        height: 88px;
+        margin: 5px 0;
+        cursor: pointer;
+        transition: 0.2s;
+        object-fit: contain;
+        border: solid 1px #000;
+        border-radius: .25rem;
+        padding: 0;
+    }
+
+    .container .videos img:nth-child(1) {
+        margin-top: 0;
+    }
+
+    .container .videos img:hover,
+    .container .videos .active {
+        transform: scale(1.06);
+        border: 2px solid #000;
+        border-radius: .25rem;
+    }
+
+.container.cotizacionSeminuevo {
+    background: white;
+    padding: 40px 50px;
+    max-width: 800px;
+}
+
+.cotizacionSeminuevo h2 {
+    font-size: 28px;
+    font-family: 'Roboto-Bold';
+    text-align: center;
+    padding: 10px 0px 20px 0px;
+    display: block;
+}
+
+.cotizacionSeminuevo .titulo {
+    display: block;
+    padding-bottom: 20px;
+}
+
+.cotizacionSeminuevo .disclaimerCotizacion {
+    font-size: 16px;
+    font-family: 'Roboto';
+    padding-bottom: 20px;
+    display: block;
+}
+
+.cotizacionSeminuevo .formulario input, .cotizacionSeminuevo .formulario textarea {
+    border: none;
+    border-bottom: solid 1.3px;
+    border-radius: 0;
+}
+
+.cotizacionSeminuevo .formulario textarea {
+    height: 70px;
+}
+
+.cotizacionSeminuevo .checkbox-lopd {
+    font-size: 16px;
+    font-family: 'Roboto';
+}
+
+.cotizacionSeminuevo #btnEnviarSem {
+    background: #334E8B;
+    color: #fff;
+    font-family: 'Roboto-Bold';
+    padding: 10px 50px;
+    border-radius: 20px;
+    margin: 30px 0 50px 0;
+}
+
+#Cotizacion-container {
+    top: 0;
+    position: absolute;
+    background: rgb(0,0,0,0.5);
+    height: 100%;
+    z-index: 999;
+    display: none;
+}
+
+    #Cotizacion-container .cslider img,
+    #galeria-slider-container .cslider img {
+        display: block;
+        margin: 60px 15px 0 auto;
+        height: 48px;
+    }
+
+#galeria-slider-container {
+    padding-left: 80px;
+}
+
+.container .main-video.desktop {
+    display: block;
+    position: relative;
+}
+
+.container .main-video.mobile {
+    display: none;
+}
+
+.container .main-video {
+    width: 80%;
+    padding: 10px;
+    text-align: center;
+    max-height: 550px;
+}
+
+    .container .main-video img {
+        max-width: 100%;
+        height: 100%;
+        object-fit: cover;
+        max-height: 550px;
+        cursor: pointer;
+    }
+
+@media (max-width:768px) {
+    .container .main-video img {
+        width: 100%;
+        height: auto;
+    }
+
+    .nomobile {
+        display: none;
+    }
+
+    .container .main-video.desktop {
+        display: none;
+    }
+
+    .container .main-video.mobile {
+        display: block;
+        position: relative;
+    }
+
+    .ficha-vehiculo .container {
+        display: block;
+        max-height: initial;
+    }
+
+    .container .videos {
+        display: block;
+        width: 100%;
+        height: auto;
+    }
+
+    .main-video {
+        width: 100%;
+        display: block;
+    }
+
+    .container .videos a:nth-child(4), .container .videos a:nth-child(5), .container .videos a:nth-child(6) {
+        display: none;
+    }
+
+    .container .videos a, .container .videos div {
+        display: inline-block;
+        margin: 10px;
+        width: 70px;
+        height: 70px;
+    }
+
+        .container .videos div span {
+            margin: 6px auto auto auto;
+            height: 100%;
+        }
+
+    .ficha-nuevo .nombre-modelo .modelo {
+        font-size: 14px;
+        padding: 10px;
+        display: block;
+        border: none;
+        height: auto;
+    }
+
+    .ficha-nuevo .nombre-modelo .zona-precio {
+        font-size: 14px;
+        display: block;
+    }
+
+        .ficha-nuevo .nombre-modelo .zona-precio .desde {
+            font-size: 14px;
+        }
+
+    #Principal h1, #exteriorClaims .header, #interiorClaims .header, #Tecnologia .header, #Seguridad .header, #Dimensiones h3, #Versiones h3 {
+        font-size: 18px;
+        text-align: center;
+        margin: 0 auto;
+        display: block;
+    }
+
+    .separador {
+        text-align: center;
+        margin: 0 auto 20px auto;
+        /* display: block; */
+    }
+
+    #Descargas .separador {
+        margin: 20px auto 20px auto;
+    }
+
+    #backRedEdge .separador {
+        text-align: center;
+        margin: 10px auto;
+    }
+
+    #Principal .separador {
+        display: block;
+    }
+
+    .titulo {
+        font-size: 28px;
+        margin: 0 auto;
+        text-align: center;
+        padding-bottom: 20px;
+        display: block;
+    }
+
+    .subtitulo {
+        text-align: center;
+        font-size: 15px;
+        padding: 15px 10px 20px 10px;
+        width: 100%;
+    }
+
+    .ficha-nuevo .atras-link {
+        display: block;
+        padding-bottom: 15px;
+        margin-left: 55px
+    }
+
+    .ficha-nuevo .nombre-modelo {
+        width: 100%;
+        padding: 10px 0
+    }
+
+        .ficha-nuevo .nombre-modelo:after {
+            display: none
+        }
+}
+
+.ficha-nuevo .visor-coche {
+    background-image: url(../img/fndvehiculonuevo.png);
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: 100% 528px
+}
+
+    .ficha-nuevo .visor-coche, .ficha-nuevo .visor-coche .coche-color {
+        width: 100vw;
+        height: 528px;
+        position: relative
+    }
+
+        .ficha-nuevo .visor-coche .coche-color img {
+            align: bottom;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            margin: auto
+        }
+
+@media (max-width:768px) {
+    .cotizacionSeminuevo h2 {
+        font-size: 19px;
+        padding: 10px 0px 20px 0px;
+    }
+
+    .cotizacionSeminuevo .titulo {
+        font-size: 18px;
+    }
+
+    .cotizacionSeminuevo .disclaimerCotizacion {
+        font-size: 14px;
+    }
+
+    #exteriorClaims #slider-ficha-exterior {
+        margin-bottom: 100px;
+    }
+
+    .ficha-nuevo .visor-coche {
+        background-image: url(../img/fndvehiculonuevomobile.png);
+        background-size: 100% 230px;
+        height: 230px
+    }
+
+        .ficha-nuevo .visor-coche .coche-color {
+            height: 230px
+        }
+
+            .ficha-nuevo .visor-coche .coche-color img {
+                max-height: 230px
+            }
+}
+
+.ficha-nuevo .zona-color {
+    margin-top: 45px
+}
+
+    .ficha-nuevo .zona-color .nombre-color {
+        font-size: 2.5rem
+    }
+
+    .ficha-nuevo .zona-color ul li {
+        display: inline-block;
+        width: 34px;
+        height: 34px;
+        border: 1px solid transparent;
+        position: relative
+    }
+
+        .ficha-nuevo .zona-color ul li.active, .ficha-nuevo .zona-color ul li:hover {
+            border-color: #000
+        }
+
+            .ficha-nuevo .zona-color ul li.active::after {
+                content: "";
+                position: absolute;
+                background-color: #c5140c;
+                left: -1px;
+                bottom: -6px;
+                height: 2px;
+                display: block;
+                width: 34px
+            }
+
+        .ficha-nuevo .zona-color ul li::after.active {
+            container: "asd";
+            position: absolute;
+            width: 34px;
+            height: 1px;
+            background-color: #c5140c;
+            bottom: -10px;
+            left: 0
+        }
+
+    .ficha-nuevo .zona-color .observaciones {
+        font-size: 1.6rem;
+        font-family: "Roboto",sans-serif;
+        margin-top: 8px
+    }
+
+@media (max-width:768px) {
+    .ficha-nuevo .nombre-color {
+        margin-top: 8px
+    }
+
+    .ficha-nuevo .observaciones {
+        margin-top: 0
+    }
+}
+
+.ficha-nuevo .zona-cotizador {
+    margin-top: 90px
+}
+
+    .ficha-nuevo .zona-cotizador h2 {
+        font-size: 4.4rem;
+        text-align: center;
+        margin-bottom: 20px
+    }
+
+@media (max-width:768px) {
+    .ficha-nuevo .zona-cotizador h2 {
+        font-size: 2.5rem
+    }
+}
+
+.ficha-nuevo .zona-cotizador form {
+    padding-left: 40px;
+    padding-right: 40px
+}
+
+.ficha-nuevo .zona-cotizador .form-control, .ficha-nuevo .zona-cotizador .form-select {
+    border: 1px solid #000;
+    border-radius: 9px;
+    font-size: 2.2rem;
+    padding: 20px 0 13px 29px;
+    width: 100%;
+    margin: 0
+}
+
+    .ficha-nuevo .zona-cotizador .form-control::placeholder, .ficha-nuevo .zona-cotizador .form-select::placeholder {
+        font-family: "Roboto",sans-serif
+    }
+
+.ficha-nuevo .zona-cotizador .form-select {
+    font-family: "Roboto",sans-serif
+}
+
+.ficha-nuevo .zona-cotizador .zona-lopd {
+    margin-top: 40px
+}
+
+    .ficha-nuevo .zona-cotizador .zona-lopd .lopd-checkbox {
+        width: 24px;
+        height: 24px;
+        margin-right: 10px
+    }
+
+    .ficha-nuevo .zona-cotizador .zona-lopd .label-lopd {
+        font-size: 3.2rem
+    }
+
+.ficha-nuevo .zona-cotizador .btn-enviar {
+    background-color: #c5140c;
+    border-radius: 8px;
+    font-size: 2.6rem;
+    padding: 17px 20px 10px;
+    color: #fff;
+    margin-top: 25px;
+    width: 100%;
+    max-width: 400px
+}
+
+@media (max-width:768px) {
+    .ficha-nuevo .zona-cotizador {
+        margin-top: 45px
+    }
+
+        .ficha-nuevo .zona-cotizador .form-control, .ficha-nuevo .zona-cotizador .form-select {
+            margin-bottom: 20px;
+            font-size: 2rem
+        }
+
+        .ficha-nuevo .zona-cotizador .zona-lopd {
+            margin-top: 15px
+        }
+
+            .ficha-nuevo .zona-cotizador .zona-lopd .lopd-checkbox {
+                width: 20px;
+                height: 20px;
+                margin-right: 10px
+            }
+
+            .ficha-nuevo .zona-cotizador .zona-lopd .label-lopd {
+                font-size: 2rem
+            }
+
+        .ficha-nuevo .zona-cotizador .btn-enviar {
+            max-width: 100%;
+            font-size: 2.2rem
+        }
+}
+
+@media (max-width:468px) {
+    .ficha-nuevo .zona-cotizador .zona-lopd .label-lopd {
+        font-size: 1.6rem
+    }
+}
+
+.ficha-nuevo .zona-detalles {
+    margin-top: 120px
+}
+
+    .ficha-nuevo .zona-detalles h1 {
+        font-size: 8.8rem;
+        font-family: "Roboto-Bold",sans-serif
+    }
+
+        .ficha-nuevo .zona-detalles h1 span {
+            color: #c5140c
+        }
+
+    .ficha-nuevo .zona-detalles .subtitulo {
+        margin-top: 50px;
+        font-size: 2.5rem
+    }
+
+    .ficha-nuevo .zona-detalles .zona-sliders {
+        max-width: 1920px;
+        margin-left: auto;
+        margin-right: auto
+    }
+
+        .ficha-nuevo .zona-detalles .zona-sliders.zona-slider-01 {
+            margin-top: 80px
+        }
+
+        .ficha-nuevo .zona-detalles .zona-sliders.zona-slider-02, .ficha-nuevo .zona-detalles .zona-sliders.zona-slider-03 {
+            margin-top: 30px
+        }
+
+        .ficha-nuevo .zona-detalles .zona-sliders.zona-slider-05 {
+            margin-top: 120px
+        }
+
+@media (min-width:769px) {
+    .ficha-nuevo .zona-detalles .zona-sliders .descripcion {
+        max-width: 410px;
+        left: 0;
+        right: 0;
+        margin-left: auto;
+        margin-right: auto
+    }
+}
+
+.ficha-nuevo .zona-detalles .zona-sliders .descripcion h3 {
+    font-size: 3.3rem;
+    color: #c5140c;
+    font-family: "Roboto-Bold",sans-serif
+}
+
+.ficha-nuevo .zona-detalles .zona-sliders .descripcion p {
+    font-size: 2.1rem
+}
+
+@media (max-width:991px) {
+    .ficha-nuevo .zona-detalles .zona-sliders.zona-slider-01 {
+        margin-top: 10px
+    }
+
+    .ficha-nuevo .zona-detalles .zona-sliders .descripcion {
+        margin-top: 20px;
+        max-width: 100%;
+        width: auto;
+        padding-left: 40px;
+        padding-right: 40px
+    }
+
+        .ficha-nuevo .zona-detalles .zona-sliders .descripcion h3 {
+            font-size: 2.3rem
+        }
+
+        .ficha-nuevo .zona-detalles .zona-sliders .descripcion p {
+            font-size: 1.7rem
+        }
+}
+
+@media (max-width:575px) {
+    .ficha-nuevo .zona-detalles .zona-sliders.zona-slider-01 {
+        margin-top: 10px
+    }
+
+    .ficha-nuevo .zona-detalles .zona-sliders.zona-slider-05 {
+        margin-top: 30px
+    }
+
+    .ficha-nuevo .zona-detalles .zona-sliders .descripcion {
+        margin-top: 20px;
+        max-width: 100%;
+        width: auto;
+        padding-left: 20px;
+        padding-right: 20px
+    }
+
+        .ficha-nuevo .zona-detalles .zona-sliders .descripcion h3 {
+            font-size: 2rem
+        }
+
+        .ficha-nuevo .zona-detalles .zona-sliders .descripcion p {
+            font-size: 1.5rem
+        }
+}
+
+.ficha-nuevo .zona-detalles .zona-sliders #slider-ficha-exterior {
+    position: relative;
+    height: 733;
+    overflow: hidden
+}
+
+    .ficha-nuevo .zona-detalles .zona-sliders #slider-ficha-exterior:after {
+        content: "";
+        display: block;
+        width: 500px;
+        height: 1300px;
+        background-color: #fff;
+        position: absolute;
+        top: -100px;
+        left: -140px;
+        transform: rotate(-25deg)
+    }
+
+    .ficha-nuevo .zona-detalles .zona-sliders #slider-ficha-exterior div {
+        background-repeat: no-repeat;
+        background-size: auto;
+        background-position: center right;
+        height: 733px
+    }
+
+    .ficha-nuevo .zona-detalles .zona-sliders #slider-ficha-exterior .slick-next {
+        right: 78px;
+        top: auto;
+        bottom: 45px
+    }
+
+    .ficha-nuevo .zona-detalles .zona-sliders #slider-ficha-exterior .slick-prev {
+        right: 240px;
+        left: auto;
+        top: auto;
+        bottom: 45px
+    }
+
+@media (max-width:991px) {
+    .ficha-nuevo .zona-detalles .zona-sliders #slider-ficha-exterior {
+        height: 400px;
+        padding-left: 40px;
+        padding-right: 40px
+    }
+
+        .ficha-nuevo .zona-detalles .zona-sliders #slider-ficha-exterior:after {
+            display: none
+        }
+
+        .ficha-nuevo .zona-detalles .zona-sliders #slider-ficha-exterior div {
+            height: 400px;
+            background-size: cover
+        }
+
+        .ficha-nuevo .zona-detalles .zona-sliders #slider-ficha-exterior .slick-next {
+            right: 40px;
+            top: auto;
+            bottom: 5px
+        }
+
+        .ficha-nuevo .zona-detalles .zona-sliders #slider-ficha-exterior .slick-prev {
+            right: 180px;
+            left: auto;
+            top: auto;
+            bottom: 5px
+        }
+}
+
+@media (max-width:575px) {
+    .ficha-nuevo .zona-detalles .zona-sliders #slider-ficha-exterior {
+        height: 250px;
+        padding-left: 20px;
+        padding-right: 20px
+    }
+
+        .ficha-nuevo .zona-detalles .zona-sliders #slider-ficha-exterior:after {
+            display: none
+        }
+
+        .ficha-nuevo .zona-detalles .zona-sliders #slider-ficha-exterior div {
+            height: 250px;
+            background-size: cover
+        }
+
+        .ficha-nuevo .zona-detalles .zona-sliders #slider-ficha-exterior .slick-next {
+            right: 20px;
+            top: auto;
+            bottom: -20px
+        }
+
+        .ficha-nuevo .zona-detalles .zona-sliders #slider-ficha-exterior .slick-prev {
+            right: 120px;
+            left: auto;
+            top: auto;
+            bottom: -20px
+        }
+
+            .ficha-nuevo .zona-detalles .zona-sliders #slider-ficha-exterior .slick-next:before, .ficha-nuevo .zona-detalles .zona-sliders #slider-ficha-exterior .slick-prev:before {
+                font-size: 30px
+            }
+}
+
+.ficha-nuevo .zona-detalles .zona-sliders #slider-ficha-interior {
+    position: relative;
+    height: 733;
+    overflow: hidden
+}
+
+    .ficha-nuevo .zona-detalles .zona-sliders #slider-ficha-interior:after {
+        content: "";
+        display: block;
+        width: 500px;
+        height: 1300px;
+        background-color: #fff;
+        position: absolute;
+        top: -100px;
+        right: -120px;
+        transform: rotate(25deg)
+    }
+
+    .ficha-nuevo .zona-detalles .zona-sliders #slider-ficha-interior div {
+        background-repeat: no-repeat;
+        background-size: auto;
+        background-position: center left;
+        height: 733px
+    }
+
+    .ficha-nuevo .zona-detalles .zona-sliders #slider-ficha-interior .slick-next {
+        left: 240px;
+        top: auto;
+        bottom: 45px
+    }
+
+    .ficha-nuevo .zona-detalles .zona-sliders #slider-ficha-interior .slick-prev {
+        left: 78px;
+        top: auto;
+        bottom: 45px
+    }
+
+@media (max-width:991px) {
+    .ficha-nuevo .zona-detalles .zona-sliders #slider-ficha-interior {
+        height: 400px;
+        padding-left: 40px;
+        padding-right: 40px
+    }
+
+        .ficha-nuevo .zona-detalles .zona-sliders #slider-ficha-interior:after {
+            display: none
+        }
+
+        .ficha-nuevo .zona-detalles .zona-sliders #slider-ficha-interior div {
+            height: 400px;
+            background-size: cover
+        }
+
+        .ficha-nuevo .zona-detalles .zona-sliders #slider-ficha-interior .slick-next {
+            right: 40px;
+            top: auto;
+            left: auto;
+            bottom: 5px
+        }
+
+        .ficha-nuevo .zona-detalles .zona-sliders #slider-ficha-interior .slick-prev {
+            right: 180px;
+            left: auto;
+            top: auto;
+            bottom: 5px
+        }
+}
+
+@media (max-width:575px) {
+    .ficha-nuevo .zona-detalles .zona-sliders #slider-ficha-interior {
+        height: 250px;
+        padding-left: 20px;
+        padding-right: 20px
+    }
+
+        .ficha-nuevo .zona-detalles .zona-sliders #slider-ficha-interior:after {
+            display: none
+        }
+
+        .ficha-nuevo .zona-detalles .zona-sliders #slider-ficha-interior div {
+            height: 250px;
+            background-size: cover
+        }
+
+        .ficha-nuevo .zona-detalles .zona-sliders #slider-ficha-interior .slick-next {
+            right: 20px;
+            top: auto;
+            bottom: -20px
+        }
+
+        .ficha-nuevo .zona-detalles .zona-sliders #slider-ficha-interior .slick-prev {
+            right: 120px;
+            left: auto;
+            top: auto;
+            bottom: -20px
+        }
+
+            .ficha-nuevo .zona-detalles .zona-sliders #slider-ficha-interior .slick-next:before, .ficha-nuevo .zona-detalles .zona-sliders #slider-ficha-interior .slick-prev:before {
+                font-size: 30px
+            }
+}
+
+.ficha-nuevo .zona-detalles .zona-sliders #slider-ficha-equipamiento {
+    position: relative;
+    height: 733;
+    overflow: hidden
+}
+
+    .ficha-nuevo .zona-detalles .zona-sliders #slider-ficha-equipamiento:after {
+        content: "";
+        display: block;
+        width: 800px;
+        height: 1800px;
+        background-color: #fff;
+        position: absolute;
+        top: -300px;
+        left: -400px;
+        transform: rotate(25deg)
+    }
+
+    .ficha-nuevo .zona-detalles .zona-sliders #slider-ficha-equipamiento div {
+        background-repeat: no-repeat;
+        background-size: auto;
+        background-position: center right;
+        height: 733px
+    }
+
+    .ficha-nuevo .zona-detalles .zona-sliders #slider-ficha-equipamiento .slick-next {
+        right: 78px;
+        top: auto;
+        bottom: 45px
+    }
+
+    .ficha-nuevo .zona-detalles .zona-sliders #slider-ficha-equipamiento .slick-prev {
+        right: 240px;
+        left: auto;
+        top: auto;
+        bottom: 45px
+    }
+
+@media (max-width:1600px) {
+    .ficha-nuevo .zona-detalles .zona-sliders #slider-ficha-equipamiento:after {
+        left: -600px
+    }
+}
+
+@media (max-width:1200px) {
+    .ficha-nuevo .zona-detalles .zona-sliders #slider-ficha-equipamiento:after {
+        left: -700px
+    }
+}
+
+@media (max-width:991px) {
+    .ficha-nuevo .zona-detalles .zona-sliders #slider-ficha-equipamiento {
+        height: 400px;
+        padding-left: 40px;
+        padding-right: 40px
+    }
+
+        .ficha-nuevo .zona-detalles .zona-sliders #slider-ficha-equipamiento:after {
+            display: none
+        }
+
+        .ficha-nuevo .zona-detalles .zona-sliders #slider-ficha-equipamiento div {
+            height: 400px;
+            background-size: cover
+        }
+
+        .ficha-nuevo .zona-detalles .zona-sliders #slider-ficha-equipamiento .slick-next {
+            right: 40px;
+            top: auto;
+            bottom: 5px
+        }
+
+        .ficha-nuevo .zona-detalles .zona-sliders #slider-ficha-equipamiento .slick-prev {
+            right: 180px;
+            left: auto;
+            top: auto;
+            bottom: 5px
+        }
+}
+
+@media (max-width:575px) {
+    .ficha-nuevo .zona-detalles .zona-sliders #slider-ficha-equipamiento {
+        height: 250px;
+        padding-left: 20px;
+        padding-right: 20px
+    }
+
+        .ficha-nuevo .zona-detalles .zona-sliders #slider-ficha-equipamiento:after {
+            display: none
+        }
+
+        .ficha-nuevo .zona-detalles .zona-sliders #slider-ficha-equipamiento div {
+            height: 250px;
+            background-size: cover
+        }
+
+        .ficha-nuevo .zona-detalles .zona-sliders #slider-ficha-equipamiento .slick-next {
+            right: 20px;
+            top: auto;
+            bottom: -20px
+        }
+
+        .ficha-nuevo .zona-detalles .zona-sliders #slider-ficha-equipamiento .slick-prev {
+            right: 120px;
+            left: auto;
+            top: auto;
+            bottom: -20px
+        }
+
+            .ficha-nuevo .zona-detalles .zona-sliders #slider-ficha-equipamiento .slick-next:before, .ficha-nuevo .zona-detalles .zona-sliders #slider-ficha-equipamiento .slick-prev:before {
+                font-size: 30px
+            }
+}
+
+.ficha-nuevo .zona-detalles .zona-sliders #slider-ficha-seguridad {
+    position: relative;
+    height: 733;
+    overflow: hidden
+}
+
+    .ficha-nuevo .zona-detalles .zona-sliders #slider-ficha-seguridad div {
+        background-repeat: no-repeat;
+        background-size: auto;
+        background-position: center left;
+        height: 733px
+    }
+
+    .ficha-nuevo .zona-detalles .zona-sliders #slider-ficha-seguridad .slick-next {
+        left: 240px;
+        top: auto;
+        bottom: 45px
+    }
+
+    .ficha-nuevo .zona-detalles .zona-sliders #slider-ficha-seguridad .slick-prev {
+        left: 78px;
+        top: auto;
+        bottom: 45px
+    }
+
+@media (max-width:991px) {
+    .ficha-nuevo .zona-detalles .zona-sliders #slider-ficha-seguridad {
+        height: 400px;
+        padding-left: 40px;
+        padding-right: 40px
+    }
+
+        .ficha-nuevo .zona-detalles .zona-sliders #slider-ficha-seguridad:after {
+            display: none
+        }
+
+        .ficha-nuevo .zona-detalles .zona-sliders #slider-ficha-seguridad div {
+            height: 400px;
+            background-size: cover
+        }
+
+        .ficha-nuevo .zona-detalles .zona-sliders #slider-ficha-seguridad .slick-next {
+            right: 40px;
+            top: auto;
+            left: auto;
+            bottom: 5px
+        }
+
+        .ficha-nuevo .zona-detalles .zona-sliders #slider-ficha-seguridad .slick-prev {
+            right: 180px;
+            left: auto;
+            top: auto;
+            bottom: 5px
+        }
+}
+
+@media (max-width:575px) {
+    .ficha-nuevo .zona-detalles .zona-sliders #slider-ficha-seguridad {
+        height: 250px;
+        padding-left: 20px;
+        padding-right: 20px
+    }
+
+        .ficha-nuevo .zona-detalles .zona-sliders #slider-ficha-seguridad:after {
+            display: none
+        }
+
+        .ficha-nuevo .zona-detalles .zona-sliders #slider-ficha-seguridad div {
+            height: 250px;
+            background-position: center center
+        }
+
+        .ficha-nuevo .zona-detalles .zona-sliders #slider-ficha-seguridad .slick-next {
+            right: 20px;
+            top: auto;
+            bottom: -20px
+        }
+
+        .ficha-nuevo .zona-detalles .zona-sliders #slider-ficha-seguridad .slick-prev {
+            right: 120px;
+            left: auto;
+            top: auto;
+            bottom: -20px
+        }
+
+            .ficha-nuevo .zona-detalles .zona-sliders #slider-ficha-seguridad .slick-next:before, .ficha-nuevo .zona-detalles .zona-sliders #slider-ficha-seguridad .slick-prev:before {
+                font-size: 30px
+            }
+}
+
+.ficha-nuevo .zona-detalles .zona-slider-04 {
+    margin-top: 60px
+}
+
+    .ficha-nuevo .zona-detalles .zona-slider-04 .col-12 {
+        position: relative
+    }
+
+.ficha-nuevo .zona-detalles #slider-ficha-fotos {
+    position: relative;
+    overflow: hidden
+}
+
+    .ficha-nuevo .zona-detalles #slider-ficha-fotos .slick-next {
+        left: 240px;
+        top: auto;
+        bottom: 15px
+    }
+
+    .ficha-nuevo .zona-detalles #slider-ficha-fotos .slick-prev {
+        left: 78px;
+        top: auto;
+        bottom: 15px
+    }
+
+@media (max-width:768px) {
+    .ficha-nuevo .zona-detalles .slick-next {
+        position: absolute;
+        left: 120px;
+        top: auto;
+        bottom: -20px
+    }
+
+    .ficha-nuevo .zona-detalles .slick-prev {
+        left: 20px;
+        right: auto;
+        top: auto;
+        bottom: -20px
+    }
+
+        .ficha-nuevo .zona-detalles .slick-next:before, .ficha-nuevo .zona-detalles .slick-prev:before {
+            font-size: 40px
+        }
+}
+
+@media (max-width:400px) {
+    .ficha-nuevo .zona-detalles .slick-next {
+        position: absolute;
+        left: 60px;
+        top: auto;
+        bottom: -20px
+    }
+
+    .ficha-nuevo .zona-detalles .slick-prev {
+        left: 10px;
+        right: auto;
+        top: auto;
+        bottom: -20px
+    }
+
+        .ficha-nuevo .zona-detalles .slick-next:before, .ficha-nuevo .zona-detalles .slick-prev:before {
+            font-size: 40px
+        }
+}
+
+.ficha-nuevo .zona-detalles #ficha-fotos-filter {
+    position: absolute;
+    z-index: 999;
+    bottom: 40px;
+    right: 200px;
+    display: flex;
+    flex-direction: row
+}
+
+    .ficha-nuevo .zona-detalles #ficha-fotos-filter div {
+        position: relative;
+        margin-left: 30px
+    }
+
+    .ficha-nuevo .zona-detalles #ficha-fotos-filter label {
+        color: #fff;
+        font-size: 2rem;
+        padding-right: 40px;
+        cursor: pointer
+    }
+
+    .ficha-nuevo .zona-detalles #ficha-fotos-filter input[type=radio] {
+        position: absolute;
+        visibility: hidden
+    }
+
+        .ficha-nuevo .zona-detalles #ficha-fotos-filter input[type=radio]:checked ~ .check {
+            border: 1px solid #c5140c;
+            background: #c5140c
+        }
+
+    .ficha-nuevo .zona-detalles #ficha-fotos-filter .check {
+        display: block;
+        top: 0;
+        position: absolute;
+        border: 1px solid #aaa;
+        background-color: #fff;
+        height: 25px;
+        width: 25px;
+        right: 0;
+        z-index: 5;
+        transition: border .25s linear;
+        -webkit-transition: border .25s linear;
+        pointer-events: none
+    }
+
+        .ficha-nuevo .zona-detalles #ficha-fotos-filter .check:hover {
+            border: 1px solid #c5140c
+        }
+
+@media (max-width:768px) {
+    .ficha-nuevo .zona-detalles #ficha-fotos-filter {
+        bottom: 20px;
+        right: 100px
+    }
+}
+
+@media (max-width:575px) {
+    .ficha-nuevo .zona-detalles #ficha-fotos-filter {
+        right: 20px
+    }
+
+        .ficha-nuevo .zona-detalles #ficha-fotos-filter label {
+            font-size: 1.6rem
+        }
+}
+
+.ficha-nuevo .zona-detalles .zona-datos-tecnicos {
+    margin-top: 160px
+}
+
+    .ficha-nuevo .zona-detalles .zona-datos-tecnicos h2 {
+        font-family: "Roboto-Bold",sans-serif;
+        color: #c5140c;
+        font-size: 6rem
+    }
+
+    .ficha-nuevo .zona-detalles .zona-datos-tecnicos .zona-detalle {
+        margin-top: 70px
+    }
+
+        .ficha-nuevo .zona-detalles .zona-datos-tecnicos .zona-detalle .col-4 {
+            border-left: 1px solid #000;
+            display: flex;
+            flex-direction: column
+        }
+
+footer .infofooter .infoDirectorios .bloque {
+    background-color: white;
+    color: black;
+    margin: 0px 20px;
+    padding: 10px 0px;
+}
+
+.ficha-nuevo .zona-detalles .zona-datos-tecnicos .zona-detalle .col-4:first-child, footer .infofooter .infoDirectorios {
+    margin-top: 45px;
+}
+
+footer .infofooter .infohorarios .col-sm-4:first-child {
+    border-left: none
+}
+
+.ficha-nuevo .zona-detalles .zona-datos-tecnicos .zona-detalle .col-4 span {
+    width: 100%
+}
+
+.ficha-nuevo .zona-detalles .zona-datos-tecnicos .zona-detalle .col-4 .tit {
+    font-size: 2.1rem;
+    padding-top: 30px;
+    padding-bottom: 30px
+}
+
+.ficha-nuevo .zona-detalles .zona-datos-tecnicos .zona-detalle .col-4 .dato {
+    font-size: 6.3rem;
+    font-family: "Roboto-Bold",sans-serif;
+    padding-bottom: 30px
+}
+
+    .ficha-nuevo .zona-detalles .zona-datos-tecnicos .zona-detalle .col-4 .dato .sub {
+        font-family: "Roboto",sans-serif;
+        font-size: 2.4rem
+    }
+
+@media (max-width:768px) {
+    .ficha-nuevo .zona-detalles .zona-datos-tecnicos {
+        margin-top: 30px
+    }
+
+        .ficha-nuevo .zona-detalles .zona-datos-tecnicos h2 {
+            font-size: 2.6rem
+        }
+
+        .ficha-nuevo .zona-detalles .zona-datos-tecnicos .zona-detalle {
+            margin-top: 20px
+        }
+
+            .ficha-nuevo .zona-detalles .zona-datos-tecnicos .zona-detalle .col-4 .tit {
+                font-size: 1.3rem;
+                padding-top: 5px;
+                padding-bottom: 5px
+            }
+
+            .ficha-nuevo .zona-detalles .zona-datos-tecnicos .zona-detalle .col-4 .dato {
+                font-size: 2.4rem;
+                padding-bottom: 5px
+            }
+}
+
+.ficha-nuevo .zona-detalles .tit-zona-dimensiones {
+    margin-top: 120px
+}
+
+    .ficha-nuevo .zona-detalles .tit-zona-dimensiones h2 {
+        font-family: "Roboto-Bold",sans-serif;
+        color: #c5140c;
+        font-size: 6rem
+    }
+
+.ficha-nuevo .zona-detalles .zona-dimensiones {
+    background-image: url(../img/fnddimensiones.png);
+    background-position: center center;
+    background-size: 100% 50%;
+    background-repeat: no-repeat
+}
+
+.ficha-nuevo .zona-detalles .zona-ficha-tecnica-btn {
+    margin-top: 80px
+}
+
+    .ficha-nuevo .zona-detalles .zona-ficha-tecnica-btn .btn-descargar {
+        font-size: 2.6rem;
+        background-color: #000;
+        color: #fff;
+        padding: 14px 30px 10px;
+        border-radius: 8px;
+        min-width: 400px
+    }
+
+#Tecnologia .titulo {
+    /* width: 150px; */
+    text-align: center;
+    margin: 0 auto;
+}
+
+#Versiones #Botones {
+    text-align: right;
+    padding-right: 60px;
+    padding-bottom: 30px;
+}
+
+#Versiones #BotonesMobile {
+    display: none;
+    text-align: right;
+    padding-right: 60px;
+    padding-bottom: 30px;
+}
+
+#Tecnologia .subtitulo {
+    width: 1024px;
+    text-align: center;
+    margin: 20px auto 20px auto;
+}
+
+@media (max-width:768px) {
+    .ficha-nuevo .zona-detalles .tit-zona-dimensiones {
+        margin-top: 20px
+    }
+
+        .ficha-nuevo .zona-detalles .tit-zona-dimensiones h2 {
+            font-size: 2.6rem
+        }
+
+    .ficha-nuevo .zona-detalles .zona-ficha-tecnica-btn {
+        margin-top: 30px
+    }
+
+        .ficha-nuevo .zona-detalles .zona-ficha-tecnica-btn .btn-descargar {
+            min-width: auto;
+            width: 100%;
+            font-size: 2.2rem
+        }
+}
+
+.ficha-nuevo .zona-detalles .zona-versiones-cabecera {
+    margin-top: 120px
+}
+
+    .ficha-nuevo .zona-detalles .zona-versiones-cabecera h2 {
+        font-family: "Roboto-Bold",sans-serif;
+        color: #c5140c;
+        font-size: 6rem
+    }
+
+@media (max-width:768px) {
+    .ficha-nuevo .zona-detalles .zona-versiones-cabecera {
+        margin-top: 40px
+    }
+
+        .ficha-nuevo .zona-detalles .zona-versiones-cabecera h2 {
+            font-size: 2.6rem
+        }
+}
+
+.ficha-nuevo .zona-detalles #slider-versiones .slick-next {
+    right: 30px;
+    top: 120px
+}
+
+.ficha-nuevo .zona-detalles #slider-versiones .slick-prev {
+    left: 30px;
+    top: 120px
+}
+
+    .ficha-nuevo .zona-detalles #slider-versiones .slick-next:before, .ficha-nuevo .zona-detalles #slider-versiones .slick-prev:before {
+        font-size: 60px;
+        color: #000
+    }
+
+@media (max-width:768px) {
+    .ficha-nuevo .zona-detalles #slider-versiones .slick-next {
+        right: 10px;
+        left: auto;
+        top: 120px
+    }
+
+    .ficha-nuevo .zona-detalles #slider-versiones .slick-prev {
+        left: 10px;
+        right: auto;
+        top: 120px
+    }
+}
+
+@media (max-width:468px) {
+    .ficha-nuevo .zona-detalles #slider-versiones .slick-next {
+        right: 5px;
+        top: 80px
+    }
+
+    .ficha-nuevo .zona-detalles #slider-versiones .slick-prev {
+        left: 5px;
+        top: 80px
+    }
+}
+
+.ficha-nuevo .zona-detalles #slider-versiones .slider h3 {
+    text-align: center;
+    font-size: 2.8rem;
+    position: relative
+}
+
+    .ficha-nuevo .zona-detalles #slider-versiones .slider h3:before {
+        position: absolute;
+        content: "";
+        width: 78px;
+        border-bottom: 7px solid #c5140c;
+        display: block;
+        bottom: 0;
+        left: calc(50% - 39px)
+    }
+
+.ficha-nuevo .zona-detalles #slider-versiones .slider .cabecerasub {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 25px
+}
+
+    .ficha-nuevo .zona-detalles #slider-versiones .slider .cabecerasub .cabprecio {
+        font-size: 2.8rem;
+        font-family: "Roboto",sans-serif;
+        padding: 0;
+        margin: 0
+    }
+
+    .ficha-nuevo .zona-detalles #slider-versiones .slider .cabecerasub .precio {
+        font-size: 4.5rem;
+        font-family: "Roboto-Bold",sans-serif;
+        padding: 0;
+        margin-top: -20px
+    }
+
+.ficha-nuevo .zona-detalles #slider-versiones .slider ul {
+    margin-top: 75px;
+    font-size: 2.2rem;
+    width: 50%;
+    margin-left: 25%;
+    list-style: none
+}
+
+    .ficha-nuevo .zona-detalles #slider-versiones .slider ul li:before {
+        content: "-";
+        text-indent: -5px;
+        margin-right: 5px
+    }
+
+@media (max-width:1920px) {
+    .ficha-nuevo .zona-detalles #slider-versiones .slider ul {
+        width: 70%;
+        margin-left: 15%
+    }
+}
+
+@media (max-width:970px) {
+    .ficha-nuevo .zona-detalles #slider-versiones .slider ul {
+        width: 84%;
+        margin-left: 8%
+    }
+}
+
+@media (max-width:768px) {
+    #Versiones #BotonesMobile {
+        display: block;
+        text-align: center;
+        padding: 0;
+    }
+
+    #Versiones #Botones {
+        display: none;
+    }
+
+    #Versiones #BotonesMobile .btn {
+        display: inline-block;
+        margin: 20px 0;
+        width: 170px;
+        font-size: 14px;
+    }
+
+    .ficha-nuevo .zona-detalles #slider-versiones .slider ul {
+        margin-top: 15px;
+        width: 90%;
+        margin-left: 5%;
+        font-size: 1.9rem
+    }
+
+        .ficha-nuevo .zona-detalles #slider-versiones .slider ul li:nth-child(n+3) {
+            display: none
+        }
+
+        .ficha-nuevo .zona-detalles #slider-versiones .slider ul li:before {
+            content: "-";
+            text-indent: -5px;
+            margin-right: 5px
+        }
+
+    .ficha-nuevo .zona-detalles #slider-versiones .slider .btn-ver-mas {
+        background-color: #c5140c;
+        color: #fff;
+        text-align: center;
+        width: 90%;
+        padding: 15px 0 8px;
+        border-radius: 8px
+    }
+
+    .ficha-nuevo .zona-detalles {
+        margin-top: 45px
+    }
+
+        .ficha-nuevo .zona-detalles h1 {
+            font-size: 3.7rem
+        }
+
+        .ficha-nuevo .zona-detalles .subtitulo {
+            margin-top: 25px;
+            font-size: 1.6rem;
+            padding-left: 30px;
+            padding-right: 30px
+        }
+}
+
+
+.zona-aviso-pie {
+    margin-top: 130px;
+    font-size: 1.8rem;
+    color: #828282;
+    margin-bottom: 170px;
+    padding-left: 50px;
+    padding-right: 50px
+}
+
+@media (max-width:768px) {
+    .zona-aviso-pie {
+        font-size: 1.4rem;
+        margin-top: 50px;
+        margin-bottom: 40px;
+        /* padding-left: 30px; */
+        /* padding-right: 30px; */
+        margin: 0;
+    }
+}
+
+footer {
+    background-color: #000202;
+    color: #fff
+}
+
+    footer .infofooter {
+        text-align: center;
+        font-size: 1.4rem;
+        padding: 70px 0 0
+    }
+
+        footer .infofooter .infohorarios {
+            margin-top: 45px
+        }
+
+            footer .infofooter .infohorarios .col-sm-4 {
+                border-left: 1px solid #534741
+            }
+
+        footer .infofooter .infosocial {
+            margin-top: 40px
+        }
+
+@media (max-width:768px) {
+    footer .infofooter {
+        padding: 10px 0 0;
+        font-size: 1.2rem
+    }
+
+        footer .infofooter .infohorarios {
+            margin-top: 10px
+        }
+
+            footer .infofooter .infohorarios .col-sm-4 {
+                border-left: none
+            }
+
+                footer .infofooter .infohorarios .col-sm-4 .bloque {
+                    width: 60%;
+                    margin-left: 20%;
+                    margin-bottom: 15px;
+                    padding-bottom: 15px;
+                    border-bottom: 1px solid #534741
+                }
+
+                footer .infofooter .infohorarios .col-sm-4:last-child .bloque {
+                    border-bottom: none
+                }
+
+        footer .infofooter .infosocial {
+            margin-top: 0
+        }
+
+            footer .infofooter .infosocial i {
+                width: 30px;
+                height: 30px
+            }
+}
+
+#boxModeloInfo {
+    max-width: 100%;
+}
+
+
+#Versiones #slider.slick-slider {
+    padding: 0px 110px 0px 85px;
+}
+
+#Versiones #VersionDetail #DetalleVersiones, #Versiones #VersionDetail #CaracteristicasVersiones {
+    text-align: left;
+    width: 700px;
+    max-width: 100%;
+    background-color: #f1f1f1;
+    border-radius: 40px;
+    margin: 0 auto;
+    padding: 30px 20px;
+    display: none;
+}
+
+    #Versiones #VersionDetail #DetalleVersiones.selected, #Versiones #VersionDetail #CaracteristicasVersiones.selected {
+        display: block;
+    }
+
+    #Versiones #VersionDetail #DetalleVersiones .color {
+        display: inline-block;
+        margin: 10px;
+        cursor: pointer;
+    }
+
+.DG #Versiones #VersionDetail #DetalleVersiones .color.select img {
+    border: solid 2px #C51A18;
+}
+
+.CH #Versiones #VersionDetail #DetalleVersiones .color.select img {
+    border: solid 2px #164075;
+}
+
+.FI #Versiones #VersionDetail #DetalleVersiones .color.select img {
+    border: solid 2px #E30D13;
+}
+
+.JP #Versiones #VersionDetail #DetalleVersiones .color.select img {
+    border: solid 2px #324B20;
+}
+
+.RM #Versiones #VersionDetail #DetalleVersiones .color.select img {
+    border: solid 2px #848484;
+}
+
+.PE-PREMIUM #VersionDetail #DetalleVersiones .color.select img, .PE-VANS #VersionDetail #DetalleVersiones .color.select img {
+    border: solid 2px #00A3E0;
+}
+
+#Versiones #VersionDetail #DetalleVersiones .color.select img {
+    border-radius: 28px;
+}
+
+#Versiones #VersionDetail #DetalleVersiones .color img {
+    width: 50px;
+}
+
+#Versiones #VersionDetail #DetalleVersiones .Nombre {
+    display: block;
+    font-family: 'Roboto-Bold';
+    font-size: 20px;
+}
+
+#Versiones #VersionDetail #DetalleVersiones .Precio {
+    display: block;
+    font-family: 'Roboto-Medium';
+    font-size: 15px;
+    padding-bottom: 20px;
+}
+
+
+#Versiones #VersionDetail #DetalleVersiones #PaletaColores .tituloColor {
+    font-family: 'Roboto-Medium';
+    font-size: 13px;
+}
+
+#Versiones {
+    padding: 30px 0;
+}
+
+    #Versiones #slider .ModelosNuevos {
+        font-size: 18px;
+        font-family: 'Roboto-Medium';
+        cursor: pointer;
+    }
+
+        #Versiones #slider .ModelosNuevos .titleAuto {
+            max-width: 200px;
+        }
+
+#galeria-slider-container .galeria-slider .slick-track .slide.slick-slide iframe {
+    width: 600px;
+    height: 400px;
+}
+
+.DG #Versiones #slider .ModelosNuevos:hover .titleAuto, .DG #Versiones #slider .ModelosNuevos.Selected .titleAuto {
+    border-bottom: solid 1.5px #C51A18;
+}
+
+.CH #Versiones #slider .ModelosNuevos:hover .titleAuto, .CH #Versiones #slider .ModelosNuevos.Selected .titleAuto {
+    border-bottom: solid 1.5px #164075;
+}
+
+.FI #Versiones #slider .ModelosNuevos:hover .titleAuto, .FI #Versiones #slider .ModelosNuevos.Selected .titleAuto {
+    border-bottom: solid 1.5px #E30D13;
+}
+
+.JP #Versiones #slider .ModelosNuevos:hover .titleAuto, .JP #Versiones #slider .ModelosNuevos.Selected .titleAuto {
+    border-bottom: solid 1.5px #324B20;
+}
+
+.RM #Versiones #slider .ModelosNuevos:hover .titleAuto, .RM #Versiones #slider .ModelosNuevos.Selected .titleAuto {
+    border-bottom: solid 1.5px #848484;
+}
+
+.PE-PREMIUM #slider .ModelosNuevos:hover .titleAuto, .PE-PREMIUM #Versiones #slider .ModelosNuevos.Selected .titleAuto, .PE-VANS #slider .ModelosNuevos:hover .titleAuto, .PE-VANS #Versiones #slider .ModelosNuevos.Selected .titleAuto {
+    border-bottom: solid 1.5px #00A3E0;
+}
+
+#Versiones #slider .ModelosNuevos img {
+    margin: 0 auto;
+    max-width: 50%;
+}
+
+#Dimensiones > div, #Versiones > div {
+    text-align: center;
+    padding-top: 20px;
+}
+
+#versionColorImgBack {
+    width: 103%;
+    margin-left: -38px;
+}
+
+#Versiones #VersionDetail #CaracteristicasVersiones {
+    padding: 35px;
+}
+
+#Versiones #VersionDetail #ListaCaracteristicas li {
+    font-family: 'Roboto';
+    font-size: 16px;
+    padding: 8px;
+}
+
+#Versiones #Botones .btn, #Versiones #BotonesMobile .btn {
+    color: black;
+    border: solid 1px black;
+    border-radius: 40px;
+    padding: 10px 20px;
+    font-family: 'Roboto-Medium';
+    margin: 50px 10px 10px 10px;
+    width: 200px;
+}
+
+.DG #Versiones #Botones .btn.select, .DG #Versiones #Botones .btn:hover, .DG #Versiones #BotonesMobile .btn.select, .DG #Versiones #BotonesMobile .btn:hover {
+    background-color: #C51A18;
+    border-color: #C51A18;
+}
+
+.CH #Versiones #Botones .btn.select, .CH #Versiones #Botones .btn:hover, .CH #Versiones #BotonesMobile .btn.select, .CH #Versiones #BotonesMobile .btn:hover {
+    background-color: #164075;
+    border-color: #164075;
+}
+
+.FI #Versiones #Botones .btn.select, .FI #Versiones #Botones .btn:hover, .FI #Versiones #BotonesMobile .btn.select, .FI #Versiones #BotonesMobile .btn:hover {
+    background-color: #E30D13;
+    border-color: #E30D13;
+}
+
+.JP #Versiones #Botones .btn.select, .JP #Versiones #Botones .btn:hover, .JP #Versiones #BotonesMobile .btn.select, .JP #Versiones #BotonesMobile .btn:hover {
+    background-color: #324B20;
+    border-color: #324B20;
+}
+
+.RM #Versiones #Botones .btn.select, .RM #Versiones #Botones .btn:hover, .RM #Versiones #BotonesMobile .btn.select, .RM #Versiones #BotonesMobile .btn:hover {
+    background-color: #848484;
+    color: white;
+    border-color: #848484;
+}
+
+.PE-PREMIUM #Versiones #Botones .btn.select, .PE-PREMIUM #Versiones #Botones .btn:hover, .PE-PREMIUM #Versiones #BotonesMobile .btn.select, .PE-PREMIUM #Versiones #BotonesMobile .btn:hover, .PE-VANS #Versiones #Botones .btn.select, .PE-VANS #Versiones #Botones .btn:hover, .PE-VANS #Versiones #BotonesMobile .btn.select, .PE-VANS #Versiones #BotonesMobile .btn:hover {
+    background-color: #00A3E0;
+    color: white;
+    border-color: #00A3E0;
+}
+
+#Versiones #Botones .btn.select, #Versiones #Botones .btn:hover, #Versiones #BotonesMobile .btn.select, #Versiones #BotonesMobile .btn:hover {
+    color: white;
+}
+
+#Exterior .container, #Interior .container {
+    position: relative;
+}
+
+    #Exterior .container img, #Interior .container img {
+        width: 100%;
+        height: auto;
+        display: block;
+    }
+
+    #Exterior .container:hover .text, #Interior .container:hover .text {
+        opacity: 1;
+        transition: opacity 0.3s, visibility 0.3s;
+    }
+
+    #Exterior .container .text, #Interior .container .text {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgb(0 0 0 / 50%);
+        text-align: center;
+        opacity: 0;
+        transition: opacity 0.3s, visibility 0.3s;
+    }
+
+        #Exterior .container .text:after, #Interior .container .text:after {
+            content: '';
+            width: 1px;
+            height: 100%;
+            vertical-align: middle;
+            display: inline-block;
+        }
+
+        #Exterior .container .text span, #Interior .container .text span {
+            display: inline-block;
+            vertical-align: middle;
+            font-size: 45px;
+            font-family: 'Roboto-Medium';
+        }
+
+
+
+.center {
+    display: block;
+    margin: 0 auto;
+}
+
+footer .copyfooter {
+    margin-top: 40px
+}
+
+    footer .copyfooter a:first-child {
+        color: #534741;
+        border-right: 1px solid #534741;
+        padding-right: 20px;
+        margin-right: 20px
+    }
+
+    footer .copyfooter a.phonefooter i {
+        color: #c5140c;
+        margin-right: 5px
+    }
+
+#exterior_04 {
+    padding: 50px 25px;
+}
+
+#versionColorImg {
+    margin-right: 40px;
+    width: 80%;
+}
+
+@media (max-width:768px) {
+    #galeria-slider-container .galeria-slider .slick-track .slide.slick-slide iframe {
+        width: 80%;
+        height: auto;
+    }
+
+    #versionColorImg {
+        margin-right: auto;
+    }
+
+    #home-ventajas .slick-prev {
+        left: -40px;
+    }
+
+    #home-ventajas .slick-next {
+        right: -40px;
+    }
+
+    body.Home2 #home-ventajas .slick-prev {
+        left: 10px;
+    }
+
+    body.Home2 #home-ventajas .slick-next {
+        right: 10px;
+    }
+
+    #Exterior .container:hover .text, #Interior .container:hover .text {
+        display: flex;
+        align-items: center;
+        text-align: center;
+        width: 100%;
+    }
+
+    #Exterior .container .text span, #Interior .container .text span {
+        /* height:100%; */
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        width: 100%;
+    }
+
+    #Versiones #slider .ModelosNuevos img {
+        max-width: 80%;
+    }
+
+    #versionColorImgBack {
+        width: 104%;
+        margin-left: -9px;
+        height: 100px;
+    }
+
+    #Versiones #VersionDetail #DetalleVersiones {
+        background: white;
+    }
+
+    footer .copyfooter {
+        margin-top: 10px;
+        padding-bottom: 40px
+    }
+
+    #exterior_04 {
+        padding: 20px 2px;
+    }
+
+    footer .copyfooter .phonefooter i {
+        background-color: #fff;
+        width: 20px;
+        height: 20px;
+        display: inline-block;
+        border-radius: 20px
+    }
+    .ficha-nuevo {
+        margin-left: 0px;
+    }
+
+    #galeria-slider-container {
+        display: none;
+        padding-left: 0;
+    }
+}
+
+.hidden {
+    overflow: hidden;
+}

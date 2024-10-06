@@ -1,54 +1,7 @@
-@font-face {
-     font-family: 'DMSans';
-     src: url('../fonts/DMSans-Bold.ttf') format('truetype');
-     font-weight: 700;
-     font-style: normal;
-}
+@import url('https://fonts.googleapis.com/css2?family=DMSans:wght@400;700&family=Roboto:wght@400;500;700&display=swap');
 
-@font-face {
-     font-family: 'DMSans';
-     src: url('../fonts/DMSans-BoldItalic.ttf') format('truetype');
-     font-weight: 700;
-     font-style: italic;
-}
-
-@font-face {
-     font-family: 'DMSans';
-     src: url('../fonts/DMSans-Italic.ttf') format('truetype');
-     font-weight: 400;
-     font-style: italic;
-}
-
-@font-face {
-     font-family: 'Roboto';
-     src: url('../fonts/Roboto-Regular.ttf') format('truetype');
-     font-weight: 400;
-     font-style: normal;
-}
-
-@font-face {
-     font-family: 'Roboto';
-     src: url('../fonts/Roboto-Medium.ttf') format('truetype');
-     font-weight: 500;
-     font-style: normal;
-}
-
-@font-face {
-     font-family: 'Roboto';
-     src: url('../fonts/Roboto-Bold.ttf') format('truetype');
-     font-weight: 700;
-     font-style: normal;
-}
-
-@font-face {
-     font-family: 'BarlowCondensed-Bold';
-     src: url('../fonts/BarlowCondensed-Bold.ttf') format('truetype');
-     font-weight: 700;
-     font-style: normal;
-}
-
-svg {
-     font-family: 'Roboto', sans-serif !important;
+html {
+     font-size: 16px;
 }
 
 body {
@@ -57,60 +10,54 @@ body {
      background-color: #000000;
 }
 
-@media (max-width: 768px) {
-     body {
-          margin: 0px;
-     }
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-     font-family: 'BarlowCondensed-Bold', sans-serif !important;
+h1, h2, h3, h4, h5, h6 {
+     font-family: 'Barlow Condensed', sans-serif !important;
      text-transform: uppercase;
-     font-style: normal !important;
-}
+ }
 
 h1 {
-     font-size: 32px;
+     font-size: 28px;
      font-weight: 700;
      text-align: left;
+     font-family: 'Barlow Condensed', sans-serif !important;
+
 }
 
 @media (max-width: 768px) {
      h1 {
           font-size: 24px;
-          text-align: center;
+          font-family: 'Barlow Condensed', sans-serif !important;
+
      }
 }
 
-h2 {
+h2, h3 {
      font-size: 28px;
      font-weight: 500;
+     font-family: 'Barlow Condensed', sans-serif !important;
+
 }
 
 @media (max-width: 768px) {
-     h2 {
+     h2, h3 {
           font-size: 24px;
-     }
-}
+          font-family: 'Barlow Condensed', sans-serif !important;
 
-h3 {
-     font-size: 24px;
-     font-weight: 500;
+     }
 }
 
 h4 {
      font-size: 20px;
      font-weight: 400;
+     font-family: 'Barlow Condensed', sans-serif !important;
+
 }
 
 h5 {
      font-size: 18px;
      font-weight: 400;
+     font-family: 'Barlow Condensed', sans-serif !important;
+
 }
 
 h6 {
@@ -238,12 +185,13 @@ p {
      transition: background-color 0.3s, border-color 0.3s;
      padding: 8px 40px;
      height: 41px;
+     font-size: 16px;
 }
 
 @media (max-width: 768px) {
      .dodge-btn {
           width: 100%;
-          padding: 8px 0;
+          padding: 12px 0;
           text-align: center;
           height: 53px;
      }
@@ -267,12 +215,13 @@ p {
      transition: background-color 0.3s, border-color 0.3s;
      padding: 8px 40px;
      height: 41px;
+     font-size: 16px;
 }
 
 @media (max-width: 768px) {
      .dodge-btn-02 {
           width: 100%;
-          padding: 8px 0;
+          padding: 12px 0;
           text-align: center;
           height: 53px;
      }
@@ -395,7 +344,7 @@ p {
 
 
 .card-title {
-     font-size: 1.8rem;
+     font-size: 24px;
      font-weight: bold;
      color: #000000;
 }
@@ -782,7 +731,12 @@ hr.fiat-hr-01 {
 }
 
 .big-text-cta {
-     font-size: 32px;
+     font-size: 28px;
+}
+@media (max-width: 768px) {
+     .big-text-cta {
+          font-size: 24px;
+     }
 }
 
 

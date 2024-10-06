@@ -1,0 +1,831 @@
+@font-face {
+    font-family: 'Roboto';
+    src: url('../fonts/Roboto-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url('../fonts/Roboto-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url('../fonts/Roboto-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
+
+h1 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 32px;
+    font-weight: 700;
+    text-align: left;
+}
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 24px;
+    }
+}
+
+.vehicle-section p.mb-4 {
+    font-size: 16px;
+    margin-bottom: 40px;
+}
+
+.registered {
+    font-size: 15px;
+}
+
+.text-link-btn {
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: bold;
+    color: #424D07;
+}
+
+.text-link-btn.jeep,
+.text-link-btn.jeep:hover,
+.text-jeep {
+    color: #424D07;
+}
+
+.text-link-btn.fiat,
+.text-link-btn.fiat:hover,
+.text-fiat {
+    color: #FF1530;
+}
+
+.text-link-btn.dodge,
+.text-link-btn.dodge:hover,
+.text-dodge {
+    color: #D50000;
+}
+
+.text-link-btn.peugeot,
+.text-link-btn.peugeot:hover,
+.text-peugeot {
+    color: #0074E8;
+}
+
+.text-link-btn.peugeotprofessional,
+.text-link-btn.peugeotprofessional:hover,
+.text-peugeotprofessional {
+    color: #0074E8;
+}
+
+.text-link-btn.ram,
+.text-link-btn.ram:hover,
+.text-ram {
+    color: #000000;
+}
+
+.tabs-container {
+    padding: 20px;
+    max-width: 100%;
+    position: relative;
+}
+
+.tabs-rounded {
+    display: flex;
+    gap: 20px;
+    justify-content: left;
+    overflow-x: auto;
+    white-space: nowrap;
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+.tabs-rounded::-webkit-scrollbar {
+    display: none;
+}
+
+.tabs-rounded-tab {
+    padding: 0 30px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    border: 1px solid #707070;
+    border-radius: 30px;
+    background-color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-size: 16px;
+}
+
+.contenedor-padre {
+    overflow-x: hidden;
+    width: 100%;
+}
+
+.tabs-rounded-tab.active-tab,
+.tabs-rounded-tab:hover {
+    background-color: #424D07;
+    color: white;
+    border: none;
+}
+
+.tabs-rounded-tab.fiat.active-tab,
+.tabs-rounded-tab.fiat:hover {
+    background-color: #FF1530;
+}
+
+.tabs-rounded-tab.dodge.active-tab,
+.tabs-rounded-tab.dodge:hover {
+    background-color: #D50000;
+}
+
+.tabs-rounded-tab.peugeot.active-tab,
+.tabs-rounded-tab.peugeot:hover {
+    background-color: #0074E8;
+}
+
+.tabs-rounded-tab.peugeotprofessional.active-tab,
+.tabs-rounded-tab.peugeotprofessional:hover {
+    background-color: #0074E8;
+}
+
+.tabs-rounded-tab.ram.active-tab,
+.tabs-rounded-tab.ram:hover {
+    background-color: #000000;
+}
+
+.tabs-rounded-content {
+    display: none;
+    margin-top: 50px;
+}
+
+.tabs-rounded-content.active-content {
+    display: block;
+}
+
+.no-margin {
+    margin: 0px;
+}
+
+#listaPromos {
+    margin-top: 20px;
+}
+
+#listaPromos .cardModelopromo {
+    width: 295px;
+    min-height: 477px;
+    border-radius: 8px 8px 0px 0px;
+}
+
+#listaPromos .cardModelopromo img {
+    width: 100%;
+    border-radius: 8px 8px 0px 0px;
+}
+
+#listaPromos .cardModelopromo .cardDetalle {
+    box-shadow: 0px 3px 6px #00000029;
+    border-radius: 0px 0px 8px 8px;
+    padding: 20px;
+}
+
+#listaPromos .cardModelopromo .cardDetalle .tituloModelo {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+#listaPromos .cardModelopromo .cardDetalle .txtVersion {
+    font-size: 12px;
+    color: #707070;
+}
+
+#listaPromos .cardModelopromo .cardDetalle .selectVersiones {
+    background: #F4F4F4;
+    border-radius: 4px;
+    width: 100%;
+    height: 34px;
+    border: none;
+    font-size: 12px;
+    font-weight: bold;
+    display: block;
+    margin-top: 5px;
+}
+
+#listaPromos .cardModelopromo .cardDetalle .txtPromo {
+    font-size: 12px;
+    text-wrap: wrap;
+    padding-bottom: 20px;
+}
+
+#listaPromos .cardModelopromo .cardDetalle .txtPromo span {
+    display: block;
+}
+
+#listaPromos .cardModelopromo .cardDetalle a {
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+#listaPromos .cardModelopromo.jeep .cardDetalle a {
+    color: #424D07;
+}
+
+#listaPromos .cardModelopromo.fiat .cardDetalle a {
+    color: #FF1530;
+}
+
+#listaPromos .cardModelopromo.dodge .cardDetalle a {
+    color: #D50000;
+}
+
+#listaPromos .cardModelopromo.peugeot .cardDetalle a {
+    color: #0074E8;
+}
+
+#listaPromos .cardModelopromo.peugeotprofessional .cardDetalle a {
+    color: #0074E8;
+}
+
+#listaPromos .cardModelopromo.ram .cardDetalle a {
+    color: #000000;
+}
+
+#listaPromos .cardModelopromo {
+    transition: margin 0.5s ease;
+}
+
+#listaPromos .cardModelopromo:hover {
+    margin-top: -20px;
+}
+
+#listaPromos .slick-next,
+#listaPromos .slick-prev {
+    cursor: pointer;
+    font-size: 0;
+    font-weight: bold;
+    display: inline-block;
+    background-color: #334E8B;
+    border-radius: 20px;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    color: white;
+    content: '';
+    top: -40px;
+    right: 0;
+}
+
+#listaPromos .slick-prev {
+    left: auto;
+    right: 50px;
+}
+
+#listaPromos .slick-prev.slick-disabled,
+#listaPromos .slick-next.slick-disabled {
+    opacity: 0.5;
+    background-color: #7F7F7F !important;
+}
+
+#listaPromos .slick-next:before {
+    content: '>';
+    font-size: 25px;
+    font-family: "Roboto", sans-serif;
+    opacity: 1;
+    display: block;
+    margin-top: 0px;
+}
+
+#listaPromos .slick-prev:before {
+    content: '<';
+    font-size: 25px;
+    font-family: "Roboto", sans-serif;
+    opacity: 1;
+    display: block;
+    margin-top: 0px;
+}
+
+#listaPromos .slick-slide {
+    margin: 0 10px;
+}
+
+#listaPromos .slick-slide {
+    outline: none;
+}
+
+#listaPromos .slick-list {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+#listaPromos .cardModelopromo {
+    width: 100%;
+    min-height: 500px;
+    border-radius: 8px 8px 0px 0px;
+    transition: margin 0.5s ease;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#listaPromos .cardModelopromo img {
+    width: 100%;
+    height: 200px;
+    border-radius: 8px 8px 0px 0px;
+    object-fit: cover;
+}
+
+#listaPromos .cardModelopromo .cardDetalle {
+    box-shadow: 0px 3px 6px #00000029;
+    border-radius: 0px 0px 8px 8px;
+    padding: 20px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#listaPromos .cardModelopromo .cardDetalle .tituloModelo {
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    height: calc(1.5em * 2);
+}
+
+#listaPromos .cardModelopromo .cardDetalle .txtVersion {
+    font-size: 14px;
+    font-weight: 600;
+    color: #707070;
+}
+
+#listaPromos .cardModelopromo .cardDetalle .selectVersiones {
+    background: #F4F4F4;
+    border-radius: 4px;
+    width: 100%;
+    height: 39px;
+    border: none;
+    font-size: 12px;
+    font-weight: bold;
+    margin-top: 5px;
+    padding: 5px;
+    color: #333;
+}
+
+#listaPromos .cardModelopromo .cardDetalle .txtPromo {
+    font-size: 12px;
+    color: #333;
+    line-height: 1.5;
+    height: 80px;
+    max-height: 80px;
+    overflow-y: auto;
+    text-overflow: ellipsis;
+}
+
+#listaPromos .cardModelopromo .cardDetalle .txtPromo span {
+    display: block;
+}
+
+#listaPromos ::-webkit-scrollbar {
+    width: 5px;
+}
+
+#listaPromos ::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 10px;
+}
+
+#listaPromos ::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 10px;
+}
+
+#listaPromos ::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+#listaPromos .cardModelopromo .cardDetalle a {
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: bold;
+    color: #424D07;
+}
+
+#listaPromos .cardModelopromo:hover {
+    margin-top: -10px;
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 768px) {
+    #listaPromos .cardModelopromo:hover {
+        margin-top: 0;
+        box-shadow: none;
+    }
+}
+
+#listaPromos .cardModelopromo.fiat .cardDetalle a {
+    color: #FF1530;
+}
+
+#listaPromos .cardModelopromo.dodge .cardDetalle a {
+    color: #D50000;
+}
+
+#listaPromos .cardModelopromo.peugeot .cardDetalle a,
+#listaPromos .cardModelopromo.peugeotprofessional .cardDetalle a {
+    color: #0074E8;
+}
+
+#listaPromos .cardModelopromo.ram .cardDetalle a {
+    color: #000000;
+}
+
+#listaPromos .cardModelopromo.jeep .cardDetalle a.btn.jeep-btn-promo {
+    background-color: #424D07;
+    border-color: #424D07;
+    border-radius: 25px;
+    width: auto;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s, border-color 0.3s;
+    padding: 8px;
+    height: 41px;
+}
+
+#listaPromos .cardModelopromo.fiat .cardDetalle a.btn.fiat-btn-promo {
+    background-color: #FF1530;
+    border-color: #FF1530;
+    border-radius: 25px;
+    width: auto;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s, border-color 0.3s;
+    padding: 8px;
+    height: 41px;
+}
+
+#listaPromos .cardModelopromo.dodge .cardDetalle a.btn.dodge-btn-promo {
+    background-color: #D50000;
+    border-color: #D50000;
+    border-radius: 25px;
+    width: auto;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s, border-color 0.3s;
+    padding: 8px;
+    height: 41px;
+}
+
+#listaPromos .cardModelopromo.peugeot .cardDetalle a.btn.peugeot-btn-promo {
+    background-color: #0074E8;
+    border-color: #0074E8;
+    border-radius: 25px;
+    width: auto;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s, border-color 0.3s;
+    padding: 8px;
+    height: 41px;
+}
+
+#listaPromos .cardModelopromo.peugeotprofessional .cardDetalle a.btn.peugeotprofessional-btn-promo {
+    background-color: #0074E8;
+    border-color: #0074E8;
+    border-radius: 25px;
+    width: auto;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s, border-color 0.3s;
+    padding: 8px;
+    height: 41px;
+}
+
+#listaPromos .cardModelopromo.ram .cardDetalle a.btn.ram-btn-promo {
+    background-color: #000000;
+    border-color: #000000;
+    border-radius: 25px;
+    width: auto;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s, border-color 0.3s;
+    padding: 8px;
+    height: 41px;
+}
+
+#detallePromo {
+    padding-bottom: 80px;
+    display: none;
+}
+
+#detallePromo .form-label {
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    font-size: 16px;
+}
+
+.card-detail {
+    box-shadow: 0px 3px 6px #00000029;
+    border: none !important;
+    height: 160px;
+}
+
+.content-card {
+    height: 100px;
+    overflow: hidden;
+}
+
+.text-link-btn {
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: bold;
+    color: #424D07;
+}
+
+.text-link-btn:hover {
+    color: #424D07;
+}
+
+.back-btn {
+    background-color: transparent;
+    border: none;
+    font-size: 18px;
+    color: black;
+    display: inline-flex;
+    align-items: center;
+}
+
+.back-btn span {
+    font-size: 24px;
+    margin-right: 8px;
+}
+
+.selectVersiones {
+    background: #F4F4F4;
+    border-radius: 4px;
+    width: 100%;
+    height: 39px;
+    border: none;
+    font-size: 12px;
+    font-weight: bold;
+    margin-top: 5px;
+    padding: 5px;
+    color: #333;
+}
+
+#detallePromo .content-card span {
+    font-size: 16px;
+    margin-bottom: 20px;
+    display: block;
+}
+
+#detallePromo .card-body {
+    padding: 20px;
+}
+
+#detallePromo a.btn {
+    border-radius: 25px;
+    width: auto;
+    cursor: pointer;
+    transition: background-color 0.3s, border-color 0.3s;
+    padding: 8px;
+    height: 41px;
+    font-size: 16px;
+    font-family: 'Roboto-Medium';
+}
+
+#detallePromo a.btn.jeep-btn-low {
+    background-color: white;
+    border-color: #424D07;
+    color: #424D07;
+}
+
+#detallePromo a.btn.jeep-btn {
+    background-color: #424D07;
+    border-color: #424D07;
+    color: white;
+}
+
+#detallePromo a.btn.fiat-btn-low {
+    background-color: white;
+    border-color: #FF1530;
+    color: #FF1530;
+}
+
+#detallePromo a.btn.fiat-btn {
+    background-color: #FF1530;
+    border-color: #FF1530;
+    color: white;
+}
+
+#detallePromo a.btn.dodge-btn-low {
+    background-color: white;
+    border-color: #D50000;
+    color: #D50000;
+}
+
+#detallePromo a.btn.peugeot-btn {
+    background-color: #0074E8;
+    border-color: #0074E8;
+    color: white;
+}
+
+#detallePromo a.btn.peugeot-btn-low {
+    background-color: white;
+    border-color: #0074E8;
+    color: #0074E8;
+}
+
+#detallePromo a.btn.peugeotprofessional-btn {
+    background-color: #0074E8;
+    border-color: #0074E8;
+    color: white;
+}
+
+#detallePromo a.btn.peugeotprofessional-btn-low {
+    background-color: white;
+    border-color: #0074E8;
+    color: #0074E8;
+}
+
+#detallePromo a.btn.ram-btn {
+    background-color: #000000;
+    border-color: #000000;
+    color: white;
+}
+
+#detallePromo a.btn.ram-btn-low {
+    background-color: white;
+    border-color: #000000;
+    color: #000000;
+}
+
+#detallePromo a.btn.dodge-btn {
+    background-color: #D50000;
+    border-color: #D50000;
+    color: white;
+}
+
+.custom-modal-content {
+    background-color: #fff;
+    border-radius: 12px;
+    max-width: 1114px;
+    box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.3);
+    max-height: 50vh;
+    overflow: hidden;
+}
+
+@media (max-width: 576px) {
+    .custom-modal-content {
+        width: 100%;
+        height: 100%;
+        border-radius: 0;
+        max-width: none;
+        max-height: none;
+    }
+
+    .modal-dialog {
+        margin: 0;
+        width: 100%;
+        height: 100%;
+        max-width: none;
+    }
+
+    .custom-modal-body {
+        max-height: calc(100vh - 50px) !important;
+        overflow-y: auto;
+    }
+}
+
+.custom-modal-header {
+    background-color: #fff;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    padding-right: 75px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.modal-close-container .btn-close {
+    font-size: 14px;
+    background: none;
+    border: none;
+    color: #000;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.custom-modal-body {
+    padding: 15px;
+    overflow-y: auto;
+    max-height: calc(80vh - 50px);
+}
+
+.boxPrivacidad {
+    padding: 15px;
+}
+
+.boxPrivacidad h2 {
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+.boxPrivacidad p {
+    font-size: 16px;
+    text-align: justify;
+}
+
+.modal-dialog {
+    margin: auto;
+}
+
+.btn-close:hover {
+    color: #000;
+    text-decoration: underline;
+}
+
+@media (min-width: 576px) {
+    .modal-dialog {
+        max-width: 1114px !important;
+        margin: 1.75rem auto;
+    }
+}
+
+.content-mobile {
+    padding-left: 24px;
+    padding-right: 24px;
+}
+
+@media (max-width: 768px) {
+    .row>* {
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+    }
+}
+
+@media (max-width: 768px) {
+    #listaPromos .d-flex {
+        flex-direction: column;
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    #listaPromos .cardModelopromo .cardDetalle a {
+        text-decoration: none;
+        font-size: 15px;
+        font-weight: bold;
+        color: #424D07;
+        padding-top: 16px;
+    }
+}
+
+@media (max-width: 768px) {
+    #listaPromos .d-flex .btn, #listaPromos .d-flex a {
+        width: 100% !important;
+        margin-bottom: 10px;
+        text-align: center;
+    }
+}
+
+.content-detail-promo {
+    padding-right: 24px;
+    padding-left: 24px;
+}
+
+.margin-top-mobile {
+    margin-top: 40px;
+}
+
+@media only screen and (max-width: 768px) {
+    .margin-bottom {
+        margin-top: 40px !important;
+    }
+}
+
+@media (max-width: 767px) {
+    .button-container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 24px !important;
+    }
+}
+
+.btn-back-icon-mobile {
+    font-size: 24px;
+    transform: translateX(-10px);
+    top: -64px;
+    font-weight: 600;
+}
+
+@media only screen and (max-width: 768px) {
+    .margin-top-eow {
+        margin-top: 80px;
+    }
+}
