@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@100;200;300;400;500;600;700;800;900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=DMSans:wght@400;700&family=Roboto:wght@400;500;700&display=swap');
 
 html {
@@ -10,59 +11,68 @@ body {
      background-color: #000000;
 }
 
+/* Encabezados globales */
 h1, h2, h3, h4, h5, h6 {
      font-family: 'Barlow Condensed', sans-serif !important;
      text-transform: uppercase;
- }
+     margin: 0;
+}
 
+/* Estilos de h1 */
 h1 {
      font-size: 28px;
      font-weight: 700;
      text-align: left;
-     font-family: 'Barlow Condensed', sans-serif !important;
-
 }
 
 @media (max-width: 768px) {
      h1 {
           font-size: 24px;
-          font-family: 'Barlow Condensed', sans-serif !important;
-
      }
 }
 
+/* Estilos de h2 y h3 */
 h2, h3 {
      font-size: 28px;
      font-weight: 500;
-     font-family: 'Barlow Condensed', sans-serif !important;
-
 }
 
 @media (max-width: 768px) {
      h2, h3 {
           font-size: 24px;
-          font-family: 'Barlow Condensed', sans-serif !important;
-
      }
 }
 
+/* Estilo de h4 */
 h4 {
      font-size: 20px;
      font-weight: 400;
-     font-family: 'Barlow Condensed', sans-serif !important;
-
 }
 
+/* Estilo de h5 */
 h5 {
      font-size: 18px;
      font-weight: 400;
-     font-family: 'Barlow Condensed', sans-serif !important;
-
 }
 
+/* Estilo de h6 */
 h6 {
      font-size: 16px;
      font-weight: 400;
+}
+
+/* Estilo de párrafos */
+p {
+     font-family: 'Roboto', sans-serif;
+     font-size: 15px;
+     font-weight: 400;
+}
+
+/* Clase personalizada para h2 regular */
+.h2-regular {
+     font-size: 32px;
+     font-weight: 700;
+     font-style: normal;
 }
 
 
