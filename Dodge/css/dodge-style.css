@@ -15,8 +15,13 @@ body {
 h1, h2, h3, h4, h5, h6 {
      font-family: 'Barlow Condensed', sans-serif !important;
      text-transform: uppercase;
+<<<<<<< Updated upstream
      margin: 0;
 }
+=======
+     font-weight: 700; 
+ }
+>>>>>>> Stashed changes
 
 /* Estilos de h1 */
 h1 {
@@ -28,31 +33,61 @@ h1 {
 @media (max-width: 768px) {
      h1 {
           font-size: 24px;
+<<<<<<< Updated upstream
+=======
+          font-family: 'Barlow Condensed', sans-serif !important;
+          font-weight: 700; 
+
+>>>>>>> Stashed changes
      }
 }
 
 /* Estilos de h2 y h3 */
 h2, h3 {
      font-size: 28px;
+<<<<<<< Updated upstream
      font-weight: 500;
+=======
+     font-family: 'Barlow Condensed', sans-serif !important;
+     font-weight: 700; 
+
+>>>>>>> Stashed changes
 }
 
 @media (max-width: 768px) {
      h2, h3 {
           font-size: 24px;
+<<<<<<< Updated upstream
+=======
+          font-family: 'Barlow Condensed', sans-serif !important;
+          font-weight: 700; 
+
+>>>>>>> Stashed changes
      }
 }
 
 /* Estilo de h4 */
 h4 {
      font-size: 20px;
+<<<<<<< Updated upstream
      font-weight: 400;
+=======
+     font-family: 'Barlow Condensed', sans-serif !important;
+     font-weight: 700; 
+
+>>>>>>> Stashed changes
 }
 
 /* Estilo de h5 */
 h5 {
      font-size: 18px;
+<<<<<<< Updated upstream
      font-weight: 400;
+=======
+     font-family: 'Barlow Condensed', sans-serif !important;
+     font-weight: 700; 
+
+>>>>>>> Stashed changes
 }
 
 /* Estilo de h6 */
@@ -742,10 +777,12 @@ hr.fiat-hr-01 {
 
 .big-text-cta {
      font-size: 28px;
+     font-weight: 700;
 }
 @media (max-width: 768px) {
      .big-text-cta {
           font-size: 24px;
+          font-weight: 700; 
      }
 }
 

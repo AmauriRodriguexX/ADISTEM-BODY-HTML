@@ -1,3 +1,7 @@
+html {
+     font-size: 16px;
+}
+
 @font-face {
      font-family: 'PeugeotNew';
      src: url('../fonts/PeugeotNew-Bold.otf') format('opentype');
@@ -28,17 +32,15 @@
 
 body {
      font-family: 'Roboto', sans-serif;
-     margin: -12px;
      overflow-x: hidden;
 }
 
-@media (max-width: 768px) {
-     body {
-         margin: 0px;
-     }
-}
-
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
      font-family: 'PeugeotNew', sans-serif;
      font-weight: bold;
 }
@@ -72,6 +74,14 @@ h3 {
      font-size: 24px;
 }
 
+@media (max-width: 768px) {
+     h3 {
+          font-size: 20px;
+          text-transform: uppercase;
+          line-height: 32px;
+     }
+}
+
 h4 {
      font-size: 20px;
 }
@@ -94,9 +104,9 @@ p {
 
 @media (max-width: 768px) {
      p {
-         font-size: 16px;
+          font-size: 16px;
      }
- }
+}
 
 
 .vichle-text-01 {
@@ -157,17 +167,19 @@ p {
      padding: 8px 40px;
      height: 41px;
      text-transform: uppercase;
- }
- 
- @media (max-width: 768px) {
+     font-size: 16px;
+
+}
+
+@media (max-width: 768px) {
      .pg-btn {
-         width: 100%;
-         padding: 8px 0;
-         text-align: center;
-         height: 53px;
+          width: 100%;
+          padding: 13px 0;
+          text-align: center;
+          height: 53px;
      }
- }
- 
+}
+
 
 .pg-btn:hover {
      background-color: #0057AD;
@@ -178,7 +190,8 @@ p {
 
 .pg-btn-02 {
      border: 1px solid #FFFFFF;
-     background-color: transparent; /* Fondo transparente */
+     background-color: transparent;
+     /* Fondo transparente */
      border-radius: 25px;
      width: 264px;
      color: white;
@@ -187,17 +200,17 @@ p {
      padding: 8px 40px;
      height: 41px;
      text-transform: uppercase;
- }
- 
- @media (max-width: 768px) {
+}
+
+@media (max-width: 768px) {
      .pg-btn-02 {
-         width: 100%;
-         padding: 8px 0;
-         text-align: center;
-         height: 53px;
+          width: 100%;
+          padding: 13px 0;
+          text-align: center;
+          height: 53px;
      }
- }
- 
+}
+
 
 .pg-btn-02:hover {
      background-color: #0057AD;
@@ -409,9 +422,9 @@ p {
 }
 
 .title-form {
-     font-size: 22px;
+     font-size: 20px;
      font-weight: 700;
-     color: #424D07;
+     font-family: 'PeugeotNew', sans-serif;
 
 }
 
@@ -423,183 +436,187 @@ p {
 
 /* Custom styles for the modal */
 .custom-modal-content {
-    background-color: #fff;
-    border-radius: 12px;
-    max-width: 900px;
-    box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.3);
-    max-height: 50vh; /* Altura máxima del modal */
-    overflow: hidden; /* Controlar el desplazamiento del contenido */
+     background-color: #fff;
+     border-radius: 12px;
+     max-width: 900px;
+     box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.3);
+     max-height: 50vh;
+     /* Altura máxima del modal */
+     overflow: hidden;
+     /* Controlar el desplazamiento del contenido */
 }
 
 .custom-modal-header {
-    background-color: #fff;
-    position: sticky;
-    top: 0;
-    z-index: 10;
-    padding-right: 32px;
-    display: flex;
-    justify-content: flex-end; /* Alinea el botón cerrar a la derecha */
+     background-color: #fff;
+     position: sticky;
+     top: 0;
+     z-index: 10;
+     padding-right: 32px;
+     display: flex;
+     justify-content: flex-end;
+     /* Alinea el botón cerrar a la derecha */
 }
 
 .modal-close-container .btn-close {
-    font-size: 14px;
-    background: none;
-    border: none;
-    color: #000;
-    font-weight: bold;
-    cursor: pointer;
+     font-size: 14px;
+     background: none;
+     border: none;
+     color: #000;
+     font-weight: bold;
+     cursor: pointer;
 }
 
 .custom-modal-body {
-    padding: 15px;
-    overflow-y: auto;
-    max-height: calc(80vh - 50px); /* Resta la altura de la cabecera */
+     padding: 15px;
+     overflow-y: auto;
+     max-height: calc(80vh - 50px);
+     /* Resta la altura de la cabecera */
 }
 
 .boxPrivacidad {
-    padding: 15px;
+     padding: 15px;
 }
 
 .boxPrivacidad h2 {
-    font-size: 1.5rem;
-    font-weight: bold;
-    margin-bottom: 15px;
-    text-align: center;
+     font-size: 1.5rem;
+     font-weight: bold;
+     margin-bottom: 15px;
+     text-align: center;
 }
 
 .boxPrivacidad p {
-    font-size: 14px;
-    text-align: justify;
+     font-size: 14px;
+     text-align: justify;
 }
 
 .modal-dialog {
-    margin: auto;
+     margin: auto;
 }
 
 .btn-close:hover {
-    color: #000;
-    text-decoration: underline;
+     color: #000;
+     text-decoration: underline;
 }
 
 /* Custom styles for the modal */
 .custom-modal-content {
      background-color: #fff;
      border-radius: 12px;
-     max-width: 1114px; 
+     max-width: 1114px;
      box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.3);
-     max-height: 50vh; 
-     overflow: hidden; 
- }
+     max-height: 50vh;
+     overflow: hidden;
+}
 
- /* mobile modal */
+/* mobile modal */
 @media (max-width: 576px) {
      .custom-modal-content {
-         width: 100%; 
-         height: 100%; 
-         border-radius: 0; 
-         max-width: none; 
-         max-height: none; 
+          width: 100%;
+          height: 100%;
+          border-radius: 0;
+          max-width: none;
+          max-height: none;
      }
- 
+
      .modal-dialog {
-         margin: 0; 
-         width: 100%; 
-         height: 100%; 
-         max-width: none; 
+          margin: 0;
+          width: 100%;
+          height: 100%;
+          max-width: none;
      }
-     
+
      .custom-modal-body {
-         max-height: calc(100vh - 50px) !important; 
-         overflow-y: auto; 
+          max-height: calc(100vh - 50px) !important;
+          overflow-y: auto;
      }
- }
+}
 
 .custom-modal-header {
-    background-color: #fff;
-    position: sticky;
-    top: 0;
-    z-index: 10;
-    padding-right: 75px;
-    display: flex;
-    justify-content: flex-end;
+     background-color: #fff;
+     position: sticky;
+     top: 0;
+     z-index: 10;
+     padding-right: 75px;
+     display: flex;
+     justify-content: flex-end;
 }
 
 .modal-close-container .btn-close {
-    font-size: 14px;
-    background: none;
-    border: none;
-    color: #000;
-    font-weight: bold;
-    cursor: pointer;
+     font-size: 14px;
+     background: none;
+     border: none;
+     color: #000;
+     font-weight: bold;
+     cursor: pointer;
 }
 
 .custom-modal-body {
-    padding: 15px;
-    overflow-y: auto;
-    max-height: calc(80vh - 50px); 
+     padding: 15px;
+     overflow-y: auto;
+     max-height: calc(80vh - 50px);
 }
 
 .boxPrivacidad {
-    padding: 15px;
+     padding: 15px;
 }
 
 .boxPrivacidad h2 {
-    font-size: 1.5rem;
-    font-weight: bold;
-    margin-bottom: 15px;
-    text-align: center;
+     font-size: 1.5rem;
+     font-weight: bold;
+     margin-bottom: 15px;
+     text-align: center;
 }
 
 .boxPrivacidad p {
-    font-size: 14px;
-    text-align: justify;
+     font-size: 14px;
+     text-align: justify;
 }
 
 .modal-dialog {
-    margin: auto;
+     margin: auto;
 }
 
 .btn-close:hover {
-    color: #000;
-    text-decoration: underline;
+     color: #000;
+     text-decoration: underline;
 }
 
 @media (min-width: 576px) {
-    .modal-dialog {
-        max-width: 1114px !important; 
-        margin: 1.75rem auto;
-    }
+     .modal-dialog {
+          max-width: 1114px !important;
+          margin: 1.75rem auto;
+     }
 }
 
 
 .hr-container {
      display: flex;
-     justify-content: center; 
+     justify-content: center;
      width: 100%;
- }
- 
- hr.pg-hr {
+}
+
+hr.pg-hr {
      border: solid 1px #9b9b9b69;
      height: 0;
      background-color: #9b9b9b69;
-     width: 197px; 
-     margin: 0; 
+     width: 197px;
+     margin: 0;
      opacity: 1;
      margin-top: 16px;
      margin-bottom: 8px;
- }
+}
 
 
 hr.pg-hr-blue {
      border: solid 1px #0057AD;
      height: 0;
      background-color: #0057AD;
-     width: 197px; 
-     margin: 0; 
+     width: 197px;
+     margin: 0;
      opacity: 1;
      margin-top: 16px;
      margin-bottom: 8px;
- }
+}
 
 
 .p-5 {
@@ -626,12 +643,18 @@ hr.pg-hr-blue {
      text-transform: uppercase;
      font-size: 20px;
      font-weight: 700;
- font-family: 'PeugeotNew', sans-serif;
- }
+     font-family: 'PeugeotNew', sans-serif;
+}
 
 .privacy-title {
      font-family: 'Roboto', sans-serif !important;
      font-style: normal !important;
- }
- 
+}
 
+
+.text-peugeot {
+     text-transform: uppercase;
+     font-size: 20px;
+     font-weight: 700;
+     font-family: 'PeugeotNew', sans-serif;
+}
