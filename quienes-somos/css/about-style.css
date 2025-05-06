@@ -1,0 +1,188 @@
+.quienes-somos-section {
+     background-image: url('../assets/quienes-somos-autosur.jpg');
+     background-size: cover;
+     background-position: center;
+     background-repeat: no-repeat;
+     height: 60vh;
+     min-height: 400px;
+     position: relative;
+}
+
+@media (max-width: 767px) {
+     .quienes-somos-section {
+          background-image: url('../assets/quienes-somos-autosur-mobile.jpg');
+     }
+}
+
+
+.unete-anuestro-equipo {
+     background-image: url('../assets/bolsa-trabajo-autosur.jpg');
+     background-size: cover;
+     background-position: center;
+     background-repeat: no-repeat;
+     height: 60vh;
+     min-height: 400px;
+     position: relative;
+}
+
+@media (max-width: 767px) {
+     .unete-anuestro-equipo {
+          background-image: url('../assets/bolsa-trabajo-autosur-mobile.jpg');
+     }
+}
+
+p {
+     font-size: 16px;
+     font-family: 'Roboto', sans-serif;
+     color: #000000;
+
+}
+
+.h1-quienes-somos {
+     font-size: 32px;
+     font-weight: 700;
+     color: #FFFFFF;
+     font-family: 'Roboto', sans-serif;
+}
+
+.descripcion-texto {
+     max-width: 800px;
+     font-size: 16px;
+     line-height: 1.6;
+     color: #212121;
+     text-align: center;
+     /* Default en desktop */
+}
+
+@media (max-width: 767.98px) {
+     .descripcion-texto {
+          text-align: left;
+     }
+}
+
+
+.timeline-section {
+     background-color: #FAFAFA;
+     position: relative;
+     padding-bottom: 60px;
+}
+
+.timeline-icon {
+     width: 48px;
+     height: 48px;
+     object-fit: contain;
+}
+
+.timeline-items {
+     position: relative;
+     z-index: 2;
+}
+
+.timeline-line {
+     position: absolute;
+     bottom: -11px;
+     left: 0;
+     right: 0;
+     height: 3px;
+     background-color: #DCDCDC;
+     z-index: 1;
+}
+
+.timeline-dot {
+     position: absolute;
+     bottom: -38px;
+     left: 0;
+     width: 12px;
+     height: 12px;
+     background-color: #334E8B;
+     border-radius: 50%;
+     z-index: 2;
+}
+
+/* Responsive */
+@media (max-width: 767.98px) {
+     .timeline-items {
+          position: relative;
+          padding-left: 32px;
+     }
+
+     .timeline-items::before {
+          content: '';
+          position: absolute;
+          top: 20px;
+          left: 35px;
+          width: 2px;
+          height: 100%;
+          background-color: #DCDCDC;
+          z-index: 1;
+     }
+
+     .timeline-dot {
+          position: absolute;
+          left: 0;
+          top: 12px;
+          width: 12px;
+          height: 12px;
+          background-color: #334E8B;
+          border-radius: 50%;
+          z-index: 2;
+     }
+
+     .timeline-items .col-md-4 {
+          position: relative;
+          margin-bottom: 48px;
+     }
+
+     .timeline-line {
+          display: none !important;
+     }
+}
+
+
+.text-icon-3tr {
+     font-size: 16px;
+     font-weight: 700;
+     font-family: 'Roboto', sans-serif;
+     color: #000000;
+     text-align: left;
+}
+
+@media (max-width: 767px) {
+     .ml-mobile-32 {
+          margin-left: 32px;
+     }
+}
+
+.formulario-box {
+     max-width: 800px;
+     background-color: #fff;
+     border-radius: 12px;
+     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.06);
+}
+
+.formulario-box .form-label {
+     font-weight: 500;
+     font-size: 14px;
+}
+
+.formulario-box input.form-control,
+.formulario-box select.form-select {
+     background-color: #f8f8f8;
+     border: none;
+     font-size: 14px;
+}
+
+.btn-outline-primary {
+     border: 2px solid #2a407c;
+     color: #2a407c;
+}
+
+.btn-outline-primary:hover {
+     background-color: #2a407c;
+     color: #fff;
+}
+
+.btn-primary {
+     background-color: #2a407c;
+     border: none;
+}
