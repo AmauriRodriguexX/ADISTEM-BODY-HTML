@@ -31,6 +31,39 @@
      }
 }
 
+
+.montejo {
+     background-image: url('../assets/montejo/flotillas-automaya-montejo.jpg');
+     background-size: cover;
+     background-position: center;
+     background-repeat: no-repeat;
+     height: 60vh;
+     min-height: 400px;
+     position: relative;
+}
+
+@media (max-width: 767px) {
+     .montejo {
+          background-image: url('../assets/montejo/flotillas-automaya-montejo-mobile.jpg');
+     }
+}
+
+.itzaes {
+     background-image: url('../assets/Itzaes/flotillas-automaya-itzaes.jpg');
+     background-size: cover;
+     background-position: center;
+     background-repeat: no-repeat;
+     height: 60vh;
+     min-height: 400px;
+     position: relative;
+}
+
+@media (max-width: 767px) {
+     .itzaes {
+          background-image: url('../assets/Itzaes/flotillas-automaya-itzaes-mobile.jpg');
+     }
+}
+
 p {
      font-size: 16px;
      font-family: 'Roboto', sans-serif;
@@ -139,6 +172,68 @@ p {
 }
 
 
+
+.timeline-line-2 {
+     position: absolute;
+     bottom: -11px;
+     left: 0;
+     right: 0;
+     height: 3px;
+     background-color: #DCDCDC;
+     z-index: 1;
+}
+
+.timeline-dot-2 {
+     position: absolute;
+     bottom: -38px;
+     left: 0;
+     width: 12px;
+     height: 12px;
+     background-color: #334E8B;
+     border-radius: 50%;
+     z-index: 2;
+}
+
+/* Responsive */
+@media (max-width: 767.98px) {
+     .timeline-items-2 {
+          position: relative;
+          padding-left: 32px;
+     }
+
+     .timeline-items-2::before {
+          content: '';
+          position: absolute;
+          top: 104px;
+          left: 35px;
+          width: 2px;
+          height: 88%;
+          background-color: #DCDCDC;
+          z-index: 1;
+     }
+
+     .timeline-dot-2 {
+          position: absolute;
+          left: 0;
+          top: 12px;
+          width: 12px;
+          height: 12px;
+          background-color: #334E8B;
+          border-radius: 50%;
+          z-index: 2;
+     }
+
+     .timeline-items-2 .col-md-4 {
+          position: relative;
+          margin-bottom: 48px;
+     }
+
+     .timeline-line-2 {
+          display: none !important;
+     }
+}
+
+
 .text-icon-3tr {
      font-size: 16px;
      font-weight: 700;
@@ -185,4 +280,92 @@ p {
 .btn-primary {
      background-color: #2a407c;
      border: none;
+}
+
+.mb-40 {
+     margin-bottom: 60px;
+}
+
+.marca-logo {
+     max-height: 100px;
+     transition: filter 0.3s ease;
+}
+
+
+.marcas-scroll {
+     scroll-snap-type: x mandatory;
+}
+
+.marcas-scroll img {
+     scroll-snap-align: center;
+     height: 48px;
+     flex-shrink: 0;
+     transition: filter 0.3s ease;
+}
+
+.marcas-scroll img:hover {
+     filter: grayscale(0%);
+}
+
+.text-logo-cars {
+     margin-top: 40px;
+     text-align: center;
+}
+
+@media (max-width: 767.98px) {
+     .text-logo-cars {
+          text-align: left;
+     }
+}
+
+
+.h2-c-l {
+     text-align: center;
+}
+
+@media (max-width: 767.98px) {
+     .h2-c-l {
+          text-align: left;
+     }
+}
+
+.lista-servicios {
+     list-style-type: disc;
+     padding-left: 1.2rem;
+}
+
+.sublista-servicios {
+     list-style-type: circle;
+     padding-left: 1.5rem;
+}
+
+.logo-mopar {
+     height: 24px;
+     vertical-align: middle;
+}
+
+.contacto-lista {
+     list-style-type: disc;
+     padding-left: 1.2rem;
+}
+
+
+.lista-servicios {
+     list-style-type: disc;
+     padding-left: 1.2rem;
+}
+
+.sublista-servicios {
+     list-style-type: disc;
+     padding-left: 1.5rem;
+}
+
+.logo-mopar {
+     height: 48px;
+     vertical-align: middle;
+}
+
+.contacto-lista {
+     list-style-type: disc;
+     padding-left: 1.2rem;
 }
