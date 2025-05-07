@@ -33,14 +33,31 @@
 
 
 .montejo {
-     background-image: url('../assets/montejo/flotillas-automaya-montejo.jpg');
+     background-image: url(../assets/montejo/flotillas-automaya-montejo.jpg);
      background-size: cover;
      background-position: center;
      background-repeat: no-repeat;
      height: 60vh;
      min-height: 400px;
      position: relative;
-}
+     z-index: 1;
+     color: white; /* asegúrate de esto también */
+   }
+   
+   .montejo::before {
+     content: "";
+     position: absolute;
+     inset: 0;
+     background: rgba(0, 0, 0, 0.5); /* Puedes subir o bajar el 0.5 */
+     z-index: 0;
+   }
+   
+   .montejo > * {
+     position: relative;
+     z-index: 1;
+     color: white; /* Esto asegura que el texto sea blanco */
+   }
+   
 
 @media (max-width: 767px) {
      .montejo {
@@ -56,8 +73,24 @@
      height: 60vh;
      min-height: 400px;
      position: relative;
-}
-
+     z-index: 1;
+     color: white;
+   }
+   
+   .itzaes::before {
+     content: "";
+     position: absolute;
+     inset: 0;
+     background: rgba(0, 0, 0, 0.5); /* Overlay oscuro */
+     z-index: 0;
+   }
+   
+   .itzaes > * {
+     position: relative;
+     z-index: 1;
+     color: white;
+   }
+   
 @media (max-width: 767px) {
      .itzaes {
           background-image: url('../assets/Itzaes/flotillas-automaya-itzaes-mobile.jpg');
@@ -320,7 +353,7 @@ p {
 
 
 .h2-c-l {
-     text-align: center;
+     text-align: left;
 }
 
 @media (max-width: 767.98px) {
@@ -369,3 +402,5 @@ p {
      list-style-type: disc;
      padding-left: 1.2rem;
 }
+
+
